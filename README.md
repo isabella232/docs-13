@@ -1,6 +1,9 @@
 # docs
-Official documentation of GraphCMS
+Official documentation of [GraphCMS](https://graphcms.com)
 
+GraphCMS is a GraphQL based Headless Content Management System
+
+## Install
 
 ```
 pip install mkdocs
