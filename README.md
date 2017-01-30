@@ -3,7 +3,7 @@ Official documentation of GraphCMS
 
 
 ```
-pip install mkdocs && mkdocs --version
+pip install mkdocs
 pip install pygments
 pip install pymdown-extensions
 
