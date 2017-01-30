@@ -1,66 +1,102 @@
 # Getting Started
 
-## Projects
+Creating a content API with GraphCMS is easy. In this getting started guide we will create a `movie database` sample project.
 
-Your content lives within a project. In a project you can:
+After login screen see project overview page
+- Click on project tile to open the project
+- Switch to the content view
+- Click on add content model
+- Create three models: movie, character, actor
+- switch to movie field list
+- add text field, location field as list, media:poster, relation to Character
+- add fields name + date of birth for actor and name and picture for character
+- also add a relation between character and actor
 
-* Define the shape of your content by adding `content models`
-* Add `fields` to your models
-* Manage and browse your project´s content
-* Upload and assign media files
-* Invite others to your team
-* Track the activity of your team
-* Create permanent `auth tokens` for your applications and content consumers
-* Use the integrated GraphiQL playground to run queries and mutations against your project´s endpoint
 
-## Content Models
-
-Content models describe the shape of your content. They consist of several fields while each field can store various types of content (e.g: text, numbers or images). A field can also be a reference to another model, which allows you to build a complex content graph. The fields you associate with a model will also define how its content onboarding user interface will look like.
-
-Lets take a look on a small example. The following screenshot is showing the field configuration of a content model called **Product**.
-
-It consists of three fields:
-
-* **Name** of type *text*
-* **Price** of type *Number*
-* **Product Images** of type *Media*
-
-![Screenshot](img/screen_product_fields.png)
-
-After defining the fields, we are able to create *content entries* of type **Product**
-
-![Screenshot](img/screen_product_add.png)
-
-One GraphQL query on this model would look like this:
+![Screenshot](img/screenshots/1x/01.png)
+![Screenshot](img/screenshots/1x/02.png)
+![Screenshot](img/screenshots/1x/03.png)
+![Screenshot](img/screenshots/1x/04.png)
+![Screenshot](img/screenshots/1x/05.png)
+![Screenshot](img/screenshots/1x/06.png)
+![Screenshot](img/screenshots/1x/07.png)
+![Screenshot](img/screenshots/1x/08.png)
+![Screenshot](img/screenshots/1x/09.png)
+![Screenshot](img/screenshots/1x/10.png)
+![Screenshot](img/screenshots/1x/11.png)
+![Screenshot](img/screenshots/1x/14.png)
+![Screenshot](img/screenshots/1x/15.png)
+![Screenshot](img/screenshots/1x/16.png)
+![Screenshot](img/screenshots/1x/20.png)
+![Screenshot](img/screenshots/1x/30.png)
 
 ```
-query {
-  allProducts {
-    name
-    price
-    productImages {
+{
+  allMovies {
+    title
+    shootingLocations
+    poster {
       fileName
-      size
       url
+    }
+    characters {
+      name
+      picture {
+        fileName
+        url
+      }
+      actor {
+        name
+        dateOfBirth
+      }
     }
   }
 }
 ```
 
-Which would result in the following response:
 
 ```
 {
   "data": {
-    "allProducts": [
+    "allMovies": [
       {
-        "name": "Pink Backpack",
-        "price": 19.99,
-        "productImages": [
+        "title": "Star Battle IV",
+        "shootingLocations": [
           {
-            "fileName": "pexels-photo-91986.jpeg",
-            "size": 712672,
-            "url": "https://cdn.graphcms.com/api/file/Jk9MIsI2SzO9AqUbJraQ"
+            "lat": 35.17380831799959,
+            "lng": -110.0390625
+          },
+          {
+            "lat": 22.59372606392931,
+            "lng": -10.546875
+          }
+        ],
+        "poster": {
+          "fileName": "star_battle.png",
+          "url": "https://media.graphcms.com/tyCpVMSCCwjEsLwVAV2g"
+        },
+        "characters": [
+          {
+            "name": "Luke Highwalker",
+            "picture": {
+              "fileName": "luke_highwalker.jpg",
+              "url": "https://media.graphcms.com/QPSzC1GWSTuPNuOUivH5"
+            },
+            "actor": {
+              "name": "Mark Gamil",
+              "dateOfBirth": "1951-09-18T22:00:00.000Z"
+            }
+          },
+          {
+            "name": "Han Yolo",
+            "picture": {
+              "fileName": "han_yolo.jpg",
+              "url": "https://media.graphcms.com/CWNTFM4rQL2rzqkQXXVA"
+            },
+            "actor": {
+              "name": "Harrison Cord",
+              "dateOfBirth": "1942-07-24T22:00:00.000Z"
+            }
           }
         ]
       }
@@ -68,19 +104,3 @@ Which would result in the following response:
   }
 }
 ```
-
-## Fields
-
-Fields are the building blocks of your content models.
-GraphCMS offers the following field types:
-
-* **Text:** names, titles, list of names, comments, formatted text...
-* **Number:** ID, product number, price, quantity...
-* **Boolean:** true or false, yes or no...
-* **Date:** post date, opening hours, date of birth...
-* **Media:** any asset, eg. image, video...
-* **Enum:** selection on a predefined set of values
-* **Location:** geographic coordinates: latitude and longitude
-* **Relation:** for referencing other content models. E.g. the author of a blog post
-* **Color:** rgba or hex color string
-* **JSON:** data in JSON format

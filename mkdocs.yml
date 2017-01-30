@@ -12,10 +12,20 @@ theme_dir: 'theme/material'
 # Options
 extra:
   version: '0.1.0'
-  #logo: 'images/logo.png'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+  social:
+    - type: 'github'
+      link: 'https://github.com/graphcms'
+    - type: 'twitter'
+      link: 'https://twitter.com/graphcms'
+
+# Copyright
+copyright: 'Copyright &copy; 2017 GraphCMS'
+
+extra_css:
+  - 'stylesheets/extra.css'
 
 # Extensions
 markdown_extensions:

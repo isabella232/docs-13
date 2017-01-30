@@ -39,8 +39,8 @@ GraphCMS offers the following field types:
 
 Any GraphCMS project comes with two GraphQL endpoints:
 
-* The `simple endpoint` serves your content with a simple GraphQL schema for use with GraphQL clients like [Apollo](http://dev.apollodata.com/),[Apollo iOS](https://github.com/apollostack/apollo-ios) or [Lokka](https://github.com/kadirahq/lokka)
-* The `relay endpoint` serves your content with a relay conform GraphQL schema  
+* The `simple endpoint` serves your content with a simple GraphQL schema for use with GraphQL clients like [Apollo](http://dev.apollodata.com/), [Apollo iOS](https://github.com/apollostack/apollo-ios) or [Lokka](https://github.com/kadirahq/lokka)
+* The `relay endpoint` serves your content with a relay conform GraphQL schema for [data driven react applications](https://facebook.github.io/relay/)  
 
 TODO: Query und response examples
 
