@@ -6,11 +6,12 @@ Your content lives within a project. In a project you can:
 
 * Define the shape of your content by adding `content models`
 * Add `fields` to your models
-* Manage your project´s content
+* Manage and browse your project´s content
 * Upload and assign media files
 * Invite others to your team
 * Track the activity of your team
 * Create permanent `auth tokens` for your applications and content consumers
+* Use the integrated GraphiQL playground to run queries and mutations against your project´s endpoint
 
 ## Content Models
 

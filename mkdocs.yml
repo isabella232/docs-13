@@ -1,6 +1,5 @@
 site_name: GraphCMS Docs
 theme: 'material'
-theme_dir: 'material'
 # Project information
 site_description: 'A GraphQL based Headless Content Management System'
 site_author: 'Michael Lukaszczyk & Daniel Winter'
@@ -9,7 +8,7 @@ site_url: 'https://graphcms.com'
 # Documentation and theme
 docs_dir: 'docs'
 theme: 'material'
-
+theme_dir: 'mkdocs-material/material'
 # Options
 extra:
   version: '0.1.0'
@@ -27,7 +26,6 @@ markdown_extensions:
 
 pages:
 - Introduction: 'index.md'
+- Concepts: 'Concepts.md'
 - Getting Started: 'Getting_Started.md'
-- Content Editing: 'Content_Editing.md'
-- Connect: 'Connect.md'
 - Examples: 'Examples.md'
