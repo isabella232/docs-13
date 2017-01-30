@@ -1,5 +1,5 @@
 # docs
-Official documentation of [GraphCMS](https://graphcms.com)
+Official documentation of [GraphCMS](https://graphcms.com) / [docs](https://graphcms.com/docs)
 
 GraphCMS is a GraphQL based Headless Content Management System
 
