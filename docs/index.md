@@ -6,10 +6,6 @@ GraphCMS allows you to build websites and applications that are not restricted t
 
 This documentation will show you how to setup a project, define your content model, manage your content and connect your applications.
 
-!!! tip
-    Please join our [slack channel](https://graphcms.slack.com/) if you have any questions. This is the best way to get in touch with us.
-
-
 ## New to GraphQL?
 
 GraphQL is a data query language and runtime designed and used at Facebook to request and deliver data to any kind of websites and apps since 2012.
