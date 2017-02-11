@@ -1,10 +1,10 @@
 # Introduction
 
-GraphCMS is a GraphQL based headless CMS. It allows you to build a content API within minutes while taking full advantage of the powerful GraphQL language. Content stored in GraphCMS can be delivered with a simple and/or relay compliant GraphQL endpoint.
+GraphCMS is a GraphQL based headless CMS. It allows you to build rich content APIs within minutes while taking full advantage of the powerful GraphQL language. Your choice: content stored in GraphCMS can be delivered with a *simple* and/or *relay compliant* GraphQL endpoint.
 
-GraphCMS allows you to build websites and applications that are not restricted to any specific templating or frontend framework. It is up to your frontend developers how they like to present your content. This gives you great flexibility. Consider GraphCMS as a content management system for your websites, web apps, mobile apps, smartwatch and TV apps and what is yet to come.
+GraphCMS allows you to build websites and applications that are not restricted to any specific templating or frontend framework. We store your content and your frontend developers choose how they like to present it. Simply consider GraphCMS as a flexible content management system for your websites, web apps, mobile apps, smartwatch and TV apps and for what is yet to come.
 
-This documentation will show you how to setup a project, define your content model, manage your content and connect your applications.
+In this docs we will show you how to setup a project, define your content model, manage your content and connect your applications.
 
 !!! tip
     Please join our [slack channel](https://graphcms.slack.com/) if you have any questions. This is the best way to get in touch with us.
