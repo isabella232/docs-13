@@ -38,5 +38,6 @@ pages:
 - Introduction: 'index.md'
 - Concepts: 'Concepts.md'
 - Getting Started: 'Getting_Started.md'
+- Media: 'Media.md'
 - Examples: 'Examples.md'
 - API: 'API.md'
