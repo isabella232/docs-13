@@ -42,8 +42,6 @@ Any GraphCMS project comes with two GraphQL endpoints:
 * The `simple endpoint` serves your content with a simple GraphQL schema for use with GraphQL clients like [Apollo](http://dev.apollodata.com/), [Apollo iOS](https://github.com/apollostack/apollo-ios) or [Lokka](https://github.com/kadirahq/lokka)
 * The `relay endpoint` serves your content with a relay conform GraphQL schema for [data driven react applications](https://facebook.github.io/relay/)  
 
-TODO: Query und response examples
-
 ## Permanent Auth Tokens
 
 To connect your client applications to your GraphCMS project, you will need to create a `permanent auth token` in your project´s settings. This will allow your client to:
@@ -53,7 +51,7 @@ To connect your client applications to your GraphCMS project, you will need to c
 * `UPDATE` existing content entries
 * `DELETE` existing content entries
 
-!!! warning
+!!! warning ""
     Be careful! Anyone that knows one of your tokens will be able to execute all of these operations and manipulate your content. So it is never a good idea to store a token on the client side, i.e. a JavaScript client application.
 
     We will soon release a feature that will allow you to create `read-only tokens`, so even if someone gains access to such a token, your data will be safe from manipulation.

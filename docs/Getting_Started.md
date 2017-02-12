@@ -8,7 +8,7 @@ We start off by creating a new project called `Vinylbase`.
 
 ![Screenshot](img/screenshots/createProject.png)
 
-!!! Hint
+!!! Hint ""
     Project names can contain only alphanumeric characters and whitespaces.
 
 ## Creating Content Models
@@ -22,7 +22,7 @@ After creating the project, switch to the `CONTENT` view and use the `ADD MODEL`
 
 ![Screenshot](img/screenshots/modelOverview.png)
 
-!!! Hint
+!!! Hint ""
     API IDs for models must start with a capital letter and can contain only alphanumeric characters. No whitespaces allowed.
 
 ## Adding Fields to your Content Models
@@ -45,7 +45,7 @@ For `Name` we use a `Single Line Text Field` that we set as `required`. The `Dis
 
 ![Screenshot](img/screenshots/fieldWizardFieldSettings.png)
 
-!!! Hint
+!!! Hint ""
     In the web interface, API IDs are prefixed with a `#` (e.g.: `#name`).
 
     API IDs for fields must start with a lowercase letter and can contain only alphanumeric characters.
@@ -58,14 +58,14 @@ We will now add a relation to this model. Relations allow you to connect two con
 
 We will set up the relation so that an `Artist` can have _many_ `#records`, while on the reverse side, a `Record` can also have _many_ `#artists`.
 
-!!! Hint
+!!! Hint ""
     Relation names must start with a capital letter and can contain only alphanumeric characters
 
 You can now see all fields that are attached to model.
 
 ![Screenshot](img/screenshots/fieldListArtist.png)
 
-!!! Hint
+!!! Hint ""
     Notice that there are three additional fields: `ID`, `CreatedAt` and `UpdatedAt`. These are system fields and cannot be removed or modified.
 
 ### Fields for model Record
@@ -109,7 +109,7 @@ For example, field `#cover` is of type `Media`, so it will allow you to upload m
 
 ![Screenshot](img/screenshots/createRecord.png)
 
-!!! Hint
+!!! Hint ""
     Before uploading, you can crop pictures within the upload widget.
 
     All uploaded files can be found in the `MEDIA` section.
@@ -228,8 +228,8 @@ Cool! We can now start building our frontend application. Switch over to the `SE
 
 _A full code example will be available soon._
 
-!!! warning
+!!! warning ""
     GraphCMS is still in early preview. If you run into an issue, please have a look at the known issues in our issue tracker. Please don´t hesitate to open a bug ticket if you experienced an issue that is not covered by those in the tracker.
 
-!!! hint
+!!! hint ""
     In case you want to know more about the features we are currently working on, please check our public roadmap.  If you are missing a feature or if you have an idea for additional functionality, please help us to improve by submitting a feature request to this repository.
