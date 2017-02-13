@@ -1,4 +1,4 @@
 # Examples
 
-!!! hint
+!!! hint ""
     Examples will be available soon!

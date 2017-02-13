@@ -50,7 +50,7 @@ For `Name` we use a `Single Line Text Field` that we set as `required`. The `Dis
 
     API IDs for fields must start with a lowercase letter and can contain only alphanumeric characters.
 
-For field `Pictures` we will add a media field and check `Allow multiple values`.
+For field `Pictures` we will add a media field and check `Allow multiple values`, this will allow us to store an arbitrary number of media files.
 
 We will now add a relation to this model. Relations allow you to connect two content models. In this case, we create an `ArtistRecord Relation`, since we want to connect artists to existing records. The `Relation Name` defines how the relation will be named in your content API.
 
@@ -175,7 +175,7 @@ We can start typing in a GraphQL query with the integrated GraphiQL editor. Let 
 
 Will respond with:
 
-```
+``` JSON
 {
   "data": {
     "allRecordStores": [

@@ -11,7 +11,7 @@ Your content lives within a project. In a project you can:
 * Manage and browse your project´s content
 * Upload and assign media files
 * Invite others to your team
-* Track the activity of your team
+* Track the activities of your team
 * Create `permanent auth tokens` for your applications and content consumers
 * Use the integrated GraphiQL playground to run queries and mutations against your project´s endpoint
 
@@ -32,8 +32,12 @@ GraphCMS offers the following field types:
 * **JSON:** data in JSON format
 * **Color:** rgba or hex color string
 * **Location:** geographic coordinates: latitude and longitude
-* **Media:** any asset, eg. image, video...
+* **Media:** any asset, e.g. image, video...
 * **Relation:** for referencing other content models. E.g. the author of a blog post
+
+
+![Screenshot](img/screenshots/fieldWizardClean.png)
+
 
 ## GraphQL Endpoints
 
