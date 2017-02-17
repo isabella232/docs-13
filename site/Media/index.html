@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A GraphQL based Headless Content Management System">
+      
+      
+        <link rel="canonical" href="https://graphcms.com/Media/">
+      
+      
+        <meta name="author" content="Michael Lukaszczyk & Daniel Winter">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+    
+    
+      
+        <title>Media - GraphCMS Docs</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-bc099a55ca.css">
+      
+      
+        <link rel="stylesheet" href="../stylesheets/extra.css">
+      
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="GraphCMS Docs" class=" md-icon md-icon--home  md-header-nav__button">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Media
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-icon md-icon--home  md-nav__button">
+      
+    </i>
+    GraphCMS Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href=".." title="Introduction" class="md-nav__link">
+        Introduction
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../Concepts/" title="Concepts" class="md-nav__link">
+        Concepts
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../Getting_Started/" title="Getting Started" class="md-nav__link">
+        Getting Started
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Media
+      </label>
+    
+    <a href="./" title="Media" class="md-nav__link md-nav__link--active">
+      Media
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#querying-a-media-field" title="Querying a Media Field" class="md-nav__link">
+    Querying a Media Field
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphcms-image-transformations" title="GraphCMS Image Transformations" class="md-nav__link">
+    GraphCMS Image Transformations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transformation-url-structure-with-graphcms-handle" title="Transformation URL Structure with GraphCMS Handle" class="md-nav__link">
+    Transformation URL Structure with GraphCMS Handle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-transformations" title="Available Transformations" class="md-nav__link">
+    Available Transformations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resize-fit-and-align" title="Resize Fit and Align" class="md-nav__link">
+    Resize Fit and Align
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crop" title="Crop" class="md-nav__link">
+    Crop
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-cropping-works" title="How cropping works" class="md-nav__link">
+    How cropping works
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaining-transformations" title="Chaining Transformations" class="md-nav__link">
+    Chaining Transformations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../Examples/" title="Examples" class="md-nav__link">
+        Examples
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../API/" title="API" class="md-nav__link">
+        API
+      </a>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#querying-a-media-field" title="Querying a Media Field" class="md-nav__link">
+    Querying a Media Field
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphcms-image-transformations" title="GraphCMS Image Transformations" class="md-nav__link">
+    GraphCMS Image Transformations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transformation-url-structure-with-graphcms-handle" title="Transformation URL Structure with GraphCMS Handle" class="md-nav__link">
+    Transformation URL Structure with GraphCMS Handle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-transformations" title="Available Transformations" class="md-nav__link">
+    Available Transformations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resize-fit-and-align" title="Resize Fit and Align" class="md-nav__link">
+    Resize Fit and Align
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crop" title="Crop" class="md-nav__link">
+    Crop
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-cropping-works" title="How cropping works" class="md-nav__link">
+    How cropping works
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chaining-transformations" title="Chaining Transformations" class="md-nav__link">
+    Chaining Transformations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+              
+                
+                <h1 id="media">Media<a class="headerlink" href="#media" title="Permanent link">#</a></h1>
+<p>Working with media is an essential part of content management. GraphCMS allows you to upload and assign media files to any content model in your project. The uploaded files will be assigned to the project´s internal <code>Media</code> model. <code>Media fields</code> will then connect the dots between a content model and assigned files.</p>
+<p>Media files that are stored in GraphCMS are served via a global content delivery network. This assures quick response times and fast loading of your media.</p>
+<p><img alt="Screenshot" src="../img/animated/mediaScreenCapture.gif" /></p>
+<h2 id="querying-a-media-field">Querying a Media Field<a class="headerlink" href="#querying-a-media-field" title="Permanent link">#</a></h2>
+<p>Uploaded media files can be queried from your content API. Let´s assume we have a content model <code>Post</code>, with a field configuration of:</p>
+<ul>
+<li>Title <code>#title</code> <code>Single Line Text</code></li>
+<li>Images <code>#images</code> <code>Media</code> <code>Allow Multiple Values</code></li>
+</ul>
+<p>This will allow us to store an arbitrary number of images for a <code>Post</code>.</p>
+<p>We can fetch <code>allPosts</code> with the following query:</p>
+<div class="code"><pre><span></span>{
+  allPosts {
+    title
+    images {
+      fileName
+      handle
+      url
+      mimeType
+      size
+    }
+  }
+}
+</pre></div>
+
+
+<p>Which will give us a result like this:</p>
+<div class="code"><pre><span></span>{
+  &quot;data&quot;: {
+    &quot;allPosts&quot;: [
+      {
+        &quot;title&quot;: &quot;Some nice post&quot;,
+        &quot;images&quot;: [
+          {
+            &quot;fileName&quot;: &quot;pexels-photo-295821.jpeg&quot;,
+            &quot;handle&quot;: &quot;7AmzJToStuJrNqkpPSWO&quot;
+            &quot;url&quot;: &quot;https://media.graphcms.com/7AmzJToStuJrNqkpPSWO&quot;,
+            &quot;mimeType&quot;: &quot;image/jpeg&quot;,
+            &quot;size&quot;: 100075,
+          }
+        ]
+      }
+    ]
+  }
+}
+</pre></div>
+
+
+<p>Field <code>#images</code> will return an array of media objects, which contain the fields:</p>
+<ul>
+<li><code>fileName</code> the original file name of the uploaded file</li>
+<li><code>handle</code> the identifier of the uploaded file</li>
+<li><code>url</code> the full URL to the uploaded file</li>
+<li><code>mimeType</code> the media type of the uploaded file</li>
+<li><code>size</code> the total size in bytes</li>
+</ul>
+<div class="admonition hint">
+<p>If you know the desired display size of your images, it is highly recommended to use our integrated image transformation engine to scale your images to the desired size. This will increase the loading time of your content and result in a better user experience for your visitors.</p>
+</div>
+<h2 id="graphcms-image-transformations">GraphCMS Image Transformations<a class="headerlink" href="#graphcms-image-transformations" title="Permanent link">#</a></h2>
+<p>An essential feature of GraphCMS is the image processing engine. It enables you on the fly image transformations, such as resizing or cropping just by adding parameters to your media´s URL.</p>
+<h3 id="transformation-url-structure-with-graphcms-handle">Transformation URL Structure with GraphCMS Handle<a class="headerlink" href="#transformation-url-structure-with-graphcms-handle" title="Permanent link">#</a></h3>
+<div class="code"><pre><span></span>https://media.graphcms.com/[(1) Transformation Tasks]/[(2) File Handle]
+</pre></div>
+
+
+<p>1) One or multiple transformation tasks and their parameters</p>
+<p>2) The source image to run the transformation tasks on.</p>
+<h3 id="available-transformations">Available Transformations<a class="headerlink" href="#available-transformations" title="Permanent link">#</a></h3>
+<p>An overview of supported image transformations.</p>
+<div class="admonition hint">
+<p>The maximum accepted image size is 100.000.000 pixels. An image with this many pixels could have width and height combinations like 10.000 x 10.000 or 5.000 x 20.000, etc. The maximum file size of an image can not be larger than 256mb.</p>
+</div>
+<h4 id="resize-fit-and-align">Resize Fit and Align<a class="headerlink" href="#resize-fit-and-align" title="Permanent link">#</a></h4>
+<p>The resizing feature comprises two main functions, manipulating the width and height of an image and changing the fit and alignment of the image.</p>
+<div class="code"><pre><span></span><span class="n">Resize</span> <span class="n">Task</span> <span class="n">URL</span> <span class="nl">Format</span><span class="p">:</span>
+<span class="nl">https</span><span class="p">:</span><span class="c1">//media.graphcms.com/resize=[options]/[File Handle]</span>
+</pre></div>
+
+
+<blockquote>
+<p>Basic resize example with a GraphCMS file handle</p>
+<p><a href="https://media.graphcms.com/resize=width:300/bYbYJmGyQfynUBaBkRnP">https://media.graphcms.com/resize=width:300/bYbYJmGyQfynUBaBkRnP</a>
+<img alt="TransformedImage" src="https://media.graphcms.com/resize=width:300/bYbYJmGyQfynUBaBkRnP" /></p>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p><code>resize=width:100</code></p>
+<blockquote>
+<p>Can be abbreviated as <code>w:100</code></p>
+<p>The width in pixels to resize the image to. The value must be an integer from 1 to 10000.</p>
+</blockquote>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p><code>resize=height:100</code></p>
+<blockquote>
+<p>Can be abbreviated as <code>h:100</code></p>
+<p>The height in pixels to resize the image to. The value must be an integer from 1 to 10000.</p>
+</blockquote>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p><code>resize=fit:clip, crop, scale, or max</code></p>
+<blockquote>
+<p>Can be abbreviated as <code>f:clip</code></p>
+<p>The default value for the fit parameter is <code>fit:clip</code>.</p>
+</blockquote>
+<p><code>fit:clip</code></p>
+<blockquote>
+<p>Resizes the image to fit within the specified parameters without distorting, cropping, or changing the aspect ratio.</p>
+</blockquote>
+<p><code>fit:crop</code></p>
+<blockquote>
+<p>Resizes the image to fit the specified parameters exactly by removing any parts of the image that don't fit within the boundaries.</p>
+</blockquote>
+<p><code>fit:scale</code></p>
+<blockquote>
+<p>Resizes the image to fit the specified parameters exactly by scaling the image to the desired size. The aspect ratio of the image is not respected and the image can be distorted using this method.</p>
+</blockquote>
+<p><code>fit:max</code></p>
+<blockquote>
+<p>Resizes the image to fit within the parameters, but as opposed to 'fit:clip' will not scale the image if the image is smaller than the output size.</p>
+</blockquote>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p><code>resize=align:center, top, bottom, left, right, or faces</code></p>
+<blockquote>
+<p>Can be abbreviated as <code>a:top</code></p>
+<p>Using align, you can choose the area of the image to focus on. Possible values:
+<code>align:center</code> <code>align:top</code> <code>align:bottom</code> <code>align:left</code> <code>align:right</code> <code>align:faces</code></p>
+<p>By default, it crops from the center.
+You can also specify pairs e.g. align:[top,left]. Center cannot be used in pairs.</p>
+</blockquote>
+</blockquote>
+<!-- -->
+
+<blockquote>
+<p>Example with <code>resize</code> + <code>fit:crop</code></p>
+<p><a href="https://media.graphcms.com/resize=w:300,h:300,fit:crop/bYbYJmGyQfynUBaBkRnP">https://media.graphcms.com/resize=w:300,h:300,fit:crop/bYbYJmGyQfynUBaBkRnP</a>
+<img alt="TransformedImage" src="https://media.graphcms.com/resize=w:300,h:300,fit:crop/bYbYJmGyQfynUBaBkRnP" /></p>
+</blockquote>
+<h4 id="crop">Crop<a class="headerlink" href="#crop" title="Permanent link">#</a></h4>
+<p>Cropping is done by entering coordinates for where the boundary of the crop will be.</p>
+<div class="code"><pre><span></span><span class="n">Crop</span> <span class="n">Task</span> <span class="n">URL</span> <span class="nl">Format</span><span class="p">:</span>
+<span class="nl">https</span><span class="p">:</span><span class="c1">//media.graphcms.com/crop=[options]/[File Handle]</span>
+</pre></div>
+
+
+<blockquote>
+<p><code>crop=dim:[x,y,width,height]</code></p>
+<blockquote>
+<p>Can be abbreviated as <code>d:[10,20,200,250]</code></p>
+<p>Crops the image to a specified rectangle.</p>
+<p>The input for this parameter must be exactly 4 integers: <code>x coordinate, y coordinate, width, height</code>. For example, an input of <code>crop=dim:[10,20,200,250]</code> selects a 200x250 pixel rectangle starting 10 pixels from the left edge of the image and 20 pixels from the top edge of the image.</p>
+</blockquote>
+</blockquote>
+<h5 id="how-cropping-works">How cropping works<a class="headerlink" href="#how-cropping-works" title="Permanent link">#</a></h5>
+<p>The X and Y coordinates start from [0,0] and correspond to the top left hand corner of the image to be cropped. The Width and Height parameters dictate the size in pixels of the cropping rectangle once the point to start the crop at is selected by the X and Y coordinates. If you set coordinates that create a crop area that extends outside the frame of the image, then you will only receive back the part of the image that is within the crop area.</p>
+<!-- -->
+
+<blockquote>
+<p>Cropping Example</p>
+<p>Original Image:
+<a href="https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B">https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B</a></p>
+<p><img alt="TransformedImage" src="https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B" /></p>
+<p>Cropped Image
+<a href="https://media.graphcms.com/crop=dim:[2000,900,1800,1300]/resize=w:500/bXa8m7oYQdmyWpmo2I2B">https://media.graphcms.com/crop=dim:[2000,900,1800,1300]/resize=w:500/bXa8m7oYQdmyWpmo2I2B</a></p>
+<p><img alt="TransformedImage" src="https://media.graphcms.com/crop=dim:[2000,900,1800,1300]/resize=w:500/bXa8m7oYQdmyWpmo2I2B" /></p>
+</blockquote>
+<h3 id="chaining-transformations">Chaining Transformations<a class="headerlink" href="#chaining-transformations" title="Permanent link">#</a></h3>
+<p>The transformation engine also supports task chaining. This allows you to apply multiple transformations on an image. This is simply done by seperating transformations with a <code>/</code>.</p>
+<div class="code"><pre><span></span><span class="n">URL</span> <span class="n">format</span> <span class="k">for</span> <span class="nl">chaining</span><span class="p">:</span>
+<span class="nl">https</span><span class="p">:</span><span class="c1">//media.graphcms.com/[task]=[options]/[task]=[options]/[File Handle]</span>
+</pre></div>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Getting_Started/" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Getting Started
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Examples/" title="Examples" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Examples
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 GraphCMS
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/graphcms" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/graphcms" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-7f35cda7dd.js"></script>
+      <script>var config={url:{base:".."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

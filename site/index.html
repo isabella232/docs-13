@@ -181,8 +181,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#declarative-and-strong-typed" title="Declarative and Strong-Typed" class="md-nav__link">
-    Declarative and Strong-Typed
+  <a href="#declarative-and-strongly-typed" title="Declarative and Strongly-Typed" class="md-nav__link">
+    Declarative and Strongly-Typed
   </a>
   
 </li>
@@ -235,6 +235,17 @@
     
       <a href="Getting_Started/" title="Getting Started" class="md-nav__link">
         Getting Started
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="Media/" title="Media" class="md-nav__link">
+        Media
       </a>
     
   </li>
@@ -306,8 +317,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#declarative-and-strong-typed" title="Declarative and Strong-Typed" class="md-nav__link">
-    Declarative and Strong-Typed
+  <a href="#declarative-and-strongly-typed" title="Declarative and Strongly-Typed" class="md-nav__link">
+    Declarative and Strongly-Typed
   </a>
   
 </li>
@@ -350,22 +361,22 @@
               
                 
                 <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h1>
-<p>GraphCMS is a GraphQL based Headless CMS. It allows you to build a content API within minutes while taking full advantage of the powerful GraphQL language. Content stored in GraphCMS can be delivered with a simple and/or relay compliant GraphQL endpoint.</p>
-<p>GraphCMS allows you to build websites and applications that are not restricted to any specific templating or frontend framework. It is up to your frontend developers how they like to present your content. This gives you great flexibility. Consider GraphCMS as a content management system for your websites, web apps, mobile apps, smartwatch and TV apps and what is yet to come.</p>
-<p>This documentation will show you how to setup a project, define your content model, manage your content and connect your applications.</p>
+<p>GraphCMS is a GraphQL based headless CMS. It allows you to build rich content APIs within minutes while taking full advantage of the powerful GraphQL language. Your choice: content stored in GraphCMS can be delivered with a <em>simple</em> and/or <em>relay compliant</em> GraphQL endpoint.</p>
+<p>GraphCMS allows you to build websites and applications that are not restricted to any specific templating or frontend framework. We store your content and your frontend developers choose how they like to present it. Simply consider GraphCMS as a flexible content management system for your websites, web apps, mobile apps, smartwatch and TV apps and for what is yet to come.</p>
+<p>In this docs we will show you how to setup a project, define your content model, manage your content and connect your applications.</p>
 <h2 id="new-to-graphql">New to GraphQL?<a class="headerlink" href="#new-to-graphql" title="Permanent link">#</a></h2>
-<p>GraphQL is a data query language and runtime designed and used at Facebook to request and deliver data to any kind of websites and apps since 2012.</p>
+<p><a href="http://graphql.org/learn/">GraphQL</a> is a data query language and runtime designed and used at Facebook to request and deliver data to any kind of websites and apps since 2012.</p>
 <h3 id="key-benefits">Key Benefits<a class="headerlink" href="#key-benefits" title="Permanent link">#</a></h3>
+<p>Why did we choose to build GraphCMS around GraphQL?</p>
 <h4 id="one-endpoint-to-rule-them-all">One Endpoint to Rule Them All<a class="headerlink" href="#one-endpoint-to-rule-them-all" title="Permanent link">#</a></h4>
-<p>Writing applications with GraphQL enables you to define the shape of your data needs on the client side. A GraphQL query returns exactly what a client asks for and no more. There is just one endpoint on the server that is capable of serving all the data that is requested.</p>
-<h4 id="declarative-and-strong-typed">Declarative and Strong-Typed<a class="headerlink" href="#declarative-and-strong-typed" title="Permanent link">#</a></h4>
-<p>The GraphQL type system helps to ensure that your queries are valid at the time of development. This saves you from frustration and enhances the development experience.</p>
+<p>With GraphQL as a query language, it is up to your client application to specify the shape of the data it requires from the server. A GraphQL query returns exactly what a client asks for and no more. There is just one endpoint on the server that is capable of serving all the data that is requested.</p>
+<h4 id="declarative-and-strongly-typed">Declarative and Strongly-Typed<a class="headerlink" href="#declarative-and-strongly-typed" title="Permanent link">#</a></h4>
+<p>The GraphQL type system helps to ensure that your queries are valid at the time of development. This saves you from frustration of invalid queries and boosts your productivity.</p>
 <h4 id="minimum-payload">Minimum Payload<a class="headerlink" href="#minimum-payload" title="Permanent link">#</a></h4>
-<p>Since your application receives only the data it is requesting, the payload will be limited to the minimum. This is especially important in mobile or low bandwidth scenarios. If you are querying a complex content graph, GraphQL will be able to deliver all data in just one round trip.</p>
+<p>Since your application receives only the data it requested, the payload is limited to the minimum. This is especially important in mobile or low bandwidth scenarios. Also communication overhead is reduced: querying a complex content graph, GraphQL will be able to deliver all data in just one round trip.</p>
 <h4 id="generated-api-documentation">Generated API Documentation<a class="headerlink" href="#generated-api-documentation" title="Permanent link">#</a></h4>
-<p>Writing and maintaining API documentation can be cumbersome. With GraphQL, you don't have to worry about documentation at all. Through introspection, all of your API documentation will be generated automatically.</p>
+<p>Writing and maintaining API documentation can be cumbersome. With GraphQL, you don't have to worry about documentation at all. Through introspection all of your API documentation will be generated automatically.</p>
 <div class="admonition tip">
-<p class="admonition-title">Tip</p>
 <p>If you want to learn more about GraphQL, we recommend you to visit the <a href="https://graphql.org/">GraphQL.org</a> website as a good starting point.</p>
 </div>
               

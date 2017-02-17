@@ -225,6 +225,17 @@
       
   <li class="md-nav__item">
     
+      <a href="../Media/" title="Media" class="md-nav__link">
+        Media
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
       <a href="../Examples/" title="Examples" class="md-nav__link">
         Examples
       </a>
@@ -321,7 +332,7 @@
 <li>Manage and browse your project´s content</li>
 <li>Upload and assign media files</li>
 <li>Invite others to your team</li>
-<li>Track the activity of your team</li>
+<li>Track the activities of your team</li>
 <li>Create <code>permanent auth tokens</code> for your applications and content consumers</li>
 <li>Use the integrated GraphiQL playground to run queries and mutations against your project´s endpoint</li>
 </ul>
@@ -339,16 +350,16 @@ GraphCMS offers the following field types:</p>
 <li><strong>JSON:</strong> data in JSON format</li>
 <li><strong>Color:</strong> rgba or hex color string</li>
 <li><strong>Location:</strong> geographic coordinates: latitude and longitude</li>
-<li><strong>Media:</strong> any asset, eg. image, video...</li>
+<li><strong>Media:</strong> any asset, e.g. image, video...</li>
 <li><strong>Relation:</strong> for referencing other content models. E.g. the author of a blog post</li>
 </ul>
+<p><img alt="Screenshot" src="../img/screenshots/fieldWizardClean.png" /></p>
 <h2 id="graphql-endpoints">GraphQL Endpoints<a class="headerlink" href="#graphql-endpoints" title="Permanent link">#</a></h2>
 <p>Any GraphCMS project comes with two GraphQL endpoints:</p>
 <ul>
 <li>The <code>simple endpoint</code> serves your content with a simple GraphQL schema for use with GraphQL clients like <a href="http://dev.apollodata.com/">Apollo</a>, <a href="https://github.com/apollostack/apollo-ios">Apollo iOS</a> or <a href="https://github.com/kadirahq/lokka">Lokka</a></li>
 <li>The <code>relay endpoint</code> serves your content with a relay conform GraphQL schema for <a href="https://facebook.github.io/relay/">data driven react applications</a>  </li>
 </ul>
-<p>TODO: Query und response examples</p>
 <h2 id="permanent-auth-tokens">Permanent Auth Tokens<a class="headerlink" href="#permanent-auth-tokens" title="Permanent link">#</a></h2>
 <p>To connect your client applications to your GraphCMS project, you will need to create a <code>permanent auth token</code> in your project´s settings. This will allow your client to:</p>
 <ul>
@@ -358,7 +369,6 @@ GraphCMS offers the following field types:</p>
 <li><code>DELETE</code> existing content entries</li>
 </ul>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
 <p>Be careful! Anyone that knows one of your tokens will be able to execute all of these operations and manipulate your content. So it is never a good idea to store a token on the client side, i.e. a JavaScript client application.</p>
 <p>We will soon release a feature that will allow you to create <code>read-only tokens</code>, so even if someone gains access to such a token, your data will be safe from manipulation.</p>
 </div>
