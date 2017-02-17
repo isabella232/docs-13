@@ -51,7 +51,7 @@ For the app we will use Next.js, which is a minimalistic framework for server-re
 Data fetching will be done with Apollo, a wonderful GraphQL client which runs in nearly every environment.
 Apollo allow you to query and mutate your data using plain GraphQL queries. This makes the development process easy since you can test your queries in an IDE like [GraphiQL](https://github.com/graphql/graphiql) and paste them directly into your project. Apollo manages all stuff like caching, prefetching and optimistic UI.
 
-As a starting point we use [this](https://github.com/ads1018/next-apollo-example) project (thanks [Adam Soffer](http://twitter.com/adamSoffer)).
+As a starting point we use [this](https://github.com/ads1018/next-apollo-example) project (thanks to [Adam Soffer](http://twitter.com/adamSoffer)).
 This projects is a skeleton for using Apollo within a Next.js application. To allow this, it wraps the pages within a higher order component ([HOC](https://facebook.github.io/react/docs/higher-order-components.html)), which will pass down query results from Apollo directly into the component. This is realized by Apollos [getDataFromTree](http://dev.apollodata.com/react/server-side-rendering.html#getDataFromTree) function, which checks the React tree on which data it needs to be rendered. This function returns a Promise when the data is ready in the Apollo Store, so the page can be rendered and passed down to the client.
 
 #### Setting up Apollo
