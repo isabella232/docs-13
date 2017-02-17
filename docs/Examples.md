@@ -141,5 +141,69 @@ const allReviews = gql`
   }`
 
 export default withData(graphql(allReviews)(AllReviews))
+```
+
+The rest of the app is pretty straight forward. For every Grid view there is a corresponding page within the root `pages` folder, similar to the example above.
+For the detail views a `details.js` is placed within a subfolder.
+To enable routing to those pages we use the `slug` field within each model. This is a URL safe representation of the unique title or name of the model. This allows to use beautiful URLS within the usage of ids. GraphCMS allows you to define text fields with the appearance `slug`. This creates a sluggified representation of your text input. To ensure this value is unique, we have marked those fields as `unique` in GraphCMS.
+To use those slugs for routing, we must define the corresponding routes within a `server.js` file. We use [Express](https://express.com) as server, which makes routing easy.
+
+Here is an example of the route to a review details page. It takes the slug from the path and pass it into the component as a prop.
 
 ```
+server.get('/reviews/:slug', (req, res) => {
+  return app.render(req, res, '/reviews/details', { slug: req.params.slug })
+})
+```
+
+
+To use this slug within the GraphQL query, we use a $slug variable. Since the slug field is marked as unique in GraphCMS, we can search for it directly by passing it as a parameter to the `Review` query.
+To pass the value into the query, we can use the options object in the Apollo wrapper.
+This object has an options property, which is a simple function returning the options used by Apollo. The function will receive the props from router as parameter, so we can destructure the props to return it as a variables object used to fill all variables within our query:
+
+```
+
+function Review ({ url: { pathname }, data: { loading, Review } }) {
+  return (
+    <App>
+      <Nav pathname={pathname} />
+      {
+        loading ? <Loading /> : (
+          <div>
+            <Header title={Review.title} />
+            <ReviewDetails review={Review} />
+          </div>
+        )
+       }
+    </App>
+  )
+}
+
+const reviewDetails = gql`
+  query reviewDetails($slug: String! ) {
+    Review(slug: $slug) {
+      id
+      title
+      review
+      rating
+      record {
+        title
+        cover {
+          handle
+        }
+        artist {
+          name
+          slug
+        }
+      }
+    }
+}`
+
+const ReviewWithData = graphql(reviewDetails, {
+  options: ({ url: { query: { slug } } }) => ({ variables: { slug } })
+})(Review)
+
+export default(withData(ReviewWithData))
+```
+
+All other pages are build in a similar way, so we won't discuss all of them here. Feel free to browse the code within the [Repository](https://github.com/GraphCMS/Vinylbase).
