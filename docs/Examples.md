@@ -2,7 +2,7 @@
 
 ## Serverside rendered App with Next.js and Apollo
 
-In this example we are going to build a simple serverside rendered Application backed by GraphCMS using [Next.js](https://zeit.co/) and [Apollo](http://www.apollodata.com/).
+In this example we are going to build a simple serverside rendered Application backed by GraphCMS using [Next.js](https://github.com/zeit/next.js/) and [Apollo](http://www.apollodata.com/).
 
 !!! hint ""
     If you want to follow along, check out our [Getting started Guide](Getting_Started) to setup you own content model to play around and fill it with your own data.
