@@ -2,7 +2,7 @@
 
 ## Serverside rendered App with Next.js and Apollo
 
-In this example we are going to build a simple serverside rendered Application backed by GraphCMS using [Next.js](https://zeit.co/) and [Apollo](http://www.apollodata.com/).
+In this example we are going to build a simple serverside rendered Application backed by GraphCMS using [Next.js](https://github.com/zeit/next.js/) and [Apollo](http://www.apollodata.com/).
 
 !!! hint ""
     If you want to follow along, check out our [Getting started Guide](Getting_Started) to setup you own content model to play around and fill it with your own data.
@@ -51,7 +51,7 @@ For the app we will use Next.js, which is a minimalistic framework for server-re
 Data fetching will be done with Apollo, a wonderful GraphQL client which runs in nearly every environment.
 Apollo allow you to query and mutate your data using plain GraphQL queries. This makes the development process easy since you can test your queries in an IDE like [GraphiQL](https://github.com/graphql/graphiql) and paste them directly into your project. Apollo manages all stuff like caching, prefetching and optimistic UI.
 
-As a starting point we use [this](https://github.com/ads1018/next-apollo-example) project (thanks [Adam Soffer](http://twitter.com/adamSoffer)).
+As a starting point we use [this](https://github.com/ads1018/next-apollo-example) project (thanks to [Adam Soffer](http://twitter.com/adamSoffer)).
 This projects is a skeleton for using Apollo within a Next.js application. To allow this, it wraps the pages within a higher order component ([HOC](https://facebook.github.io/react/docs/higher-order-components.html)), which will pass down query results from Apollo directly into the component. This is realized by Apollos [getDataFromTree](http://dev.apollodata.com/react/server-side-rendering.html#getDataFromTree) function, which checks the React tree on which data it needs to be rendered. This function returns a Promise when the data is ready in the Apollo Store, so the page can be rendered and passed down to the client.
 
 #### Setting up Apollo
@@ -141,5 +141,69 @@ const allReviews = gql`
   }`
 
 export default withData(graphql(allReviews)(AllReviews))
+```
+
+The rest of the app is pretty straight forward. For every Grid view there is a corresponding page within the root `pages` folder, similar to the example above.
+For the detail views a `details.js` is placed within a subfolder.
+To enable routing to those pages we use the `slug` field within each model. This is a URL safe representation of the unique title or name of the model. This allows to use beautiful URLS within the usage of ids. GraphCMS allows you to define text fields with the appearance `slug`. This creates a sluggified representation of your text input. To ensure this value is unique, we have marked those fields as `unique` in GraphCMS.
+To use those slugs for routing, we must define the corresponding routes within a `server.js` file. We use [Express](https://express.com) as server, which makes routing easy.
+
+Here is an example of the route to a review details page. It takes the slug from the path and pass it into the component as a prop.
 
 ```
+server.get('/reviews/:slug', (req, res) => {
+  return app.render(req, res, '/reviews/details', { slug: req.params.slug })
+})
+```
+
+
+To use this slug within the GraphQL query, we use a $slug variable. Since the slug field is marked as unique in GraphCMS, we can search for it directly by passing it as a parameter to the `Review` query.
+To pass the value into the query, we can use the options object in the Apollo wrapper.
+This object has an options property, which is a simple function returning the options used by Apollo. The function will receive the props from router as parameter, so we can destructure the props to return it as a variables object used to fill all variables within our query:
+
+```
+
+function Review ({ url: { pathname }, data: { loading, Review } }) {
+  return (
+    <App>
+      <Nav pathname={pathname} />
+      {
+        loading ? <Loading /> : (
+          <div>
+            <Header title={Review.title} />
+            <ReviewDetails review={Review} />
+          </div>
+        )
+       }
+    </App>
+  )
+}
+
+const reviewDetails = gql`
+  query reviewDetails($slug: String! ) {
+    Review(slug: $slug) {
+      id
+      title
+      review
+      rating
+      record {
+        title
+        cover {
+          handle
+        }
+        artist {
+          name
+          slug
+        }
+      }
+    }
+}`
+
+const ReviewWithData = graphql(reviewDetails, {
+  options: ({ url: { query: { slug } } }) => ({ variables: { slug } })
+})(Review)
+
+export default(withData(ReviewWithData))
+```
+
+All other pages are build in a similar way, so we won't discuss all of them here. Feel free to browse the code within the [Repository](https://github.com/GraphCMS/Vinylbase).
