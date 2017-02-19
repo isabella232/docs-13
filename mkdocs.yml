@@ -39,5 +39,6 @@ pages:
 - Concepts: 'Concepts.md'
 - Getting Started: 'Getting_Started.md'
 - Media: 'Media.md'
-- Examples: 'Examples.md'
+- Examples: 
+  - 'Serverside rendered app with Next.js and Apollo': 'examples/Serverside_rendered_app_with_nextjs_and_apollo.md'
 - API: 'API.md'
