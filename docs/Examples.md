@@ -6,6 +6,7 @@ In this example we are going to build a simple serverside rendered Application b
 
 !!! hint ""
     If you want to follow along, check out our [Getting started Guide](Getting_Started) to setup you own content model to play around and fill it with your own data.
+    You can see a live demo [here](https://vinylbase-fsiujaerlv.now.sh)
 
 
 The app will be a simple collection of music records reviews. To keep things simple, the data model is not really complex:
@@ -206,4 +207,4 @@ const ReviewWithData = graphql(reviewDetails, {
 export default(withData(ReviewWithData))
 ```
 
-All other pages are build in a similar way, so we won't discuss all of them here. Feel free to browse the code within the [Repository](https://github.com/GraphCMS/Vinylbase).
+All other pages are build in a similar way, so we won't discuss all of them here. Feel free to browse the code within the [Repository](https://github.com/GraphCMS/exmple_01_nextjs_apollo).
