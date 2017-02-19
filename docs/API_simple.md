@@ -22,10 +22,9 @@ All queries are generated for you and can have different arguments which can be 
 For every content model there is one query to fetch a specific entry. You have to pass a selector as an argument to this query, to retrieve the right entry.
 You can either pass the entries ID or any scalar field which is marked as _unique_ within this model.
 For example if you wan't to get the `name` and the `createdAt` field from the content model `Artist`, the following request can be used:
-
 ```
 query {
-  Article(
+  Artist(
     id: "cixnen2vv33lo0143bdwvr52n"
   ) {
     name
@@ -33,6 +32,7 @@ query {
   }
 }
 ```
+
 Or, if the Artist model has a unique field `slug`:
 ```
 query {
@@ -56,7 +56,6 @@ A few examples for query names
 - model name: Review, query name: allReviews.
 
 A query which fetches all entries from the `Artist` content model could look like the following:
-
 ```
 query {
   allArtists {
@@ -91,7 +90,6 @@ query {
 When querying all entries of a model you can supply different parameters to the filter argument to filter the query response accordingly. The available options depend on the scalar fields defined on the model in question.
 
 If you supply exactly one parameter to the filter argument, the query response will only contain entries that fulfill this constraint:
-
 ```
 query {
   allArtists(
@@ -131,11 +129,9 @@ For to-one relations, you can define conditions on the related entry by nesting 
     slug
   }
 }
-
 ```
 
 For to-many relations, three additional arguments are available: `every`, `some` and `none`, to define that a condition should match every, some or none related entries.
-
 ```
 query {
   {
@@ -150,7 +146,10 @@ query {
 You can use the filter combinators `OR` and `AND` to create an arbitrary logical combination of filter conditions.
 ```
 {
-  allRecords(filter: {AND: [{artist: {name: "Cat-Stevie"}}, {cover: {isPublic: true}}]}) {
+  allRecords(filter: {AND: [
+    {artist: {name: "Cat-Stevie"}},
+    {cover: {isPublic: true}}
+  ]}) {
     id
     slug
     cover {
@@ -161,7 +160,6 @@ You can use the filter combinators `OR` and `AND` to create an arbitrary logical
 ```
 
 You can combine and even nest the filter combinators `AND` and `OR` to create arbitrary logical combinations of filter conditions:
-
 ```
 {
   allRecords(filter: {OR: [
@@ -187,7 +185,6 @@ Pagination allows you to request a certain amount of entries at the same time. Y
 - to seek backwards, use `last`; specify a starting entry with before.
 
 You can also skip an arbitrary amount of entries in whichever direction you are seeking by supplying the skip argument:
-
 ```
 {
   allArtists(first: 5) {
@@ -197,10 +194,10 @@ You can also skip an arbitrary amount of entries in whichever direction you are 
 }
 ```
 
-To query the first two articles after the first article with id `cixnen2ssewlo0143bexdd52n`:
+To query the first two artists after the artists with id `cixnen2ssewlo0143bexdd52n`:
 ```
 query {
-  allArticles(
+  allArtists(
     first: 2,
     after: "cixnen2ssewlo0143bexdd52n"
   ) {
@@ -210,16 +207,15 @@ query {
 }
 ```
 
-To query the last 5 articles use `last`:
+To query the last 5 artists use `last`:
 ```
 query {
-  allArticles(last: 5) {
+  allArtists(last: 5) {
     id
     name
   }
 }
 ```
-
 
 !!! hint ""
     Note: You cannot combine first with before or last with after. Note: If you query more entries than exist, your response will simply contain all entries that actually do exist in that direction.
@@ -230,7 +226,7 @@ With a mutation you can modify the data of your project. Similar to queries, all
 This is an example mutation:
 ```
 mutation {
-  createArtist(name:"Cat Stevie" slug:"cat-stevie") {
+  createArtist(name:"Cat Stevie", slug:"cat-stevie") {
     id
     name
     slug
@@ -241,15 +237,14 @@ mutation {
     Note: The subselection of fields cannot be empty. If you have no specific data requirements, you can always select id as a default.
 
 ### Modifying entries
-For every content model in your project, there are different mutations to create, update and delete entries.
+For every content model in your project, there are different mutations to _create_, _update_ and _delete_ entries.
 
 #### Creating entries
 Creates a new entry for a specific model that gets assigned a new id. All required fields of the model without a default value have to be specified, the other fields are optional arguments.
 The query response can contain all fields of the newly created entry, including the id field.
-
 ```
 mutation {
-  createArtist(name:"Cat Stevie" slug:"cat-stevie") {
+  createArtist(name:"Cat Stevie", slug:"cat-stevie") {
     id
     name
     slug
@@ -258,7 +253,6 @@ mutation {
 ```
 
 When creating an entry you can directly connect it to another entry on the one-side of a relation. You can either choose to connect it to an existing entry, or even create the entry yourself:
-
 ```
 mutation {
   createArtist(name: "Cat Stevie", slug: "cat-stevie", records: [{title: "Summer Breeze", slug: "summer-breeze"}]) {
@@ -268,7 +262,6 @@ mutation {
   }
 }
 ```
-
 !!! hint ""
     Note: This works for one-to-one and one-to-many relations but not for many-to-many relations.
 
@@ -298,7 +291,6 @@ mutation {
 #### Connect two entries in a one-to-one relation
 Creates a new edge between two entries specified by their id. The according models have to be in the same relation.
 The query response can contain both entries of the new edge. The names of query arguments and entry names depend on the field names of the relation.
-
 ```
 mutation {
 	setArtistReview(reviewReviewId:"cixnen2ssewlo0143bexdd52n" artistArtistId:"cixnen2sse223412bexdd52n") {
@@ -325,7 +317,7 @@ mutation {
 }
 ```
 
-To removes an edge of an entry you have can use the `unset` mutation.
+To remove an edge of an entry you have can use the `unset` mutation.
 The query response can contain both entries of the former edge. The names of query arguments and entry names depend on the field names of the relation:
 ```
 mutation {
@@ -344,7 +336,7 @@ mutation {
 One-to-many relations relate two models to each other.
 An entry of the one side of a one-to-many relation can be connected to multiple entries. An entry of the many side of a one-to-many relation can at most be connected to one entry.
 
-To creates a new edge between two entries you have to use the `addTo` mutation. The according models have to be in the same relation.
+To create a new edge between two entries you have to use the `addTo` mutation. The according models have to be in the same relation.
 The query response can contain both entries of the new edge. The names of query arguments and entry names depend on the field names of the relation.
 ```
 mutation {
@@ -361,7 +353,6 @@ mutation {
 
 To remove one edge between two entries use the `removeFrom` mutation.
 The query response can contain both entries of the former edge. The names of query arguments and entry names depend on the field names of the relation.
-
 ```
 mutation {
   removeFromTrackList(tracksTrackId: "cixnen2sddseq143bexdd52n", recordRecordId: "cixnen222dfsdwebexdd52n") {
