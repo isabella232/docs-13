@@ -4,7 +4,7 @@
     
     <url>
      <loc>https://graphcms.com/</loc>
-     <lastmod>2017-02-14</lastmod>
+     <lastmod>2017-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>https://graphcms.com/Concepts/</loc>
-     <lastmod>2017-02-14</lastmod>
+     <lastmod>2017-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
      <loc>https://graphcms.com/Getting_Started/</loc>
-     <lastmod>2017-02-14</lastmod>
+     <lastmod>2017-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,25 +28,35 @@
     
     <url>
      <loc>https://graphcms.com/Media/</loc>
-     <lastmod>2017-02-14</lastmod>
+     <lastmod>2017-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
     <url>
-     <loc>https://graphcms.com/Examples/</loc>
-     <lastmod>2017-02-14</lastmod>
+     <loc>https://graphcms.com/examples/Server-side_rendered_app_with_nextjs_and_apollo/</loc>
+     <lastmod>2017-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     
 
     
+        
     <url>
-     <loc>https://graphcms.com/API/</loc>
-     <lastmod>2017-02-14</lastmod>
+     <loc>https://graphcms.com/API_simple/</loc>
+     <lastmod>2017-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>https://graphcms.com/API_relay/</loc>
+     <lastmod>2017-02-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

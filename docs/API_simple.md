@@ -1,13 +1,10 @@
-# API
+# Simple API
 
 GraphCMS provides two different APIs for you: _Relay_ and _Simple_.
-Which one you choose is up to you and depends on your use case. The Simple API is a bit simpler to use API in comparison to the Relay API. If you don't use [Facebook's Relay](https://facebook.github.io/relay/) it might be simpler to start with the Simple API.
+Which one you choose is up to you and depends on your use case. The simple API is less complex, in comparison to the Relay API. If you don't use [Facebook's Relay](https://facebook.github.io/relay/) it might be simpler to start with the Simple API.
 Of course it is up to you which one you prefer. You might also use both APIs inside your app if you want to.
 
-
-## Simple API
-
-### Querying the API
+## Querying the API
 To query the Simple API you need to use your project specific Endpoint URL. The URL is composed by the API URL and your project ID:
 
 `https://api.graphcms.com/simple/v1/$YOUR_PROJECT_ID$`
@@ -17,11 +14,11 @@ For example if you wan't to query the title of all posts within your project you
 
 `curl 'https://api.graphcms.com/simple/v1/$YOUR_PROJECT_ID$' -H 'content-type: application/json' --data-binary '{"query":"query {allPosts {title}}"}' --compressed`
 
-#### Generated Queries
+## Generated Queries
 Using _queries_ you can ask for data you are interested in. Within each query you define a set of fields, which should be returned within the response.
 All queries are generated for you and can have different arguments which can be passed into the query.
 
-#### Query a single entry
+### Query a single entry
 For every content model there is one query to fetch a specific entry. You have to pass a selector as an argument to this query, to retrieve the right entry.
 You can either pass the entries ID or any scalar field which is marked as _unique_ within this model.
 For example if you wan't to get the `name` and the `createdAt` field from the content model `Artist`, the following request can be used:
@@ -50,7 +47,7 @@ query {
 !!! hint ""
     You cannot use both parameters within one query
 
-#### Query multiple entries
+### Query multiple entries
 The Simple API contains automatically generated queries to fetch all entries of a certain model. For example, for the Artist model the top-level query allArtists will be generated.
 
 A few examples for query names
@@ -70,11 +67,11 @@ query {
 ```
 
 !!! hint ""
-    Note: The query name approximate the plural rules of the English language. If you are unsure about the actual query name, explore available queries in your API EXPLORER.
+    Note: The query name approximates the plural rules of the English language. If you are unsure about the actual query name, explore available queries in your API EXPLORER.
 
 The query response of a query fetching multiple entries can be further controlled by supplying different query arguments. The response can be _ordered_, _filtered_ or _paginated_
 
-##### Ordering entries
+#### Ordering entries
 When querying all entries of a model you can supply the orderBy argument for every scalar field of the model:
 `orderBy: <field>_ASC` or `orderBy: <field>_DESC.`
 
@@ -90,7 +87,7 @@ query {
 }
 ```
 
-##### Filtering entries
+#### Filtering entries
 When querying all entries of a model you can supply different parameters to the filter argument to filter the query response accordingly. The available options depend on the scalar fields defined on the model in question.
 
 If you supply exactly one parameter to the filter argument, the query response will only contain entries that fulfill this constraint:
@@ -182,7 +179,7 @@ You can combine and even nest the filter combinators `AND` and `OR` to create ar
 ```
 
 
-##### Pagination
+#### Pagination
 When querying all entries of a specific model you can supply arguments that allow you to paginate the query response.
 Pagination allows you to request a certain amount of entries at the same time. You can seek forwards or backwards through the entries and supply an optional starting entry:
 
@@ -227,7 +224,7 @@ query {
 !!! hint ""
     Note: You cannot combine first with before or last with after. Note: If you query more entries than exist, your response will simply contain all entries that actually do exist in that direction.
 
-### Generated mutations
+## Generated mutations
 
 With a mutation you can modify the data of your project. Similar to queries, all mutations are automatically generated. Explore them by using the API EXPLORER inside your project.
 This is an example mutation:
@@ -243,10 +240,10 @@ mutation {
 !!! hint ""
     Note: The subselection of fields cannot be empty. If you have no specific data requirements, you can always select id as a default.
 
-#### Modifying entries
+### Modifying entries
 For every content model in your project, there are different mutations to create, update and delete entries.
 
-##### Creating entries
+#### Creating entries
 Creates a new entry for a specific model that gets assigned a new id. All required fields of the model without a default value have to be specified, the other fields are optional arguments.
 The query response can contain all fields of the newly created entry, including the id field.
 
@@ -275,7 +272,7 @@ mutation {
 !!! hint ""
     Note: This works for one-to-one and one-to-many relations but not for many-to-many relations.
 
-##### Updating entries
+#### Updating entries
 Updates fields of an existing entry of a certain content model specified by the id field. The entry's fields will be updated according to the additionally provided values.
 The query response can contain all fields of the updated entry.
 ```
@@ -287,7 +284,7 @@ mutation {
 }
 ```
 
-##### Deleting entries
+#### Deleting entries
 Deletes an entry specified by the id field.
 The query response can contain all fields of the deleted entry.
 ```
@@ -298,7 +295,7 @@ mutation {
 }
 ```
 
-##### Connect two entries in a one-to-one relation
+#### Connect two entries in a one-to-one relation
 Creates a new edge between two entries specified by their id. The according models have to be in the same relation.
 The query response can contain both entries of the new edge. The names of query arguments and entry names depend on the field names of the relation.
 
@@ -343,7 +340,7 @@ mutation {
 }
 ```
 
-##### Connect two entries in a one-to-many relation
+#### Connect two entries in a one-to-many relation
 One-to-many relations relate two models to each other.
 An entry of the one side of a one-to-many relation can be connected to multiple entries. An entry of the many side of a one-to-many relation can at most be connected to one entry.
 
@@ -378,4 +375,7 @@ mutation {
 }
 ```
 
-## Relay API
+!!! hint ""
+    API docs are provided by GRAPHCOOL
+
+    [![Graphcool Logo](img/graphcool.svg)](https://graph.cool)

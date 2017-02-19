@@ -2,7 +2,7 @@
 
 🚀 **[Live Demo](https://vinylbase-fsiujaerlv.now.sh/)**
 
-In this example we are going to build a simple server-side rendered Application backed by GraphCMS using [Next.js](https://github.com/zeit/next.js/) and [Apollo](http://www.apollodata.com/). You can find the code in the example´s [GitHub repository](https://github.com/GraphCMS/exmple_01_nextjs_apollo).
+In this example we are going to build a simple server-side rendered Application backed by GraphCMS using [Next.js](https://github.com/zeit/next.js/) and [Apollo](http://www.apollodata.com/). You can find the code in the example´s [GitHub repository](https://github.com/GraphCMS/example_01_nextjs_apollo).
 
 The app will be a simple collection of music record reviews. The data model will look as follows:
 
@@ -45,7 +45,7 @@ Now we can start implementing our frontend application.
 ## Implementing the app
 
 !!! hint ""
-    You can checkout the source code for this project [here](https://github.com/GraphCMS/exmple_01_nextjs_apollo)
+    You can checkout the source code for this project [here](https://github.com/GraphCMS/example_01_nextjs_apollo)
 
 For the app we will use [Next.js](https://github.com/zeit/next.js/), which is a minimalistic framework for server-rendered React applications.
 Data fetching will be done with [Apollo](http://www.apollodata.com/), a powerful GraphQL client which runs in nearly any environment.
@@ -208,4 +208,4 @@ const ReviewWithData = graphql(reviewDetails, {
 export default(withData(ReviewWithData))
 ```
 
-All other pages are build in a similar way, so we won't describe all of them here. Feel free to browse the code in the [repository](https://github.com/GraphCMS/exmple_01_nextjs_apollo).
+All other pages are build in a similar way, so we won't describe all of them here. Feel free to browse the code in the [repository](https://github.com/GraphCMS/example_01_nextjs_apollo).
