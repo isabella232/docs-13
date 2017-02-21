@@ -48,3 +48,6 @@ Here you can define the endpoint URL for your custom business logic code. This c
 You can also define if your webhook is triggered synchronously or asynchronously. I.e., if you set up a synchronous `CREATE` webhook for model `Post`, a create mutation for this model will return after your custom business logic has finished.
 
 Your webhook will be active by default. You can disable it by clicking on the switch in the webhook´s entry.
+
+!!! Warning ""
+    If you change your content models or modify your field, remember to update affected webhooks accordingly! This does not happen automatically.
