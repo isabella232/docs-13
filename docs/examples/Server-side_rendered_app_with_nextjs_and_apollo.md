@@ -1,6 +1,6 @@
 # Example 01: Server-side Rendered App with Next.js and Apollo
 
-🚀 **[Live Demo](https://vinylbase-fsiujaerlv.now.sh/)**
+🚀 **[Live Demo](https://vinylbase.now.sh/)**
 
 In this example we are going to build a simple server-side rendered Application backed by GraphCMS using [Next.js](https://github.com/zeit/next.js/) and [Apollo](http://www.apollodata.com/). You can find the code in the example´s [GitHub repository](https://github.com/GraphCMS/example_01_nextjs_apollo).
 
