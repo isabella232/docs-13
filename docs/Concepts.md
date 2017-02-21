@@ -38,6 +38,13 @@ GraphCMS offers the following field types:
 
 ![Screenshot](img/screenshots/fieldWizardClean.png)
 
+## Webhooks
+
+Webhooks are a powerful concept that enable you to execute your own business logic in case of specified events.
+
+In GraphCMS, they allow you to define triggers on your content models, so you can run, for example, custom code if your content changes.
+
+Please see the [webhooks section](/Webhooks) for more information.
 
 ## GraphQL Endpoints
 

@@ -571,7 +571,7 @@ All queries are generated for you and can have different arguments which can be 
 You can either pass the entries ID or any scalar field which is marked as <em>unique</em> within this model.
 For example if you wan't to get the <code>name</code> and the <code>createdAt</code> field from the content model <code>Artist</code>, the following request can be used:</p>
 <div class="code"><pre><span></span>query {
-  Article(
+  Artist(
     id: &quot;cixnen2vv33lo0143bdwvr52n&quot;
   ) {
     name
@@ -689,7 +689,10 @@ For example if you wan't to get the <code>name</code> and the <code>createdAt</c
 
 <p>You can use the filter combinators <code>OR</code> and <code>AND</code> to create an arbitrary logical combination of filter conditions.</p>
 <div class="code"><pre><span></span>{
-  allRecords(filter: {AND: [{artist: {name: &quot;Cat-Stevie&quot;}}, {cover: {isPublic: true}}]}) {
+  allRecords(filter: {AND: [
+    {artist: {name: &quot;Cat-Stevie&quot;}},
+    {cover: {isPublic: true}}
+  ]}) {
     id
     slug
     cover {
@@ -733,9 +736,9 @@ Pagination allows you to request a certain amount of entries at the same time. Y
 </pre></div>
 
 
-<p>To query the first two articles after the first article with id <code>cixnen2ssewlo0143bexdd52n</code>:</p>
+<p>To query the first two artists after the artists with id <code>cixnen2ssewlo0143bexdd52n</code>:</p>
 <div class="code"><pre><span></span>query {
-  allArticles(
+  allArtists(
     first: 2,
     after: &quot;cixnen2ssewlo0143bexdd52n&quot;
   ) {
@@ -746,9 +749,9 @@ Pagination allows you to request a certain amount of entries at the same time. Y
 </pre></div>
 
 
-<p>To query the last 5 articles use <code>last</code>:</p>
+<p>To query the last 5 artists use <code>last</code>:</p>
 <div class="code"><pre><span></span>query {
-  allArticles(last: 5) {
+  allArtists(last: 5) {
     id
     name
   }
@@ -763,7 +766,7 @@ Pagination allows you to request a certain amount of entries at the same time. Y
 <p>With a mutation you can modify the data of your project. Similar to queries, all mutations are automatically generated. Explore them by using the API EXPLORER inside your project.
 This is an example mutation:</p>
 <div class="code"><pre><span></span>mutation {
-  createArtist(name:&quot;Cat Stevie&quot; slug:&quot;cat-stevie&quot;) {
+  createArtist(name:&quot;Cat Stevie&quot;, slug:&quot;cat-stevie&quot;) {
     id
     name
     slug
@@ -776,12 +779,12 @@ This is an example mutation:</p>
 <p>Note: The subselection of fields cannot be empty. If you have no specific data requirements, you can always select id as a default.</p>
 </div>
 <h3 id="modifying-entries">Modifying entries<a class="headerlink" href="#modifying-entries" title="Permanent link">#</a></h3>
-<p>For every content model in your project, there are different mutations to create, update and delete entries.</p>
+<p>For every content model in your project, there are different mutations to <em>create</em>, <em>update</em> and <em>delete</em> entries.</p>
 <h4 id="creating-entries">Creating entries<a class="headerlink" href="#creating-entries" title="Permanent link">#</a></h4>
 <p>Creates a new entry for a specific model that gets assigned a new id. All required fields of the model without a default value have to be specified, the other fields are optional arguments.
 The query response can contain all fields of the newly created entry, including the id field.</p>
 <div class="code"><pre><span></span>mutation {
-  createArtist(name:&quot;Cat Stevie&quot; slug:&quot;cat-stevie&quot;) {
+  createArtist(name:&quot;Cat Stevie&quot;, slug:&quot;cat-stevie&quot;) {
     id
     name
     slug
@@ -857,7 +860,7 @@ The query response can contain both entries of the new edge. The names of query 
 </pre></div>
 
 
-<p>To removes an edge of an entry you have can use the <code>unset</code> mutation.
+<p>To remove an edge of an entry you have can use the <code>unset</code> mutation.
 The query response can contain both entries of the former edge. The names of query arguments and entry names depend on the field names of the relation:</p>
 <div class="code"><pre><span></span>mutation {
   unsetArtistReview(reviewReviewId: &quot;cixnen2ssewlo0143bexdd52n&quot;, artistArtistId: &quot;cixnen2sse223412bexdd52n&quot;) {
@@ -875,7 +878,7 @@ The query response can contain both entries of the former edge. The names of que
 <h4 id="connect-two-entries-in-a-one-to-many-relation">Connect two entries in a one-to-many relation<a class="headerlink" href="#connect-two-entries-in-a-one-to-many-relation" title="Permanent link">#</a></h4>
 <p>One-to-many relations relate two models to each other.
 An entry of the one side of a one-to-many relation can be connected to multiple entries. An entry of the many side of a one-to-many relation can at most be connected to one entry.</p>
-<p>To creates a new edge between two entries you have to use the <code>addTo</code> mutation. The according models have to be in the same relation.
+<p>To create a new edge between two entries you have to use the <code>addTo</code> mutation. The according models have to be in the same relation.
 The query response can contain both entries of the new edge. The names of query arguments and entry names depend on the field names of the relation.</p>
 <div class="code"><pre><span></span>mutation {
   addToTrackList(tracksTrackId: &quot;cixnen2sddseq143bexdd52n&quot;, recordRecordId: &quot;cixnen222dfsdwebexdd52n&quot;) {
