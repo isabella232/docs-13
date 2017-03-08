@@ -50,4 +50,4 @@ You can also define if your webhook is triggered synchronously or asynchronously
 Your webhook will be active by default. You can disable it by clicking on the switch in the webhook´s entry.
 
 !!! Warning ""
-    If you change your content models or modify your field, remember to update affected webhooks accordingly! This does not happen automatically.
+    If you change your content models or modify your fields, remember to update affected webhooks accordingly! This does not happen automatically.
