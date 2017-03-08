@@ -31,3 +31,6 @@ If there exist multiple users for this email address, e.g. if they have signup w
 
 !!! hint ""
     Each user can be assigned to one role at a time. If you want to change the role, simply remove this user and send a new invitation.
+
+!!! hint ""
+    To remove yourself from a project, use the `LEAVE PROJECT` button in the danger zone.
