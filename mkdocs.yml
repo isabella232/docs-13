@@ -44,6 +44,7 @@ pages:
   - 'Server-side rendered app with Next.js and Apollo': 'examples/Server-side_rendered_app_with_nextjs_and_apollo.md'
 - Guides:
   - 'Export Schema and Content': 'guides/Export_schema_and_content.md'
+  - 'Adding People to your project': 'guides/Adding_people_to_project.md'
 - API:
   - 'Simple': 'API_simple.md'
   - 'Relay': 'API_relay.md'
