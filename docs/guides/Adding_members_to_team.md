@@ -1,4 +1,4 @@
-# Adding members to your team
+# Adding Members to your Team
 
 You can add other GraphCMS users as team members to your projects. This can be done from the _Team_ panel in the _Settings_ view, which also shows all members of your project.
 
@@ -15,39 +15,27 @@ You can invite other GraphCMS users to your project and assign them a role. Curr
 Depending on the role, the user has access to different parts of the CMS. The table below shows all the actions which depend on the users role within a project.
 
 |Action | OWNER | ADMIN | DEVELOPER | EDITOR | CONTRIBUTOR |
-| -------- | ------- | ------------- | ------- | -------- |
+| -------- | ------- | ------------- | ------- | -------- | --- |
 | Write Content | ✔ | ✔  | ✔ | ✔ | ✔ | ✔ |
 | Edit Content Model | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
 | Configure Webhooks | ✔ | ✔  | ✔ | 𐄂 | 𐄂 | 𐄂 |
-| Manage Team Members | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
-| Change Project Config | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
 | Manage Auth Tokens | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
-| Change API Access Settings | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
-| Export Schema and Data | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
+| Manage API Access | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
+| Export Data | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
 | Delete Project Data | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
+| Manage Team | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
+| Change Project Config | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
 | Delete Project | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
 
+!!! hint ""
+    At the moment, there is no difference between `editors` and `contributors`. This will change after publishing workflows will be introduced.
 
+You can search for users by their email address. Click on the `plus icon` next to the role name and type in the email address.
+If there are multiple users for an email address, e.g. if they have accounts with different social providers, you will see a list of search results. This will allow you to pick the right account. By clicking the `ADD` button, the user will be added to the project and notified via email.
 
-Depending on the role, the user has access to different parts of GraphCMS. The table below shows all the actions which depend on the users role within a project.
+Each user can be assigned to one role at a time. If you want to change the role, simply remove and reassign the user.
 
-|Action | OWNER | ADMIN | DEVELOPER | EDITOR | CONTRIBUTOR |
-| -------- | ------- | -- | ------- | --- | --- |
-| webhooks | ✔ | ✔  | ✔ | 𐄂 | 𐄂 | 𐄂 |
-| delete project | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
-| delete project data | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
-| manage members | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
-| change project config | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
-| manage authTokens | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
-| CRUD model | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
-| change API settings | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
-| export data | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
-
-You can search for users by their email address. Click on the `plus` icon beside the role name and type in the emails address.
-If there exist multiple users for this email address, e.g. if they have signup with different social providers, you see a list of search results. Otherwise you see exactly one search result. By clicking the `ADD` button, the user will be added to the project and notified via an email.
+To remove yourself from a project, use the `LEAVE PROJECT` button in the danger zone.
 
 !!! hint ""
-    Each user can be assigned to one role at a time. If you want to change the role, simply remove this user and send a new invitation.
-
-!!! hint ""
-    To remove yourself from a project, use the `LEAVE PROJECT` button in the danger zone.
+    Currently it is not possible to invite users without a GraphCMS account. What works already is to first create a GraphCMS account using the sign up form on app.graphcms.com and invite the user afterwards. An invite feature for inviting external users will be available soon. 
