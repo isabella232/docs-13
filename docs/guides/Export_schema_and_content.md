@@ -1,4 +1,4 @@
-# Exporting your Schema and Content
+# Export your Schema and Content
 
 To export the GraphQL schema or the content of your GraphCMS project, you can use the export function from the _Settings_ page.
 

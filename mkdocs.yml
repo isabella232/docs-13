@@ -43,8 +43,9 @@ pages:
 - Examples:
   - 'Server-side rendered app with Next.js and Apollo': 'examples/Server-side_rendered_app_with_nextjs_and_apollo.md'
 - Guides:
-  - 'Export Schema and Content': 'guides/Export_schema_and_content.md'
   - 'Adding Members to your Team': 'guides/Adding_members_to_team.md'
+  - 'Public API Access': 'guides/Public_API_access.md'
+  - 'Export Schema and Content': 'guides/Export_schema_and_content.md'
 - API:
   - 'Simple': 'API_simple.md'
   - 'Relay': 'API_relay.md'
