@@ -68,6 +68,11 @@ You can now see all fields that are attached to model.
 !!! Hint ""
     Notice that there are three additional fields: `ID`, `CreatedAt` and `UpdatedAt`. These are system fields and cannot be removed or modified.
 
+!!! Hint ""
+    You can change the order of those fields by dragging an entry on the icon on the left side.
+    The order you define here is the same order within the entry form, where you can create or edit entries for this content model. 
+
+
 ### Fields for model Record
 
 This model will store content for music records. The fields will be:
