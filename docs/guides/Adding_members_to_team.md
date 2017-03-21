@@ -16,19 +16,18 @@ Depending on the role, the user has access to different parts of the CMS. The ta
 
 |Action | OWNER | ADMIN | DEVELOPER | EDITOR | CONTRIBUTOR |
 | -------- | ------- | ------------- | ------- | -------- | --- |
-| Write Content | ✔ | ✔  | ✔ | ✔ | ✔ | ✔ |
-| Edit Content Model | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
-| Configure Webhooks | ✔ | ✔  | ✔ | 𐄂 | 𐄂 | 𐄂 |
-| Manage Auth Tokens | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
-| Manage API Access | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
-| Export Data | ✔ | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
-| Delete Project Data | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
-| Manage Team | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
-| Change Project Config | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
-| Delete Project | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
-
-!!! hint ""
-    At the moment, there is no difference between `editors` and `contributors`. This will change after publishing workflows will be introduced.
+| Write Content | ✔ | ✔  | ✔ | ✔ | ✔ |
+| Edit Content | ✔ | ✔  | ✔ | ✔ | only unpublished |
+| Publish / Unpublish Content | ✔ | ✔  | ✔ | ✔ | 𐄂 |
+| Edit Content Model | ✔ | ✔ | ✔ | 𐄂 | 𐄂 |
+| Configure Webhooks | ✔ | ✔  | ✔ | 𐄂 | 𐄂 |
+| Manage Auth Tokens | ✔ | ✔ | ✔ | 𐄂 | 𐄂 |
+| Manage API Access | ✔ | ✔ | ✔ | 𐄂 | 𐄂 |
+| Export Data | ✔ | ✔ | ✔ | 𐄂 | 𐄂 |
+| Delete Project Data | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
+| Manage Team | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
+| Change Project Config | ✔ | ✔ | 𐄂 | 𐄂 | 𐄂 |
+| Delete Project | ✔ | 𐄂 | 𐄂 | 𐄂 | 𐄂 |
 
 You can search for users by their email address. Click on the `plus icon` next to the role name and type in the email address.
 If there are multiple users for an email address, e.g. if they have accounts with different social providers, you will see a list of search results. This will allow you to pick the right account. By clicking the `ADD` button, the user will be added to the project and notified via email.
@@ -38,4 +37,4 @@ Each user can be assigned to one role at a time. If you want to change the role,
 To remove yourself from a project, use the `LEAVE PROJECT` button in the danger zone.
 
 !!! hint ""
-    Currently it is not possible to invite users without a GraphCMS account. What works already is to first create a GraphCMS account using the sign up form on app.graphcms.com and invite the user afterwards. An invite feature for inviting external users will be available soon. 
+    Currently it is not possible to invite users without a GraphCMS account. What works already is to first create a GraphCMS account using the sign up form on app.graphcms.com and invite the user afterwards. An invite feature for inviting external users will be available soon.
