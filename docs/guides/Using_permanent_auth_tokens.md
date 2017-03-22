@@ -38,3 +38,75 @@ First you need to enter your GraphCMS project´s endpoint URL, which you can fin
 After this, you just need to add the `HTTP Authorization Header` with `Bearer <token>` as header value (see screenshot below).
 
 ![Screenshot](../img/guides/graphql_ide.png)
+
+## Using curl to query your Backend
+
+The easiest way to query your API is [curl](https://curl.haxx.se/). With curl you can send queries or mutations to your API from the command line.
+
+To authorize your request using a `permanent auth token` from GraphCMS you simply have to pass it as a header along with your request.
+
+```
+curl -H "Authorization: bearer <token>" -X POST -d '
+{
+ "query": "query {
+    allRecords {
+      title
+    }
+  }"
+}
+' https://api.graphcms.com/simple/v1/ciz189ut5j9wl0185r42lvfzp
+```
+
+## Using Lokka to query your Backend
+
+[Lokka](https://github.com/kadirahq/lokka) is a Simple GraphQL client for JavaScript which works on all the JavaScript environments including Browser, NodeJS and React Native.
+
+To authorize your requests using a `permanent auth token` you have to pass it as a header
+```
+const Lokka = require('lokka').Lokka;
+const Transport = require('lokka-transport-http').Transport;
+
+const headers = {
+  'Authorization': `Bearer ${<token>}`
+};
+
+const client = new Lokka({
+  transport: new Transport('https://api.graphcms.com/simple/v1/ciz189ut5j9wl0185r42lvfzp', { headers })
+});
+
+client.query(`
+  {
+    allRecords {
+      title
+    }
+  }
+`).then(result => {
+    console.log(result.allRecords);
+});
+```
+
+## Using Apollo to query your Backend
+
+[Apollo](http://dev.apollodata.com/) is a flexible, fully-featured GraphQL client which can be used on every platform.
+
+To authorize your requests using a `permanent auth token` you have register a middleware, which adds the token to all outgoing requests. The example below shows how to do this with `react-apollo`, but you can use it for other Apollo implementations as well.
+
+```
+import { ApolloClient, createNetworkInterface } from 'react-apollo';
+const networkInterface = createNetworkInterface({
+  uri: 'https://api.graphcms.com/simple/v1/ciz189ut5j9wl0185r42lvfzp',
+});
+
+networkInterface.use([{
+  applyMiddleware(req, next) {
+    if (!req.options.headers) {
+      req.options.headers = {};  // Create the header object if needed.
+    }
+    req.options.headers.authorization = `Bearer ${<token>}`;
+    next();
+  }
+}]);
+const client = new ApolloClient({
+  networkInterface,
+});
+```
