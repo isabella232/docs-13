@@ -66,3 +66,29 @@ To connect your client applications to your GraphCMS project, you will need to c
     Be careful! Anyone that knows one of your tokens will be able to execute all of these operations and manipulate your content. So it is never a good idea to store a token on the client side, i.e. a JavaScript client application.
 
     We will soon release a feature that will allow you to create `read-only tokens`, so even if someone gains access to such a token, your data will be safe from manipulation.
+
+## System Artifacts
+
+Each GraphCMS project comes with a few system artifacts, that users should be aware of. Those are models and fields that are created automatically by the system.
+
+### Media Model
+
+The `Media` system model is where your uploaded files get stored. Each time you assign a media field to one of your content models, a relation to this model is created.
+
+The fields of the `Media` model are:
+
+* `fileName` the name of the file
+* `handle` the unique identifier of the file
+* `url` the public url of the file, which is always media.graphcms.com/`handle`
+* `size` the size of the file
+* `mimeType` the internet media type of the file
+* `isPublic` a flag that indicates if the file is available for the public (currently always `true`)
+
+### System Fields
+
+Each content model in GraphCMS has the following system fields by default:
+
+* `id` stores the unique identifier of a content entry
+* `createdAt` the date the content entry was created
+* `updatedAt` the date the content entry was updated the last time
+* `isPublished` indicates if the content entry is published ([see here](/guides/Publishing_workflow))
