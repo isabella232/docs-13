@@ -227,11 +227,9 @@ Will respond with:
 }
 ```
 
-Cool! We can now start building our frontend application. Switch over to the `SETTINGS` menu to see your endpoint `URLs` and create `Permanent Auth Tokens` for your applications.
+Cool! We can now start building our frontend application. Switch over to the `SETTINGS` menu to see your endpoint `URLs` and create `Permanent Auth Tokens` for your applications. [See how to work with permanent auth tokens](/guides/Using_permanent_auth_tokens).
 
 ![Screenshot](img/screenshots/settings.png)
-
-_A full code example will be available soon._
 
 !!! warning ""
     GraphCMS is still in early preview. If you run into an issue, please have a look at the known issues in our [issue tracker](https://github.com/GraphCMS/Issue-tracker). Please don´t hesitate to open a bug ticket if you experienced an issue that is not covered by those in the tracker.
