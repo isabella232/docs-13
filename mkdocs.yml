@@ -3,7 +3,7 @@ theme: 'material'
 # Project information
 site_description: 'A GraphQL based Headless Content Management System'
 site_author: 'Michael Lukaszczyk & Daniel Winter'
-site_url: 'https://graphcms.com'
+site_url: 'https://graphcms.com/docs'
 
 # Documentation and theme
 docs_dir: 'docs'
