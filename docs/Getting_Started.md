@@ -98,7 +98,7 @@ The last content model that we are going to configure will store information abo
 Field configuration:
 
 * Name `#name` `Single Line Text` `required`
-* Location `#location` `Markdown Text`
+* Location `#location` `Location field`
 * Articles `#articles` `Many-to-Many Relation on model Record`. This will again add another reverse relation field on model `Record`, which we named `#stores`.
 
 Great! We can now start to create our content.
