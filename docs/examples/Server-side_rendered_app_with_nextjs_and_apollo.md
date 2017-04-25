@@ -33,11 +33,7 @@ You can see the relevant attributes like type, unique constraints etc. below eac
 
 ## Authorization
 
-To authenticate the app and to be able to fetch data from GraphCMS, we need to create a [permanent auth token](../Concepts/#permanent-auth-tokens). Per default, all content stored in GraphCMS is private, so you cannot fetch data without a valid token outside the GraphCMS web application.
-
-To create a new auth token, go to the settings view and add a token in the auth tokens section.
-
-![Screenshot](../img/examples/vinylbase/create_token.png)
+To authenticate the app and to be able to fetch data from GraphCMS, we need to change the API Access in the GraphCMS project to `READ`. Per default, all content stored in GraphCMS is private, so you cannot fetch data without a valid token outside the GraphCMS web application.
 
 Now we can start implementing our frontend application.
 
@@ -56,39 +52,18 @@ This projects is a skeleton for using Apollo within a Next.js application. To al
 
 ### Setting up Apollo
 
-First, we need to init the Apollo client to set the API endpoint and set up authorization. This is done within the `createClient` function within `/lib/initClient.js`.
-Here we use the middleware feature of the Apollo networkInterface by simply adding our token.
-
-Please check the [docs](http://dev.apollodata.com/react/auth.html) for more information.
+First, we need to init the Apollo client to set the API endpoint. This is done within the `createClient` function within `/lib/initClient.js`.
 
 ```
+const GRAPHCMS_API = 'YOUR_API_URL_HERE'
+
 function createClient (headers) {
-  const GRAPHCMS_API = process.env.GRAPHCMS_API
-  const TOKEN = process.env.TOKEN
-
-  if (!GRAPHCMS_API || !TOKEN) {
-    throw new Error(`Environment variables "GRAPHCMS_API" or "TOKEN" missing`)
-  }
-
   const networkInterface = createNetworkInterface({
     uri: GRAPHCMS_API,
-
     ops: {
       credentials: 'same-origin'
     }
   })
-
-  networkInterface.use([{
-    applyMiddleware (req, next) {
-      if (!req.options.headers) {
-        req.options.headers = {}
-      }
-
-      req.options.headers.authorization = `Bearer ${TOKEN}`
-      next()
-    }
-  }])
-
   return new ApolloClient({ networkInterface })
 }
 
