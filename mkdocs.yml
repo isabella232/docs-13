@@ -42,6 +42,7 @@ pages:
 - Webhooks: 'Webhooks.md'
 - Examples:
   - 'Server-side rendered app with Next.js and Apollo': 'examples/Server-side_rendered_app_with_nextjs_and_apollo.md'
+  - 'Star Wars Expo App with Apollo and Graphcms': 'examples/Star_Wars_Expo_App_with_Apollo_and_Graphcms.md'
 - Guides:
   - 'Adding Members to your Team': 'guides/Adding_members_to_team.md'
   - 'Publishing Workflows': 'guides/Publishing_workflow.md'
