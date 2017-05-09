@@ -5,6 +5,12 @@
 
 In this example we are going to build a simple React Native Application backed by GraphCMS using [Snack by Expo.io](https://snack.expo.io) and [GraphCMS](https://graphcms.com). You can find the code on [Snack](https://snack.expo.io/r17Xs7yl-) or in the example´s [GitHub repository (Using create-react-native-app)]().
 
+> *Easily build apps with React Native*
+>
+> Expo lets web developers build truly native apps that work across both iOS and Android by writing them once in just JavaScript. It's open source, free and uses React Native.
+>
+> From [Expo.io](https://expo.io)
+
 The app will show simple information about the Star Wars movies using the SWAPI introduced on our [Blog](https://graphcms.com/blog/the-star-wars-api-just-got-a-makeover).
 
 We divide the App in three main Components:
