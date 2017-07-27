@@ -1,6 +1,6 @@
 # Using Permissions
 
-All of your content is private by default, which means it can't be accessed outside of the CMS.. With our *Permission System* you can configure CRUD-Operations either for each model or for each field individually. This gives you control over what can be done to fields or models via your endpoints.
+All of your content is private by default, which means that your content can't be accessed outside of the CMS. With our *Permission System*, you can configure CRUD-Operations (Create/Read/Update/Delete) either for models or for each field individually. This gives you control over what can be queried, updated or created from your generated content API.
 
 ## Permission View
 
@@ -10,12 +10,17 @@ The Permission settings can be found next to each model and field in the *Conten
 
 Each CRUD-Operation has a dedicated button to toggle it on or off. `Create`, `Read` and `Update` can be toggled for the entire model or for every field individually. `Delete` can only be toggled for the whole model, since you can't delete fields individually.
 
-The Permissions for Assets and Relations look a little different. You have the option to `Connect` or `Disconnect`. Connect makes your relation accessible through the API and you can add entries but not remove them. Disconnect on the other hand lets you remove entries from your relation.
+The Permissions for Assets and Relations look a little different. They have the option to `Connect` and  `Disconnect`. 
+If you enable the `Connect` toggle button, you will be able to add entries to the relation (e.g. `mutation { addToAssetEventPicture(...) }` - adding a picture to an event). 
+If you enable the `Disconnect` toggle button, you will be able to remove entries from a relation (e.g. `mutation { removeFromEventParticipant(...) }` - removing a participant from an event).
+
+
+## Testing your permissions
+
+The easiest way to test your permissions is to copy and paste one of your endpoint URLs in a new browser tab. This will let you browse your API with the permissions you defined.
+
+Your endpoints can be found under `Settings > Endpoints`.
 
 Trying to Create, Read or Update a model or field which is not made available through permissions will result in an `Insufficient Permission` error.
 
-## Endpoints
-
-Your Endpoints can be found under `Settings > Endpoints`. Just click on the link to copy it into your clipboard. Paste it in a new browser tab to test your permissions.
-
-![Endpoint Settings](../img/guides/endpoints.png)
+![Insufficient Permission Error](../img/guides/error_insufficient_perm.png)
