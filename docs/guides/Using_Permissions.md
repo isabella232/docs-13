@@ -16,6 +16,10 @@ If you enable the `Connect` toggle button, you will be able to add entries to th
 
 If you enable the `Disconnect` toggle button, you will be able to remove entries from a relation (e.g. `mutation { removeFromEventParticipant(...) }` - removing a participant from an event).
 
+## Creating and modifying data through your endpoint
+
+Whenever you are trying to modify your content via your endpoint you need to make sure to enable all the necessary permissons for these operations. For example: You want to create a new entry for your model. Make sure you have the create permisson toggled for your input fields in order for it to work.
+
 
 ## Testing your permissions
 
