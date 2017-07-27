@@ -10,7 +10,7 @@ The Permission settings can be found next to each model and field in the *Conten
 
 Each CRUD-Operation has a dedicated button to toggle it on or off. `Create`, `Read` and `Update` can be toggled for the entire model or for every field individually. `Delete` can only be toggled for the whole model, since you can not delete fields individually.
 
-The Permissions for Assets and Relations look a little different. You have the option to `Connect` or `Disconnect`. Connection makes your relation accessible through the API. Disconnect does the exact opposite - your relation can not be modified or seen via the API.
+The Permissions for Assets and Relations look a little different. You have the option to `Connect` or `Disconnect`. Connect makes your relation accessible through the API and you can add entries but not remove them. Disconnect on the other hand lets you remove entries from your relation.
 
 Trying to Create, Read or Update a model or field which is not made available through permissions will result in an `Insufficient Permission` error.
 
