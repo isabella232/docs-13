@@ -11,7 +11,9 @@ The Permission settings can be found next to each model and field in the *Conten
 Each CRUD-Operation has a dedicated button to toggle it on or off. `Create`, `Read` and `Update` can be toggled for the entire model or for every field individually. `Delete` can only be toggled for the whole model, since you can't delete fields individually.
 
 The Permissions for Assets and Relations look a little different. They have the option to `Connect` and  `Disconnect`. 
+
 If you enable the `Connect` toggle button, you will be able to add entries to the relation (e.g. `mutation { addToAssetEventPicture(...) }` - adding a picture to an event). 
+
 If you enable the `Disconnect` toggle button, you will be able to remove entries from a relation (e.g. `mutation { removeFromEventParticipant(...) }` - removing a participant from an event).
 
 
