@@ -1,17 +1,17 @@
-# Media
+# Assets
 
-Working with media is an essential part of content management. GraphCMS allows you to upload and assign media files to any content model in your project. The uploaded files will be assigned to the project´s internal `Media` model. `Media fields` will then connect the dots between a content model and assigned files.
+Working with assets is an essential part of content management. GraphCMS allows you to upload and assign asset files to any content model in your project. The uploaded files will be assigned to the project´s internal `Asset` model. `Asset fields` will then connect the dots between a content model and assigned files.
 
-Media files that are stored in GraphCMS are served via a global content delivery network. This assures quick response times and fast loading of your media.
+Asset files that are stored in GraphCMS are served via a global content delivery network. This assures quick response times and fast loading of your assets.
 
 ![Screenshot](img/animated/mediaScreenCapture.gif)
 
-## Querying a Media Field
+## Querying an Assets Field
 
-Uploaded media files can be queried from your content API. Let´s assume we have a content model `Post`, with a field configuration of:
+Uploaded asset files can be queried from your content API. Let´s assume we have a content model `Post`, with a field configuration of:
 
 * Title `#title` `Single Line Text`
-* Images `#images` `Media` `Allow Multiple Values`
+* Images `#images` `Assets` `Allow Multiple Values`
 
 This will allow us to store an arbitrary number of images for a `Post`.
 
@@ -55,20 +55,20 @@ Which will give us a result like this:
 }
 ```
 
-Field `#images` will return an array of media objects, which contain the fields:
+Field `#images` will return an array of asset objects, which contain the fields:
 
 * `fileName` the original file name of the uploaded file
 * `handle` the identifier of the uploaded file
 * `url` the full URL to the uploaded file
-* `mimeType` the media type of the uploaded file
+* `mimeType` the asset type of the uploaded file
 * `size` the total size in bytes
 
 !!! Hint ""
-    If you know the desired display size of your images, it is highly recommended to use our integrated image transformation engine to scale your images to the desired size. This will increase the loading time of your content and result in a better user experience for your visitors.
+    If you know the desired display size of your images, it is highly recommended to use our integrated image transformation engine to scale your images to the desired size. This will decrease the loading time of your content and result in a better user experience for your visitors.
 
 ## GraphCMS Image Transformations
 
-An essential feature of GraphCMS is the image processing engine. It enables you on the fly image transformations, such as resizing or cropping just by adding parameters to your media´s URL.
+An essential feature of GraphCMS is the image processing engine. It enables you on the fly image transformations, such as resizing or cropping just by adding parameters to your assets´s URL.
 
 ### Transformation URL Structure with GraphCMS Handle
 

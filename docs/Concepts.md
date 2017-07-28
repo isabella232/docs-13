@@ -32,11 +32,11 @@ GraphCMS offers the following field types:
 * **JSON:** data in JSON format
 * **Color:** rgba or hex color string
 * **Location:** geographic coordinates: latitude and longitude
-* **Media:** any asset, e.g. image, video...
+* **Assets:** any asset, e.g. image, video...
 * **Relation:** for referencing other content models. E.g. the author of a blog post
 
 
-![Screenshot](img/screenshots/fieldWizardClean.png)
+![Screenshot](img/screenshots/fieldWizardNew.png)
 
 ## Webhooks
 
@@ -76,17 +76,17 @@ To connect your client applications with your GraphCMS backend, you will need to
 
 Each GraphCMS project comes with a few system artifacts, that users should be aware of. Those are models and fields that are created automatically by the system.
 
-### Media Model
+### Asset Model
 
-The `Media` system model is where your uploaded files get stored. Each time you assign a media field to one of your content models, a relation to this model is created.
+The `Asset` system model is where your uploaded files get stored. Each time you assign an asset field to one of your content models, a relation to this model is created.
 
-The fields of the `Media` model are:
+The fields of the `Asset` model are:
 
 * `fileName` the name of the file
 * `handle` the unique identifier of the file
 * `url` the public url of the file, which is always media.graphcms.com/`handle`
 * `size` the size of the file
-* `mimeType` the internet media type of the file
+* `mimeType` the internet asset type of the file
 * `isPublic` a flag that indicates if the file is available for the public (currently always `true`)
 
 ### System Fields

@@ -50,7 +50,7 @@ For `Name` we use a `Single Line Text Field` that we set as `required`. The `Dis
 
     API IDs for fields must start with a lowercase letter and can contain only alphanumeric characters.
 
-For field `Pictures` we will add a media field and check `Allow multiple values`, this will allow us to store an arbitrary number of media files.
+For field `Pictures` we will add an asset field and check `Allow multiple values`, this will allow us to store an arbitrary number of media files.
 
 We will now add a relation to this model. Relations allow you to connect two content models. In this case, we create an `ArtistRecord Relation`, since we want to connect artists to existing records. The `Relation Name` defines how the relation will be named in your content API.
 
@@ -79,7 +79,7 @@ This model will store content for music records. The fields will be:
 
 * Title `#title` `Single Line Text` `required`
 * Tracklist `#tracklist` `Single Line Text` `Allow multiple values`
-* Cover `#cover` `Media`
+* Cover `#cover` `Asset`
 
 Noticed the relation field with API ID `#artists` on this model? This field entry is here because it is the `reverse side` of the `ArtistRecord Relation` we created before. Since we are building a GraphQL content API, we need to be able to traverse in both directions.
 
@@ -110,14 +110,14 @@ Great! We can now start to create our content.
 ### Creating a `record`
 
 We are now able to use the input form elements to populate our content. The presentation of the input fields depend on the field configuration we did before.
-For example, field `#cover` is of type `Media`, so it will allow you to upload media to your project and attach it to your record.
+For example, field `#cover` is of type `Asset`, so it will allow you to upload media to your project and attach it to your record.
 
 ![Screenshot](img/screenshots/createRecord.png)
 
 !!! Hint ""
     Before uploading, you can crop pictures within the upload widget.
 
-    All uploaded files can be found in the `MEDIA` section.
+    All uploaded files can be found in the `ASSET` section.
 
 
 We will leave the relation fields blank for now, since we don´t have any content entries that could be assigned.
