@@ -7,7 +7,7 @@ GraphCMS has a simple, built in publishing workflow that allows you to control w
 
     Example: `{ allPosts(filter: {isPublished: true}) { title body }}`
 
-To `publish` an entry you need to have the required [permissions](/Adding_members_to_team). In GraphCMS, all roles except the `CONTRIBUTOR` can publish existing entries. This can be done within the entry form.
+To `publish` an entry you need to have the required [permissions](/guides/Adding_members_to_team/). In GraphCMS, all roles except the `CONTRIBUTOR` can publish existing entries. This can be done within the entry form.
 
 To publish an existing entry you just have to click the `PUBLISHED` toggle at the top of the page, as shown in the image below. To unpublish an entry simply click the toggle again.
 
