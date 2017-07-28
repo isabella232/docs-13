@@ -6,9 +6,9 @@ To export the GraphQL schema or the content of your GraphCMS project, you can us
 
 This will automatically download a `schema.txt` file, containing all schema information of your current content API.
 
-An example schema is shown below. It shows the schema for three content models: `Article`, `Author` and `Media`.
+An example schema is shown below. It shows the schema for three content models: `Article`, `Author` and `Asset`.
 
-Media is a system model created by GraphCMS.
+Asset is a system model created by GraphCMS.
 The content model `Article` has one custom field `title` of type `String`. The content model `Author` has also one custom field with name `name` and type `String`.
 Both models are connected via a one-to-many relation with name `AuthorArticles`.
 
@@ -29,7 +29,7 @@ type Author {
   updatedAt: DateTime!
 }
 
-type Media {
+type Asset {
   createdAt: DateTime!
   fileName: String!
   handle: String!
