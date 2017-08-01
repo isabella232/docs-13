@@ -15,7 +15,7 @@ We start off by creating a new project called `Vinylbase`.
 
 After creating the project, switch to the `CONTENT` view and use the `ADD MODEL` button to add the following models:
 
-* `Arist`
+* `Artist`
 * `Record`
 * `Review`
 * `Record Store`
