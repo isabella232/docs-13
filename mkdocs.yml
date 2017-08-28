@@ -51,6 +51,7 @@ pages:
   - 'Using Aliases for your API': 'guides/Using_aliases_for_api.md'
   - 'Export Schema and Content': 'guides/Export_schema_and_content.md'
   - 'Import simple data': 'guides/Import_simple_data.md'
+  - 'Using Nested Mutations': 'guides/Using_Nested_Mutations.md'
 - API:
   - 'Simple': 'API_simple.md'
   - 'Relay': 'API_relay.md'
