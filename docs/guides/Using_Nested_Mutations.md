@@ -1,6 +1,6 @@
 # Using Nested Mutations in GraphQL
 
-To simplify content creating and updating when using relations you can make use of `nested mutations`.
+To simplify content creation and updating when using relations you can make use of `nested mutations`.
 Nested mutations allow you to interact with connected parts of your type schema.
 
 - `Nested create mutations` can be used to create and connect to a new node on the opposite side of a relation.
