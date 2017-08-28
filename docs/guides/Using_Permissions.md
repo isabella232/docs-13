@@ -18,7 +18,7 @@ If you enable the `Disconnect` toggle button, you will be able to remove entries
 
 ## Creating and modifying data from your API
 
-Whenever you are trying to modify your content via your endpoint you need to make sure to enable all the necessary permissons for these operations. For example: You want to create a new entry for your model. Make sure you have the create permisson toggled for your input fields in order for it to work.
+Whenever you are trying to create or modify your content via your API, you need to make sure to enable all the necessary permissons for these operations. For example: You want to create a new entry for your model. Make sure you have the create permisson toggled for your input fields in order for it to work.
 
 ## Testing your permissions
 

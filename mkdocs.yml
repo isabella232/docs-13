@@ -38,7 +38,7 @@ pages:
 - Introduction: 'index.md'
 - Concepts: 'Concepts.md'
 - Getting Started: 'Getting_Started.md'
-- Assets: 'Assets.md'
+- Assets: 'FileAssets.md'
 - Webhooks: 'Webhooks.md'
 - Examples:
   - 'Server-side rendered app with Next.js and Apollo': 'examples/Server-side_rendered_app_with_nextjs_and_apollo.md'
