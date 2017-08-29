@@ -54,6 +54,9 @@ pages:
       - 'Crop Faces': 'assets/facial_detection/Crop_Faces.md'
       - 'Pixelate Faces': 'assets/facial_detection/Pixelate_Faces.md'
       - 'Blur Faces': 'assets/facial_detection/Blur_Faces.md'
+    - 'Filetype Conversions - Output': 'assets/Filetype_Conversions.md'
+    - 'Compress': 'assets/Compress.md'
+    - 'Change Quality': 'assets/Change_Quality.md'
   - 'Chaining Transformations': 'assets/Chanining_Transformations.md'
     
 - Webhooks: 'Webhooks.md'

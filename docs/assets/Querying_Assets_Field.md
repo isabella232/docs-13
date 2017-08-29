@@ -1,3 +1,6 @@
+!!! Hint ""
+    The maximum accepted image size is 100.000.000 pixels. An image with this many pixels could have width and height combinations like 10.000 x 10.000 or 5.000 x 20.000, etc. The maximum file size of an image can not be larger than 256mb.
+
 Uploaded asset files can be queried from your content API. Let´s assume we have a content model `Post`, with a field configuration of:
 
 * Title `#title` `Single Line Text`

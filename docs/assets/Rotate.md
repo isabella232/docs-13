@@ -1,5 +1,8 @@
 You can rotate your image in a range clockwise from 0 degrees (no rotation) to 359 (nearly all the way around). You can also mirror an image horizontally or vertically. For more information see below.
 
+!!! Hint ""
+    The maximum accepted image size is 100.000.000 pixels. An image with this many pixels could have width and height combinations like 10.000 x 10.000 or 5.000 x 20.000, etc. The maximum file size of an image can not be larger than 256mb.
+
 ```
 Rotate Task URL Formats:
 https://media.graphcms.com/rotate=[options]/[File Handle]

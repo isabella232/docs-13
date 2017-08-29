@@ -1,3 +1,6 @@
+!!! Hint ""
+    The maximum accepted image size is 100.000.000 pixels. An image with this many pixels could have width and height combinations like 10.000 x 10.000 or 5.000 x 20.000, etc. The maximum file size of an image can not be larger than 256mb.
+
 ```
 Crop Faces URL Format:
 https://media.graphcms.com/crop_faces=[options]/[File Handle]

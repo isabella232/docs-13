@@ -2,6 +2,9 @@ GraphCMS offers an accurate and versatile facial detection feature. The below wi
 
 The feature is divided into four endpoints, one for detection, one for cropping and two filters. We will discuss the detection first.
 
+!!! Hint ""
+    The maximum accepted image size is 100.000.000 pixels. An image with this many pixels could have width and height combinations like 10.000 x 10.000 or 5.000 x 20.000, etc. The maximum file size of an image can not be larger than 256mb.
+
 ```
 Facial Detection URL Format:
 https://media.graphcms.com/detect_faces=[options]/[File Handle]

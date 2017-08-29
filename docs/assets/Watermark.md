@@ -1,5 +1,8 @@
 You can add watermarks to images by overlaying another image on top of your main image.
 
+!!! Hint ""
+    The maximum accepted image size is 100.000.000 pixels. An image with this many pixels could have width and height combinations like 10.000 x 10.000 or 5.000 x 20.000, etc. The maximum file size of an image can not be larger than 256mb.
+
 ```
 Watermark Task URL Formats:
 https://media.graphcms.com/watermark=[options]/[File Handle]
