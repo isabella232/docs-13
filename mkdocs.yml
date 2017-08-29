@@ -38,9 +38,6 @@ pages:
 - Introduction: 'index.md'
 - Concepts: 'Concepts.md'
 - Getting Started: 'Getting_Started.md'
-<<<<<<< HEAD
-- Assets: 'FileAssets.md'
-=======
 - Assets:
   - 'General': 'assets/General.md'
   - 'Querying an Asset Field': 'assets/Querying_Assets_Field.md'
@@ -57,12 +54,10 @@ pages:
       - 'Crop Faces': 'assets/facial_detection/Crop_Faces.md'
       - 'Pixelate Faces': 'assets/facial_detection/Pixelate_Faces.md'
       - 'Blur Faces': 'assets/facial_detection/Blur_Faces.md'
-    - 'Filetype Conversions - Output': 'assets/Filetype_Conversions.md'
+    - 'Filetype Conversions': 'assets/Filetype_Conversions.md'
     - 'Compress': 'assets/Compress.md'
     - 'Change Quality': 'assets/Change_Quality.md'
   - 'Chaining Transformations': 'assets/Chanining_Transformations.md'
-    
->>>>>>> 404963d742e2493c49298117575a2132439f1c6b
 - Webhooks: 'Webhooks.md'
 - Examples:
   - 'Server-side rendered app with Next.js and Apollo': 'examples/Server-side_rendered_app_with_nextjs_and_apollo.md'
