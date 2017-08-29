@@ -56,8 +56,8 @@ mutation createAuthorAndPosts {
 }
 ```
 
-The nested `posts` object takes an array of Posts with their list of arguments needed for a `createPost` muatation.
-The muatations also work with query variables.
+The nested `posts` object takes an array of Posts with their list of arguments needed for a `createPost` mutation.
+The mutations also work with query variables.
 
 Our return should be:
 
@@ -126,7 +126,7 @@ All of these examples also work with update mutations. The syntax should nearly 
 
 ## Nested Connect Mutations
 
-Nested connect mutations work in a smiliar way to `nested create muations`. You create a new node and connect an existing one to it.
+Nested connect mutations work in a smiliar way to `nested create mutations`. You create a new node and connect an existing one to it.
 
 Let's assume the same schema we uses for `create mutations`:
 ```
