@@ -232,7 +232,7 @@ Cool! We can now start building our frontend application. Switch over to the `SE
 ![Screenshot](img/screenshots/settings.png)
 
 !!! warning ""
-    GraphCMS is still in early preview. If you run into an issue, please have a look at the known issues in our [issue tracker](https://github.com/GraphCMS/Issue-tracker). Please don´t hesitate to open a bug ticket if you experienced an issue that is not covered by those in the tracker.
+    If you run into an issue, please have a look at the known issues in our [issue tracker](https://github.com/GraphCMS/Issue-tracker). Please don´t hesitate to open a bug ticket if you experienced an issue that is not covered by those in the tracker.
 
 !!! hint ""
-    In case you want to know more about the features we are currently working on, please check our public [roadmap](https://github.com/GraphCMS/Roadmap).  If you are missing a feature or if you have an idea for additional functionality, please help us to improve by submitting a feature request to this repository.
+    If you are missing a feature or if you have an idea for additional functionality, please help us to improve by submitting a feature request to the [Feature-Request Repository](https://github.com/GraphCMS/Feature-Requests).
