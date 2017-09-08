@@ -4,10 +4,14 @@ Changing your profile settings can be done in our special settings view. You can
 
 ![Opening User Settings](../img/guides/opening_user_settings.png)
 
+## Profile Settings
+
 After clicking on *Profile Settings* you will be taken to the first tab of the settings where you can change your full name, email and profile picture.
 You can also restart our onboarding tour if you skipped it before or want to do it again.
 
 ![First Tab User Settings](../img/guides/user_settings_view1.png)
+
+## Account Settings
 
 The second tab is for the account settings, where you can change your password or delete your account (bad idea!)
 
