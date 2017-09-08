@@ -46,7 +46,7 @@ The easiest way to query your API is [curl](https://curl.haxx.se/). With curl yo
 To authorize your request using a `permanent auth token` from GraphCMS you simply have to pass it as a header along with your request.
 
 ```
-curl -H "Authorization: bearer <token>" -X POST -d '
+curl -H "Authorization: bearer <token>" -H 'content-type: application/json' -X POST -d '
 {
  "query": "query {
     allRecords {
