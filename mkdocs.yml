@@ -8,6 +8,7 @@ site_url: 'https://graphcms.com/docs'
 # Documentation and theme
 docs_dir: 'docs'
 theme: 'material'
+theme_dir: 'theme/material'
 # Options
 extra:
   version: '0.1.0'
