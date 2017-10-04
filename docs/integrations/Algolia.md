@@ -3,6 +3,8 @@
 !!! Hint ""
     All of Algolias indexing is not covered within our pricing plans, so you might create extra costs with a lot of indices or records. Algolias free community plan includes 10.000 records and 100.000 operations and you have to display their logo on your search results.
 
+## Initial Setup
+
 To get started with Algolia you firstly need an [Algolia Account](https://www.algolia.com/users/sign_up). In the next step you log into your GraphCMS project dashboard and choose "Integrations" in the left menu bar. There you select "Algolia".
 
 ![Algolia Integrations View](../img/integrations/integration_view.png)
@@ -12,11 +14,14 @@ You will be prompted with your Algolia `Application ID` and `API Key`. To retrie
 Next we need to create an `API Key`. Click on *"All API Keys"* and then *"New API Key"*.
 ![Algolia API Keys](../img/integrations/algolia_api_keys.png)
 
-The new API Key needs to have *"Add records"*, *"Delete Records"* and *Delete Index* checked.
+The new API Key needs to have *"Add records"*, *"Delete Records"* and *"Delete Index"* checked.
 ![Create New API Key](../img/integrations/algolia_create_key.png)
 
-Now you can copy & paste both the `Application ID` and `API Key` in the GraphCMS prompt.
+Now you can copy & paste both the `Application ID` and `API Key` in the GraphCMS prompt and click "Add".
 
-You will then be redirected to the Algolia configuration. From here you can create indices.
+## Creating Indices
 
+After you entered your credentieals you will be redirected to the Algolia configuration. From here you can create indices.
 
+!!! Hint ""
+    The Index will only get created if you have data in your content model. If you create an index for a content model without content, the index will not be created until you add content to it.
