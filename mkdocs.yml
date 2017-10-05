@@ -59,6 +59,8 @@ pages:
     - 'Change Quality': 'assets/Change_Quality.md'
   - 'Chaining Transformations': 'assets/Chanining_Transformations.md'
 - Webhooks: 'Webhooks.md'
+- Integrations:
+  - 'integrations/Algolia.md'
 - Examples:
   - 'Server-side rendered app with Next.js and Apollo': 'examples/Server-side_rendered_app_with_nextjs_and_apollo.md'
   - 'Star Wars App with Expo': 'examples/Star_Wars_Expo.md'
