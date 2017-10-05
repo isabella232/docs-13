@@ -7,7 +7,7 @@ Algolia is a hosted full-text, numerical, and faceted search engine capable of d
 
 ## Initial Setup
 
-To get started with Algolia you firstly need an [Algolia Account](https://www.algolia.com/users/sign_up). In the next step you log into your GraphCMS project dashboard and choose "Integrations" in the left menu bar. There you select "Algolia".
+To get started with Algolia you first need an [Algolia Account](https://www.algolia.com/users/sign_up). In the next step you log into your GraphCMS project dashboard and choose "Integrations" in the left menu bar. There you select "Algolia".
 
 ![Algolia Integrations View](../img/integrations/integration_view.png)
 
