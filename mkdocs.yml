@@ -58,7 +58,6 @@ pages:
     - 'Compress': 'assets/Compress.md'
     - 'Change Quality': 'assets/Change_Quality.md'
   - 'Chaining Transformations': 'assets/Chanining_Transformations.md'
-- Webhooks: 'Webhooks.md'
 - Integrations:
   - 'integrations/Algolia.md'
 - Examples:
@@ -66,7 +65,6 @@ pages:
   - 'Star Wars App with Expo': 'examples/Star_Wars_Expo.md'
 - Guides:
   - 'Adding Members to your Team': 'guides/Adding_members_to_team.md'
-  - 'Using Permissions': 'guides/Using_Permissions.md'
   - 'Using Permanent Auth Tokens': 'guides/Using_permanent_auth_tokens.md'
   - 'Publishing Workflows': 'guides/Publishing_workflow.md'
   - 'Using Aliases for your API': 'guides/Using_aliases_for_api.md'
