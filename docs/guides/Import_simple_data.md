@@ -29,13 +29,13 @@ You can see all needed fields and their attributes in the screenshots below.
 
 ## API Access
 
-By default, `GraphCMS` protects your API against unauthorized access, so nobody can create, read, update or delete any content in your project.
+All of your content is private by default, which means that your content can't be accessed outside of the CMS. With our *Permission System*, you can configure CRUD-Operations (Create/Read/Update/Delete) either for models or for each field individually. This gives you control over what can be queried, updated or created from your generated content API.
 
-To keep things simple, this guide will write the sample data without setting up an `authToken` for authentication. To allow write operations, you have to allow at least `CREATE` operations on you API. This can be done in the `PUBLIC API ACCESS` section in the `Settings` view of your project. Simply activate the `CREATE` switch as shown in the screenshot below.
+The Permission settings can be found next to each model and field in the *Content* view.
 
-![Screenshot](../img/guides/simple_import_access.png)
+![Permission View](../img/guides/permission_view.png)
 
-Now we are good to go and we can start to write our import script.
+More details here: [Using Permissions](/Concepts/#using-permissions)
 
 ## Import script
 
