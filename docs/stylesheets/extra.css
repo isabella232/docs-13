@@ -1,6 +1,10 @@
 header.md-header {
-  background-color: #282d4c !important;
+  background: radial-gradient(farthest-corner at 0px 6000px,#61045f 0%,#282d4c 100%) !important;
 }
+
+header .md-header-nav__button {
+  padding: 0 !important;
+} 
 
 /* Related to embedded expo.io */
 .expo {

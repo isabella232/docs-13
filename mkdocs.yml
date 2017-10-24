@@ -12,8 +12,9 @@ theme_dir: 'theme/material'
 # Options
 extra:
   version: '0.1.0'
+  logo: 'img/graphcms_logo.svg'
   font:
-    text: 'Roboto'
+    text: 'Open Sans'
     code: 'Roboto Mono'
   social:
     - type: 'github'
@@ -35,7 +36,7 @@ markdown_extensions:
       permalink: '#'
 
 pages:
-- Introduction: 'index.md'
+- Introduction: 'Introduction.md'
 - Concepts: 'Concepts.md'
 - Getting Started: 'Getting_Started.md'
 - Assets:
