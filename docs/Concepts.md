@@ -141,15 +141,12 @@ To connect your client applications with your GraphCMS backend, you will need to
 * `UPDATE` existing content entries
 * `DELETE` existing content entries
 
-[How to work with permanent auth tokens](/guides/Using_permanent_auth_tokens)
+[How to work with permanent auth tokens](guides/Using_permanent_auth_tokens)
 
 !!! warning ""
     Be careful! Anyone that gains access to one of your tokens will be able to execute all of these operations and manipulate your content. So it is never a good idea to store a token on the client side, i.e. a JavaScript client application.
 
     We will soon release a feature that will allow you to create `read-only tokens`, so even if someone gains access to such a token, your data will be safe from manipulation.
-
-!!! hint ""
-    As an alternative, you can set up public access for create, read, update and delete operations ([see here](/guides/Public_API_access)). This will allow you to skip the token step.
 
 ## System Artifacts
 
