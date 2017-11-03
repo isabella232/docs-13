@@ -20,7 +20,7 @@ Here you can now search for existing languages and add them to your collection. 
     You are also able to define custom locales! Get yourself a klingon website 🖖
 
 <video controls>
-  <source src="/../img/guides/translations/AddNewLocale.mp4" type="video/mp4">
+  <source src="../NewLocale.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
@@ -41,7 +41,7 @@ Translation is handled like a Relation, which gets important when accessing it f
 When switching to the content view, you can now create new entries for the translated fields. You have the option to group the fields by language or by type for easier editing. You can also select which locales you want to have displayed in the editing view. 
 
 <video height="600px" controls>
-  <source src="/../img/guides/translations/CreatePostTranslate.mp4" type="video/mp4">
+  <source src="../CreatePostTranslate.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
