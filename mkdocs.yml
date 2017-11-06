@@ -74,6 +74,7 @@ pages:
   - 'Using Nested Mutations': 'guides/Using_Nested_Mutations.md'
   - 'Changing Your Email and Password': 'guides/User_Settings.md'
   - 'Using Translations': 'guides/Using_translations.md'
+  - 'Uploading Images to GraphCMS': 'guides/Uploading_images.md'
 - API:
   - 'Simple': 'API_simple.md'
   - 'Relay': 'API_relay.md'
