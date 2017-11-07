@@ -17,7 +17,7 @@ Before diving into the content creation we want to setup our project for the loc
 Here you can now search for existing languages and add them to your collection. When clicking on the language abbreviation you set it as default. 
 
 !!! hint " "
-    You are also able to define custom locales! Get yourself a klingon website 🖖
+    You are also able to define custom locales! Get yourself a Klingon website 🖖
 
 <video controls>
   <source src="../NewLocale.mp4" type="video/mp4">
@@ -85,4 +85,5 @@ The response then would be an array of all the set translations for these fields
 }
 ```
 
-If any question are still unanswered feel free to message us via On-Site-Chat or [Slack](https://slack.graphcms.com)
+!!! hint " "
+    If any question are still unanswered feel free to message us via On-Site-Chat or [Slack](https://slack.graphcms.com)
