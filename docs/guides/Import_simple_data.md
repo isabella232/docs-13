@@ -96,7 +96,7 @@ const createEvent = async ({ date, description, event, link, location, speakers,
 ```
 
 !!! hint ""
-    To simplify your development process, you can print out your created mutation string and verify it is valid using a tool like [GraphiQL](https://github.com/graphql/graphiql) or the [GraphCSM API Explorer](http://localhost:8000/Getting_Started/#exploring-the-content-api)
+    To simplify your development process, you can print out your created mutation string and verify it is valid using a tool like [GraphiQL](https://github.com/graphql/graphiql) or the [GraphCMS API Explorer](/Getting_Started/#exploring-the-content-api)
 
 We create and pass a mutation string into the `mutate` method of the Lokka client. This is a simple GraphQL mutation string, so we have to format the incoming data a little bit.
 
