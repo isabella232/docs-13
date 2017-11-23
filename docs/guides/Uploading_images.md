@@ -15,7 +15,7 @@ To get an image from the hard-drive or from an external URL into GraphCMS, we ne
 
 ## Setup - Retrieving the API Key
 
-Before we get started we need our Filestack API Key and our projectId/Bucket name. These are available in your project settings under "Asset Config"
+Before we get started we need our Filestack API Key and our projectId/Bucket name. These are available in your project settings under `Basic Config`
 
 ![Asset Settings](../img/guides/asset_settings.png)
 
