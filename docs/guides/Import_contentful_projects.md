@@ -1,5 +1,9 @@
 # Import Contentful Projects
 
+!!! danger " "
+        Please note that the importer is still in **BETA**. <br/>
+        Report any bugs via On-Site-Chat, [Slack](https://slack.graphcms.com) or in our [Issue-Tracker](https://github.com/GraphCMS/Issue-tracker)
+
 In this guide we will go through the importing process of a Contentful project into GraphCMS.
 
 ## The Importing Process
@@ -22,3 +26,5 @@ After successfully entering all you necessary tokens and clicking `Next` you wil
 You need to set these manually for every relation you have. Afterwards you should be able to continue the importing process.
 
 The view also provides you with other issues that were found during the import process e.g. Model IDs, which start with a capital letter in GraphCMS but with lowercase in Contentful. After filling these ID in you should be good to go.
+
+If you are running into any issues, please let us now in [Slack](https://slack.graphcms.com).
