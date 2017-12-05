@@ -75,6 +75,7 @@ pages:
   - 'Changing Your Email and Password': 'guides/User_Settings.md'
   - 'Using Translations': 'guides/Using_translations.md'
   - 'Uploading Images to GraphCMS': 'guides/Uploading_images.md'
+  - 'Import Contentful Projects': 'guides/Import_contentful_projects.md'
 - API:
   - 'Simple': 'API_simple.md'
   - 'Relay': 'API_relay.md'
