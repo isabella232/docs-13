@@ -1,4 +1,4 @@
-# Getting started: Blog with create-react-app & Apollo Client
+# Getting started: Blog with Vue CLI & Apollo Client
 In this tutorial, we'll learn how to create a basic blog using `Vue CLI`, `Apollo Client` and `GraphCMS`.
 The complete code for this example is available [here](https://github.com/GraphCMS/graphcms-examples/tree/master/vue-apollo-blog)
 # Preparation
