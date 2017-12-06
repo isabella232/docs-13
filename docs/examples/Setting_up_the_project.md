@@ -4,9 +4,21 @@ In order to make use of our different skeleton examples we need to create a proj
 
 ## Getting started
 
+To start your Blog Example you have two choices of going forward:
+
+1. Creating a project from scratch
+
+2. Using the Blog Template
+
+### Starting from scratch
+
 The first step in our journey for an awesome blog model structure is the project creation. Navigate to your [project overview](https://app.graphcms.com/overview) and click on `Create Project`. Choose a fitting name and description and select your desired region. Hit `Next` and choose `From Scratch`.
 
 That was easy, wasn't it? The actual model creation won't get any more difficult, we promise! 🤓
+
+### Using the Blog Template
+
+If you don't want to go through all the content model creation steps you can also choose `From Template` instead of `From Scratch` and choose `Blog Template`. Skip to [Creating Content](Setting_up_the_project/#creating-content) to continue the guide now.
 
 ## Creating the Content Models
 
