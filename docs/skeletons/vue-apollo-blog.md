@@ -23,7 +23,7 @@ For this, we'll use [Apollo Client](https://www.apollographql.com/) which is a u
 npm i -S apollo-client vue-apollo apollo-cache-inmemory apollo-link-http graphql-tag
 ```
 That's quite a lot of packages, don't you worry though, we're gonna look at what each of them does.
-* `apollo-client` is our main hero here, we'll use it to create our GraphQL client using [ApolloClient](https://www.apollographql.com/docs/react/basics/setup.html#ApolloClient).
+* `apollo-client` is our main hero here, we'll use it to create our GraphQL client using [ApolloClient](https://github.com/Akryum/vue-apollo#installation).
 * `vue-apollo` will be used to [install](https://github.com/Akryum/vue-apollo#create-a-provider) Apollo plugin in our Vue app and create a provider which *provides* the Apollo functionality to all the other components in the application without passing it explicitly.
 * `apollo-cache-inmemory` is the recommended cache implementation for Apollo Client 2.0. `InMemoryCache` will normalize our data before saving it to the store by splitting the result into individual objects, creating a unique identifier for each object, and storing those objects in a flattened data structure.
 * `apollo-link-http` is a standard interface for modifying control flow of GraphQL requests and fetching GraphQL results. We'll pass it the endpoint of our project so Apollo knows where to get the data from.
@@ -403,7 +403,7 @@ In this case we want our button click to change the number of posts we `skip` in
 
 _*We generally avoid mutating stuff where it's unnecessary because [reasons](https://www.youtube.com/watch?v=I7IdS-PbEgI) (The video talks about React but those rules apply here aswell)_
 
-And boom, we now have a complete `Home` component with a neat pagination button! Also, if you haven't already, we strongly encourage you read more about pagination in Apollo and GraphQL in general. [This](https://www.apollographql.com/docs/react/recipes/pagination.html) page and [that](https://dev-blog.apollodata.com/understanding-pagination-rest-graphql-and-relay-b10f835549e7) post are great places to start.
+And boom, we now have a complete `Home` component with a neat pagination button! Also, if you haven't already, we strongly encourage you read more about pagination in Apollo and GraphQL in general. [This](https://dev-blog.apollodata.com/understanding-pagination-rest-graphql-and-relay-b10f835549e7) post are great places to start.
 
 Styles for `Home` (just paste them at the end of the file):
 ```
