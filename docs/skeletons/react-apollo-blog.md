@@ -1,5 +1,5 @@
 # Getting started: Blog with create-react-app & Apollo Client
-In this tutorial, we'll learn how to create a basic blog using `create-react-app`, `Apollo Client` and `GraphCMS`.
+In this tutorial, we'll learn how to create a basic blog using `create-react-app`, `Apollo Client` and `GraphCMS`. The complete code for this example is available [here](https://github.com/GraphCMS/graphcms-examples/tree/master/react-apollo-blog)
 # Preparation
 What we'll need to get started is the `create-react-app` CLI
 ```
@@ -55,14 +55,16 @@ import { ApolloProvider } from 'react-apollo'
 
 Now we can initialize our Apollo Client! To do so, add this piece after the imports
 ```
-const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/starterBlog'
+const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/YOUR-PROJECT-ID'
 
 const client = new ApolloClient({
   link: new HttpLink({ uri: GRAPHCMS_API }),
   cache: new InMemoryCache()
 })
 ```
-and replace `GRAPHCMS_API` constant with your endpoint's URI. Next, we need to wrap our rendered `<App />` component in `ApolloProvider` so we can access our data throughout the application.
+and replace `YOUR-PROJECT-ID` with your project's id.
+
+Next, we need to wrap our rendered `<App />` component in `ApolloProvider` so we can access our data throughout the application.
 
 This is how it should look like after the modification
 ```
