@@ -18,7 +18,7 @@ That was easy, wasn't it? The actual model creation won't get any more difficult
 
 ### Using the Blog Template
 
-If you don't want to go through all the content model creation steps you can also choose `From Template` instead of `From Scratch` and choose `Blog Template`. Skip to [Creating Content](Setting_up_the_project/#creating-content) to continue the guide now.
+If you don't want to go through all the content model creation steps you can also choose `From Template` instead of `From Scratch` and choose `Blog Template`. Skip to [Creating Content](#creating-content) to continue the guide now.
 
 ## Creating the Content Models
 
@@ -31,9 +31,9 @@ Our Blog will consist of two main Models:
 
 Doesn't sound complicated at all, doesn't it? Let's get started!
 
-### Blog Post Model
+### Post Model
 
-First we will take care of the `Post` Model. Click `Add Content Model` on the top right. Enter `Post` as display name, the API ID will be field in automatically. The display name will be the model name shown in GraphCMS, while the API ID is the name shown via the GraphQL API. If you want to you can set a description and hit `Save`.
+First we will take care of the Blog `Post` Model. Click `Add Content Model` on the top right. Enter `Post` as display name, the API ID will be field in automatically. The display name will be the model name shown in GraphCMS, while the API ID is the name shown via the GraphQL API. If you want to you can set a description and hit `Save`.
 
 After the Model is created we can get to the fields. We will go through the creation of some fields together and have you create the rest.
 
