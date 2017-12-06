@@ -1,7 +1,5 @@
 # Getting started: Blog with create-react-app & Apollo Client
-
-🚀 **[Live Demo](https://sumdemo.com/)**
-
+In this tutorial, we'll learn how to create a basic blog using `create-react-app`, `Apollo Client` and `GraphCMS`.
 # Preparation
 What we'll need to get started is the `create-react-app` CLI
 ```
