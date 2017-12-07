@@ -1,5 +1,9 @@
 # Getting started: Blog with create-react-app & Apollo Client
-In this tutorial, we'll learn how to create a basic blog using `create-react-app`, `Apollo Client` and `GraphCMS`. The complete code for this example is available [here](https://github.com/GraphCMS/graphcms-examples/tree/master/react-apollo-blog)
+In this tutorial, we'll learn how to create a basic blog using `create-react-app`, `Apollo Client` and `GraphCMS`. The complete code for this example is available [here](https://github.com/GraphCMS/graphcms-examples/tree/master/react-apollo-blog).
+
+You can also see and play around with it in the awesome CodeSandbox editor below!
+<iframe src="https://codesandbox.io/embed/github/GraphCMS/graphcms-examples/tree/master/react-apollo-blog" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
 # Preparation
 What we'll need to get started is the `create-react-app` CLI
 ```
