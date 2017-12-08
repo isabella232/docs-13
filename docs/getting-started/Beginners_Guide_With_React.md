@@ -18,13 +18,13 @@ create-react-app graphcms-starter-blog
 ```
 then let's `cd` to our app and install all dependencies
 ```
-cd graphcms-starter-blog && npm install
+cd graphcms-starter-blog && yarn
 ```
 Now open up the code in the editor of your choice. You can see the main entry point to our application, which is `src/index.js` file. We'll get right on it and modify it a bit to feed the GraphQL data to our app.
 
 For this, we'll use [Apollo Client](https://www.apollographql.com/) which is a universal GraphQL client that takes care of things like caching, pagination and feeding the data to our components in a performant way so we don't have to worry about writing all of that ourselves! Let's install everything we need with:
 ```
-npm i -S apollo-client react-apollo apollo-cache-inmemory apollo-link-http graphql-tag
+yarn add apollo-client react-apollo apollo-cache-inmemory apollo-link-http graphql-tag
 ```
 That's quite a lot of packages, don't you worry though, we're gonna look at what each of them does.
 * `apollo-client` is our main hero here, we'll use it to create our GraphQL client using [ApolloClient](https://www.apollographql.com/docs/react/basics/setup.html#ApolloClient).
@@ -43,9 +43,9 @@ const query = gql`
 `
 ```
 
-For this example we'll also use `react-router` for routing.
+For this example we'll also use `react-router` for routing and `react-markdown` to parse the markdown we get from GraphCMS post's `content` field.
 ```
-npm i -S react-router-dom
+yarn add react-router-dom react-markdown
 ```
 
 
@@ -313,6 +313,7 @@ If you managed to follow what happened in the `Home` component, this one is much
 import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
+import Markdown from 'react-markdown'
 
 const Post = ({ data: { loading, error, Post } }) => {
   if (error) return <h1>Error fetching the post!</h1>
@@ -326,7 +327,10 @@ const Post = ({ data: { loading, error, Post } }) => {
             src={`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${post.coverImage.handle}`}
           />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <Markdown
+          source={post.content}
+          escapeHtml={false}
+        />
       </article>
     )
   }
@@ -415,6 +419,6 @@ As you can see, there's nothing new going on in here, the `About` component is t
 
 With all of this in place, we can go ahead and launch our application with 
 ```
-npm start
+yarn start
 ```
 Congratulations! Our basic React Apollo blog is now ready, hack away!
