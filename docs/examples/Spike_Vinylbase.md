@@ -2,9 +2,6 @@ ogtitle: GraphCMS with Spike
 ogdescription: GraphCMS vinylbase with Spike
 ogimage: https://graphcms.com/assets/og/examples/spike-vinylbase.png
 
-## [Source code](https://github.com/GraphCMS/graphcms-examples/tree/master/spike-vinylbase)
-
-### Example by [Jeff Escalante](https://github.com/jescalan)
 
 # GraphCMS, Spike, & Netlify Example
 
@@ -27,3 +24,7 @@ All configuration can be found in the `app.js` file. We use [spike-records](http
 The primary views and templates are all found in the `views` folder. View syntax is written in [sugarml](https://github.com/reshape/sugarml), a pug-like whitespace-sensitive html syntax parser for [reshape](https://reshape.ml/). There is no lock-in here though, as you can convert to a [sugarfree syntax](https://github.com/static-dev/spike-tpl-sugarfree) with one simple option and keep all the same layout, looping, and local syntax the same. The markup is quite simple, really.
 
 The css is also very simple and is found in `assets/css`. Very roughly written to follow [gps](https://github.com/jescalan/gps) guidelines. There is no javascript at all on this site as it doesn't require interactivity.
+
+## [💻 Source code](https://github.com/GraphCMS/graphcms-examples/tree/master/spike-vinylbase)
+
+### Example by [Jeff Escalante](https://github.com/jescalan)
