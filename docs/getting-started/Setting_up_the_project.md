@@ -1,6 +1,6 @@
 # Setting up the Blog Example Project
 
-In order to make use of our different skeleton examples we need to create a projects that has a specific model structure. In this guide we go through creating said example project and how to fill it with your own content.
+In order to make use of our different skeleton examples, we need to create a project that has a specific model structure. In this guide, we go through creating said example project and how to fill it with your own content.
 
 ## Getting started
 
@@ -12,7 +12,7 @@ To start your Blog Example you have two choices of going forward:
 
 ### Starting from scratch
 
-The first step in our journey for an awesome blog model structure is the project creation. Navigate to your [project overview](https://app.graphcms.com/overview) and click on `Create Project`. Choose a fitting name and description and select your desired region. Hit `Next` and choose `From Scratch`.
+The first step in our journey for an awesome blog model structure is the project creation. Navigate to your [project overview](https://app.graphcms.com/overview) and click on `Create Project`. Choose a name and description and select your desired region. Hit `Next` and choose `From Scratch`.
 
 That was easy, wasn't it? The actual model creation won't get any more difficult, we promise! 🤓
 
@@ -22,7 +22,7 @@ If you don't want to go through all the content model creation steps you can als
 
 ## Creating the Content Models
 
-To create the needed content models you can now click on your freshly born project and get to your project dashboard. Select `Models` in the left hand navigation - this is where it gets interesting. In order to use the example project we need to have a fixed structure for our models.
+To create the necessary content models you can now click on your created project to get to your project dashboard. Select `Models` in the sidebar - this is where it gets interesting. In order to use the example project, we need to have a fixed structure for our models.
 
 Our Blog will consist of two main Models:
 
@@ -33,9 +33,9 @@ Doesn't sound complicated at all, doesn't it? Let's get started!
 
 ### Post Model
 
-First we will take care of the Blog `Post` Model. Click `Add Content Model` on the top right. Enter `Post` as display name, the API ID will be field in automatically. The display name will be the model name shown in GraphCMS, while the API ID is the name shown via the GraphQL API. If you want to you can set a description and hit `Save`.
+First, we will take care of the Blog `Post` Model. Click `Add Content Model` on the top right. Enter `Post` as display name, the API ID will be filled in automatically. The display name will be the model name shown in the GraphCMS UI, while the API ID is the name in the GraphQL API. If you want to you can set a description and hit `Save`.
 
-After the Model is created we can get to the fields. We will go through the creation of some fields together and have you create the rest.
+After the Model is created, we can continue creating the fields. We will go through the creation of some fields together and have you create the rest.
 
 Let's start with our Post `Title`: Hit `Add Field` right under your model and select the type `Text`. Since our title is not really long we will choose `Single Line`. Now we enter `Title` as Display Name - the API ID will be filled in automatically again. There's no other configuration we need to do so we just hit `Next` two times.
 
@@ -50,7 +50,7 @@ Now you need to create to following fields to finish up the `Post` Model:
 
 ### Author Model
 
-One of our last steps is the `Author` Model. Just like before click `Add Content Model` on the top right and enter `Author` as Display Name and hit `Save`.
+One of our last steps is the `Author` Model. Just like before, click `Add Content Model` on the top right and enter `Author` as Display Name and hit `Save`.
 
 Now we will add the necessary fields:
 
