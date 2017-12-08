@@ -62,7 +62,9 @@ Now we are nearly done with our Content Model, and we just need one more step to
 
 ### Relations
 
-To set up a Relation from our Post Model to the Author Model we need to create a `Relation` field. The general approach to create relations is top-down. So you would create the Relation from the Model that is "above" the other. In this case `Post` would be our top level model and Author beneath it.
+Relations are used to make a connection between two models.
+
+To set up a relation from our Post Model to the Author Model we need to create a `Relation` field. The general approach to create relations is top-down. So you would create the Relation from the Model that is "above" the other. In this case `Post` would be our top level model and Author beneath it.
 
 So we will click `Add Field` on the `Post` Model and select `Relation` and `Content Entry Table` in the next step. As Display Name we enter `Post Author Relation`
 

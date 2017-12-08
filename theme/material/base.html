@@ -19,6 +19,13 @@
       {% else %}
         <link rel="shortcut icon" href="{{ base_url }}/assets/images/favicon.ico">
       {% endif %}
+      {% if page.meta %}
+        {% if page.meta.ogpath %}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta property="og:image" content="{{ page.meta.ogpath[0] }}" />
+          <meta name="twitter:image" content="{{ page.meta.ogpath[0] }}" /> 
+        {% endif %}
+      {% endif %}
       <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
     {% endblock %}
     {% block htmltitle %}
