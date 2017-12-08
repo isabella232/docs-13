@@ -1,11 +1,12 @@
 # Getting started: Blog with Vue CLI & Apollo Client
+
+_Note: This guide assumes you have some knowledge about Vue and GraphQL. If you don't yet, we *highly* recommend you check out [this](https://www.howtographql.com/) to learn about GraphQL and [this](https://vuejs.org/v2/guide/) to learn about Vue._
+
 In this tutorial, we'll learn how to create a basic blog using `Vue CLI`, `Apollo Client` and `GraphCMS`.
 The complete code for this example is available [here](https://github.com/GraphCMS/graphcms-examples/tree/master/vue-apollo-blog)
 
 You can also see and play around with it in the awesome CodeSandbox editor below!
 <iframe src="https://codesandbox.io/embed/github/GraphCMS/graphcms-examples/tree/master/vue-apollo-blog" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-
-_Note: This guide assumes you have some knowledge about Vue and GraphQL. If you don't yet, we *highly* recommend you check out [this](https://www.howtographql.com/) to learn about GraphQL and [this](https://vuejs.org/v2/guide/) to learn about Vue._
 
 # Preparation
 What we'll need to get started is the `Vue CLI`
