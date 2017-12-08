@@ -68,7 +68,7 @@ So we will click `Add Field` on the `Post` Model and select `Relation` and `Cont
 
 Now your need to select the `Entry type` the left one is already selected from the `Post` Model. For the right one choose `Author`. We want to have a Many-to-Many relation since a Post can have many Authors and the other way around, so click `Many reference` on both sides. The field names should automatically be filles with `authors` on the `Post` side and `posts` on the `Author` side. Hit `Next` and `Save` to finish the relation.
 
-![Relation View](../img/examples/setup/relation.png)
+![Relation View](../img/getting-started/relation.png)
 
 Now we are all set to create content for our Posts! 🔥
 
@@ -80,9 +80,9 @@ To create some posts, click on `Post` under `Content` in the left navigation. Cl
 
 Fill in all the Fields you need for a Post. The `Authors` field is the Relation we just created. You can click `Create new entry` there to start inline creation of an `Author`.
 
-![Inline Creation Start](../img/examples/setup/author_field.png)
+![Inline Creation Start](../img/getting-started/author_field.png)
 
-![Inline Creation Author](../img/examples/setup/inline_creation.png)
+![Inline Creation Author](../img/getting-started/inline_creation.png)
 
 After you created an `Author` you can also select existing ones by clicking `Add Entry`. To finish the creation of one post, click `Save and Publish` in the top right corner.
 
@@ -90,6 +90,6 @@ Repeat these step until you have a few posts ready.
 
 When you are done with the content creation you are ready to jump into the example! Never stop the grind 💯 💪 🏈
 
-## Choose your example
+## Choose your Example
 
-You can now choose between the React and Vue example!
+You can now choose between the React and Vue example to continue your journey!
