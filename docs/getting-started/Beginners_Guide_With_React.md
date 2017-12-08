@@ -5,9 +5,10 @@ _Note: This guide assumes you have some knowledge about React and GraphQL. If yo
 In this tutorial, we'll learn how to create a basic blog using `create-react-app`, `Apollo Client` and `GraphCMS`. The complete code for this example is available [here](https://github.com/GraphCMS/graphcms-examples/tree/master/react-apollo-blog).
 
 You can also see and play around with it in the awesome CodeSandbox editor below!
+
 <iframe src="https://codesandbox.io/embed/github/GraphCMS/graphcms-examples/tree/master/react-apollo-blog" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-# Preparation
+## Preparation
 What we'll need to get started is the `create-react-app` CLI
 ```
 npm i -g create-react-app
@@ -49,8 +50,8 @@ yarn add react-router-dom react-markdown
 ```
 
 
-# Coding up our app
-## `index.js`
+## Coding up our app
+### `index.js`
 
 Alright, we now have everything we need to start hacking! Let's come back to our `index.js` and add the following lines at the top of it
 ```
@@ -83,10 +84,10 @@ ReactDOM.render(
 )
 ```
 
-## `index.css`
+### `index.css`
 Styling is the least important part of it all and we've prepared the most basic set of styles to get you started. To use them, just replace the content of the `index.css` file with [this](https://github.com/GraphCMS/graphcms-examples/blob/master/react-apollo-blog/src/index.css)
 
-## `App.js`
+### `App.js`
 In our example, the purpose of `App` is mainly related to routing and displaying a header at the top of our application so we won't go into details here. Just go ahead and replace it's content with this
 ```
 import React from 'react'
@@ -113,14 +114,14 @@ const App = () => (
 export default App
 ```
 
-## components
+### Components
 Let's make a `components` folder in our `src` directory and create 4 components:
 * `Header.js`
 * `Home.js`
 * `About.js`
 * `Post.js`
 
-### `Header.js`
+#### `Header.js`
 Similar to our `App.js`, `Header.js` is only here to provide routing for our application. We can go ahead and paste the code below into our file
 ```
 import React from 'react'
@@ -149,7 +150,7 @@ export default () => (
 )
 ```
 
-### `Home.js`
+#### `Home.js`
 
 This is the homepage of our application also responsible for showing the list of posts and a `Load more` pagination button. Let's go through it bit by bit.
 
@@ -226,6 +227,7 @@ export const allPosts = gql`
   }
 `
 ```
+
 This is the query we use to tell Apollo what *exact* data we'd like it to get for us. We also specify that our `query allPosts` takes in 2 [variables](http://graphql.org/learn/queries/#variables) `first` and `skip` which we will then pass as [arguments](http://graphql.org/learn/queries/#arguments) to the query to specify how many posts to fetch (`first`) and where to start (`skip`). This will be useful for our pagination.
 
 Now, for the pagination itself, at the end of the file we add:
@@ -306,7 +308,7 @@ _*We generally avoid mutating stuff where it's unnecessary because [reasons](htt
 
 And boom, we now have a complete `Home` component with a neat pagination button! Also, if you haven't already, we strongly encourage you read more about pagination in Apollo and GraphQL in general. [This](https://www.apollographql.com/docs/react/recipes/pagination.html) page and [that](https://dev-blog.apollodata.com/understanding-pagination-rest-graphql-and-relay-b10f835549e7) post are great places to start.
 
-### `Post.js`
+#### `Post.js`
 
 If you managed to follow what happened in the `Home` component, this one is much simpler and requires little more explaining. You can go ahead and paste this into our `Post.js` file:
 ```
@@ -365,7 +367,7 @@ As you can see, it only gets simpler now. All we do is "enchance" our `Post` wit
 
 _You can read more about `react-router` route params [here](https://github.com/reactjs/react-router-tutorial/tree/master/lessons/06-params)_
 
-### `About.js`
+#### `About.js`
 
 Last piece of the puzzle is the `About` component that will display the list of blog authors. Go ahead and paste this in:
 ```
