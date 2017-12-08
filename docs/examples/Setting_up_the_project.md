@@ -89,3 +89,7 @@ After you created an `Author` you can also select existing ones by clicking `Add
 Repeat these step until you have a few posts ready.
 
 When you are done with the content creation you are ready to jump into the example! Never stop the grind 💯 💪 🏈
+
+## Choose your example
+
+You can now choose between the React and Vue example!
