@@ -592,6 +592,6 @@ Styles for `About`:
 
 With all of this in place, we can go ahead and launch our application with 
 ```
-npm dev
+yarn dev
 ```
 Congratulations! Our basic Vue Apollo blog is now ready, hack away!
