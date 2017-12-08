@@ -1,3 +1,7 @@
+ogtitle: GraphCMS with Vue & Apollo Client
+ogdescription: GraphCMS RSS feed with Vue & Apollo Client
+ogimage: https://graphcms.com/assets/og/examples/vue-apollo-blog.png
+
 ## [Source code](https://github.com/GraphCMS/graphcms-examples/tree/master/vue-apollo-blog)
 
 # GraphCMS starter blog with React Static & graphql-request

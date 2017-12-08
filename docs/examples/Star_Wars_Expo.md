@@ -1,3 +1,7 @@
+ogtitle: GraphCMS with React Native & fetch
+ogdescription: GraphCMS SWAPI with React Native & fetch
+ogimage: https://graphcms.com/assets/og/examples/react-native-fetch-swapi.png
+
 # Star Wars App with Expo
 <script async src="https://snack.expo.io/embed.js"></script>
 

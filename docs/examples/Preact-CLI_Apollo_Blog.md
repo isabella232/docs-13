@@ -1,3 +1,7 @@
+ogtitle: GraphCMS with PreactCLI & Apollo Client
+ogdescription: GraphCMS starter blog with Preact & Apollo Client
+ogimage: https://graphcms.com/assets/og/examples/preact-cli-apollo-blog.png
+
 ## [Source code](https://github.com/GraphCMS/graphcms-examples/tree/master/preact-cli-apollo-blog)
 
 # GraphCMS starter blog with Preact & Apollo Client
