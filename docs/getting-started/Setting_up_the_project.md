@@ -43,7 +43,7 @@ Next up we will create our Post `Slug` field, which we will use for the URL in t
 
 Now you need to create to following fields to finish up the `Post` Model:
 
-- `Content` field – Type `Text` – Appearance `Rich Text`
+- `Content` field – Type `Text` – Appearance `Markdown`
 - `Cover Image` field – Type `Asset` – Appearance `Asset Grid`
 - `Date and Time` field – Type `Date and Time` – Appearance `Date & Time``
 - `Tags` field – Type `Text` – Appearance `Slug` – Configuration: `Field has multiple values`
