@@ -1,3 +1,7 @@
+ogtitle: GraphCMS with Next.js & Apollo Client
+ogdescription: GraphCMS starter blog with Next.js & Apollo Client
+ogimage: https://graphcms.com/assets/og/examples/next-apollo-blog.png
+
 ## [Source code](https://github.com/GraphCMS/graphcms-examples/tree/master/next-apollo-blog)
 
 # GraphCMS starter blog with Next.js & Apollo Client

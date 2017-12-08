@@ -1,3 +1,7 @@
+ogtitle: GraphCMS with Spike
+ogdescription: GraphCMS vinylbase with Spike
+ogimage: https://graphcms.com/assets/og/examples/spike-vinylbase.png
+
 ## [Source code](https://github.com/GraphCMS/graphcms-examples/tree/master/spike-vinylbase)
 
 ### Example by [Jeff Escalante](https://github.com/jescalan)

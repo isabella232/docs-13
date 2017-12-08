@@ -1,3 +1,7 @@
+ogtitle: GraphCMS with Gatsby & gatsby-source-graphcms
+ogdescription: GraphCMS starter blog with Gatsby & gatsby-source-graphcms
+ogimage: https://graphcms.com/assets/og/examples/gatsby-source-plugin-blog.png
+
 ## [Source code](https://github.com/GraphCMS/graphcms-examples/tree/master/gatsby-source-plugin-blog)
 
 # GraphCMS starter blog with Gatsby & gatsby-source-graphcms

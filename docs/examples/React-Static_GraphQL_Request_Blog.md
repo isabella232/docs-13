@@ -1,3 +1,7 @@
+ogtitle: GraphCMS with React Static & graphql-request
+ogdescription: GraphCMS starter blog with React Static & graphql-request
+ogimage: https://graphcms.com/assets/og/examples/react-static-gql-request-blog.png
+
 ## [Source code](https://github.com/GraphCMS/graphcms-examples/tree/master/react-static-gql-request-blog)
 
 # GraphCMS starter blog with React Static & graphql-request

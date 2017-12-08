@@ -1,3 +1,7 @@
+ogtitle: GraphCMS with React & Apollo Client
+ogdescription: GraphCMS starter blog with React & Apollo Client
+ogimage: https://graphcms.com/assets/og/examples/react-apollo-blog.png
+
 ## [Source code](https://github.com/GraphCMS/graphcms-examples/tree/master/react-apollo-blog)
 
 # GraphCMS starter blog with React & Apollo Client
