@@ -5,9 +5,10 @@ _Note: This guide assumes you have some knowledge about React and GraphQL. If yo
 In this tutorial, we'll learn how to create a basic blog using `create-react-app`, `Apollo Client` and `GraphCMS`. The complete code for this example is available [here](https://github.com/GraphCMS/graphcms-examples/tree/master/react-apollo-blog).
 
 You can also see and play around with it in the awesome CodeSandbox editor below!
+
 <iframe src="https://codesandbox.io/embed/github/GraphCMS/graphcms-examples/tree/master/react-apollo-blog" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-# Preparation
+## Preparation
 What we'll need to get started is the `create-react-app` CLI
 ```
 npm i -g create-react-app
@@ -18,13 +19,13 @@ create-react-app graphcms-starter-blog
 ```
 then let's `cd` to our app and install all dependencies
 ```
-cd graphcms-starter-blog && npm install
+cd graphcms-starter-blog && yarn
 ```
 Now open up the code in the editor of your choice. You can see the main entry point to our application, which is `src/index.js` file. We'll get right on it and modify it a bit to feed the GraphQL data to our app.
 
 For this, we'll use [Apollo Client](https://www.apollographql.com/) which is a universal GraphQL client that takes care of things like caching, pagination and feeding the data to our components in a performant way so we don't have to worry about writing all of that ourselves! Let's install everything we need with:
 ```
-npm i -S apollo-client react-apollo apollo-cache-inmemory apollo-link-http graphql-tag
+yarn add apollo-client react-apollo apollo-cache-inmemory apollo-link-http graphql-tag
 ```
 That's quite a lot of packages, don't you worry though, we're gonna look at what each of them does.
 * `apollo-client` is our main hero here, we'll use it to create our GraphQL client using [ApolloClient](https://www.apollographql.com/docs/react/basics/setup.html#ApolloClient).
@@ -43,14 +44,14 @@ const query = gql`
 `
 ```
 
-For this example we'll also use `react-router` for routing.
+For this example we'll also use `react-router` for routing and `react-markdown` to parse the markdown we get from GraphCMS post's `content` field.
 ```
-npm i -S react-router-dom
+yarn add react-router-dom react-markdown
 ```
 
 
-# Coding up our app
-## `index.js`
+## Coding up our app
+### `index.js`
 
 Alright, we now have everything we need to start hacking! Let's come back to our `index.js` and add the following lines at the top of it
 ```
@@ -83,10 +84,10 @@ ReactDOM.render(
 )
 ```
 
-## `index.css`
+### `index.css`
 Styling is the least important part of it all and we've prepared the most basic set of styles to get you started. To use them, just replace the content of the `index.css` file with [this](https://github.com/GraphCMS/graphcms-examples/blob/master/react-apollo-blog/src/index.css)
 
-## `App.js`
+### `App.js`
 In our example, the purpose of `App` is mainly related to routing and displaying a header at the top of our application so we won't go into details here. Just go ahead and replace it's content with this
 ```
 import React from 'react'
@@ -113,14 +114,14 @@ const App = () => (
 export default App
 ```
 
-## components
+### Components
 Let's make a `components` folder in our `src` directory and create 4 components:
 * `Header.js`
 * `Home.js`
 * `About.js`
 * `Post.js`
 
-### `Header.js`
+#### `Header.js`
 Similar to our `App.js`, `Header.js` is only here to provide routing for our application. We can go ahead and paste the code below into our file
 ```
 import React from 'react'
@@ -149,7 +150,7 @@ export default () => (
 )
 ```
 
-### `Home.js`
+#### `Home.js`
 
 This is the homepage of our application also responsible for showing the list of posts and a `Load more` pagination button. Let's go through it bit by bit.
 
@@ -226,6 +227,7 @@ export const allPosts = gql`
   }
 `
 ```
+
 This is the query we use to tell Apollo what *exact* data we'd like it to get for us. We also specify that our `query allPosts` takes in 2 [variables](http://graphql.org/learn/queries/#variables) `first` and `skip` which we will then pass as [arguments](http://graphql.org/learn/queries/#arguments) to the query to specify how many posts to fetch (`first`) and where to start (`skip`). This will be useful for our pagination.
 
 Now, for the pagination itself, at the end of the file we add:
@@ -306,13 +308,14 @@ _*We generally avoid mutating stuff where it's unnecessary because [reasons](htt
 
 And boom, we now have a complete `Home` component with a neat pagination button! Also, if you haven't already, we strongly encourage you read more about pagination in Apollo and GraphQL in general. [This](https://www.apollographql.com/docs/react/recipes/pagination.html) page and [that](https://dev-blog.apollodata.com/understanding-pagination-rest-graphql-and-relay-b10f835549e7) post are great places to start.
 
-### `Post.js`
+#### `Post.js`
 
 If you managed to follow what happened in the `Home` component, this one is much simpler and requires little more explaining. You can go ahead and paste this into our `Post.js` file:
 ```
 import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
+import Markdown from 'react-markdown'
 
 const Post = ({ data: { loading, error, Post } }) => {
   if (error) return <h1>Error fetching the post!</h1>
@@ -326,7 +329,10 @@ const Post = ({ data: { loading, error, Post } }) => {
             src={`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${post.coverImage.handle}`}
           />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <Markdown
+          source={post.content}
+          escapeHtml={false}
+        />
       </article>
     )
   }
@@ -361,7 +367,7 @@ As you can see, it only gets simpler now. All we do is "enchance" our `Post` wit
 
 _You can read more about `react-router` route params [here](https://github.com/reactjs/react-router-tutorial/tree/master/lessons/06-params)_
 
-### `About.js`
+#### `About.js`
 
 Last piece of the puzzle is the `About` component that will display the list of blog authors. Go ahead and paste this in:
 ```
@@ -415,6 +421,6 @@ As you can see, there's nothing new going on in here, the `About` component is t
 
 With all of this in place, we can go ahead and launch our application with 
 ```
-npm start
+yarn start
 ```
 Congratulations! Our basic React Apollo blog is now ready, hack away!

@@ -6,9 +6,10 @@ In this tutorial, we'll learn how to create a basic blog using `Vue CLI`, `Apoll
 The complete code for this example is available [here](https://github.com/GraphCMS/graphcms-examples/tree/master/vue-apollo-blog)
 
 You can also see and play around with it in the awesome CodeSandbox editor below!
+
 <iframe src="https://codesandbox.io/embed/github/GraphCMS/graphcms-examples/tree/master/vue-apollo-blog" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-# Preparation
+## Preparation
 What we'll need to get started is the `Vue CLI`
 ```
 npm i -g vue-cli
@@ -21,13 +22,13 @@ Vue will ask us a couple of questions about our app's name, description, license
 
 Let's `cd` to our app and install all dependencies
 ```
-cd graphcms-starter-blog && npm install
+cd graphcms-starter-blog && yarn
 ```
 Now open up the code in the editor of your choice. You can see the main entry point to our application, which is `src/main.js` file. We'll get right on it and modify it a bit to feed the GraphQL data to our app.
 
 For this, we'll use [Apollo Client](https://www.apollographql.com/) which is a universal GraphQL client that takes care of things like caching, pagination and feeding the data to our components in a performant way so we don't have to worry about writing all of that ourselves! Let's install everything we need with:
 ```
-npm i -S apollo-client vue-apollo apollo-cache-inmemory apollo-link-http graphql-tag
+yarn add apollo-client vue-apollo apollo-cache-inmemory apollo-link-http graphql-tag
 ```
 That's quite a lot of packages, don't you worry though, we're gonna look at what each of them does.
 * `apollo-client` is our main hero here, we'll use it to create our GraphQL client using [ApolloClient](https://github.com/Akryum/vue-apollo#installation).
@@ -46,14 +47,14 @@ const query = gql`
 `
 ```
 
-For this example we'll also use `vue-router` for routing.
+For this example we'll also use `vue-router` for routing and `vue-markdown` to parse the markdown we get from GraphCMS post's `content` field.
 ```
-npm i -S vue-router
+yarn add vue-router vue-markdown
 ```
 
 
-# Coding up our app
-## `main.js`
+## Coding up our app
+### `main.js`
 
 Alright, we now have everything we need to start hacking! Let's come back to our `index.js` and add the following lines at the top of it
 ```
@@ -94,10 +95,10 @@ new Vue({
 })
 ```
 
-## Styling
+### Styling
 Styling is the least important part of it all and we've prepared the most basic set of styles to get you started. They will be included at the end of each component's overview.
 
-## `router.js`
+### `router.js`
 Since the only purpose of this file is to provide the routing for our application, we won't be digging too much into it, just pasting the following in the `router.js` will suffice:
 ```
 import Vue from 'vue'
@@ -131,7 +132,7 @@ export default new Router({
 ```
 If you want to read on how `vue-router` works, you can find the documentation [here](https://router.vuejs.org/en/)
 
-## `App.vue`
+### `App.vue`
 In our example, the purpose of `App` is mainly related to routing and displaying a header at the top of our application so we won't go into details here aswell. Just go ahead and replace it's content with this
 ```
 <template>
@@ -177,14 +178,14 @@ In our example, the purpose of `App` is mainly related to routing and displaying
 </style>
 ```
 
-## components
+### Components
 Let's make a `components` folder in our `src` directory and create 4 components:
 * `AppHeader.vue`
 * `Home.vue`
 * `About.vue`
 * `Post.vue`
 
-### `AppHeader.vue`
+#### `AppHeader.vue`
 Similar to our `App`, `AppHeader` is only here to provide routing for our application. We can go ahead and paste the code below into our file
 ```
 <template>
@@ -230,7 +231,7 @@ Styles for `App` (just paste them at the end of the file):
 </style>
 ```
 
-### `Home.vue`
+#### `Home.vue`
 
 This is the homepage of our application also responsible for showing the list of posts and a `Load more` pagination button. Let's go through it bit by bit.
 
@@ -439,7 +440,7 @@ Styles for `Home` (just paste them at the end of the file):
 </style>
 ```
 
-### `Post.vue`
+#### `Post.vue`
 
 If you managed to follow what happened in the `Home` component, this one is much simpler and requires little more explaining. You can go ahead and paste this into our `Post.vue` file:
 ```
@@ -456,7 +457,7 @@ If you managed to follow what happened in the `Home` component, this one is much
           :src="`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${post.coverImage.handle}`"
         />
       </div>
-      <div v-html="post.content" />
+      <vue-markdown>{{post.content}}</vue-markdown>
     </article>
   </div>
 </template>
@@ -494,7 +495,8 @@ If you managed to follow what happened in the `Home` component, this one is much
           }
         }
       }
-    }
+    },
+    components: { VueMarkdown }
   }
 </script>
 ```
@@ -513,7 +515,7 @@ Styles for `Post`:
 </style>
 ```
 
-### `About.vue`
+#### `About.vue`
 
 Last piece of the puzzle is the `About` component that will display the list of blog authors. Go ahead and paste this in:
 ```
@@ -590,6 +592,6 @@ Styles for `About`:
 
 With all of this in place, we can go ahead and launch our application with 
 ```
-npm dev
+yarn dev
 ```
 Congratulations! Our basic Vue Apollo blog is now ready, hack away!
