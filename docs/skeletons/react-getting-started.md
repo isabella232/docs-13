@@ -4,6 +4,8 @@ In this tutorial, we'll learn how to create a basic blog using `create-react-app
 You can also see and play around with it in the awesome CodeSandbox editor below!
 <iframe src="https://codesandbox.io/embed/github/GraphCMS/graphcms-examples/tree/master/react-apollo-blog" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
+_Note: This guide assumes you have some knowledge about React and GraphQL. If you don't yet, we *highly* recommend you check out [this](https://www.howtographql.com/) to learn about GraphQL and [this](https://reactjs.org/tutorial/tutorial.html) to learn about React._
+
 # Preparation
 What we'll need to get started is the `create-react-app` CLI
 ```
