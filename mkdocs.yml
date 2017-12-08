@@ -32,13 +32,17 @@ extra_css:
 markdown_extensions:
   - codehilite(css_class=code)
   - admonition
+  - meta
   - toc:
       permalink: '#'
 
 pages:
 - Introduction: 'Introduction.md'
 - Concepts: 'Concepts.md'
-- Getting Started: 'Getting_Started.md'
+- Getting Started: 
+  - 'Setting up the Blog Example Project': 'getting-started/Setting_up_the_project.md'
+  - 'Beginners Guide with React': 'getting-started/Beginners_Guide_With_React.md'
+  - 'Beginners Guide with Vue': 'getting-started/Beginners_Guide_With_Vue.md'
 - Assets:
   - 'General': 'assets/General.md'
   - 'Querying an Asset Field': 'assets/Querying_Assets_Field.md'

@@ -1,9 +1,13 @@
+ogtitle: GraphCMS with React Native & fetch
+ogdescription: GraphCMS SWAPI with React Native & fetch
+ogimage: https://graphcms.com/assets/og/examples/react-native-fetch-swapi.png
+
 # Star Wars App with Expo
 <script async src="https://snack.expo.io/embed.js"></script>
 
 🚀 **[Checkout the full code](https://snack.expo.io/r17Xs7yl-)**
 
-In this example we are going to build a simple React Native Application backed by GraphCMS using [Snack by Expo.io](https://snack.expo.io) and [GraphCMS](https://graphcms.com). You can find the code on [Snack](https://snack.expo.io/r17Xs7yl-) or in the example´s [GitHub repository (Using create-react-native-app)](https://github.com/GraphCMS/example_03_expo).
+In this example we are going to build a simple React Native Application backed by GraphCMS using [Snack by Expo.io](https://snack.expo.io) and [GraphCMS](https://graphcms.com). You can find the code on [Snack](https://snack.expo.io/r17Xs7yl-) or in the example´s [GitHub repository (Using create-react-native-app)](https://github.com/GraphCMS/graphcms-examples/tree/master/react-native-fetch-swapi).
 
 > *Easily build apps with React Native*
 >
