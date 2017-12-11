@@ -36,7 +36,7 @@ That's quite a lot of packages, don't you worry though, we're gonna look at what
 * `apollo-cache-inmemory` is the recommended cache implementation for Apollo Client 2.0. `InMemoryCache` will normalize our data before saving it to the store by splitting the result into individual objects, creating a unique identifier for each object, and storing those objects in a flattened data structure.
 * `apollo-link-http` is a standard interface for modifying control flow of GraphQL requests and fetching GraphQL results. We'll pass it the endpoint of our project so Apollo knows where to get the data from.
 * `graphql-tag` is a template literal tag we will use to concisely write a GraphQL query that is parsed into the standard GraphQL AST, like so:
-```
+```javascript
 const query = gql`
   {
     user(id: 5) {
@@ -57,7 +57,7 @@ yarn add vue-router vue-markdown
 ### `main.js`
 
 Alright, we now have everything we need to start hacking! Let's come back to our `index.js` and add the following lines at the top of it
-```
+```javascript
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
@@ -67,7 +67,7 @@ import router from './router.js'
 _Don't worry about the `router` import not existing, we'll get to it in a moment_
 
 Now we can initialize our Apollo Client! We will also tell Vue to install the `vue-apollo` plugin for us. To do so, add this piece after the imports
-```
+```javascript
 const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/YOUR-PROJECT-ID'
 
 const apolloClient = new ApolloClient({
@@ -81,7 +81,7 @@ and replace `YOUR-PROJECT-ID` with your project's id.
 Next, we need to create the `apolloProvider` and include it in our root components. A provider holds the apollo client instances that can then be used by all the child components. We will also add the imported `router` to use our `vue-router`.
 
 This is how the rest of our `main.js` should look like after the modification
-```
+```javascript
 const apolloProvider = new VueApollo({
   defaultClient: apolloClient
 })
@@ -100,7 +100,7 @@ Styling is the least important part of it all and we've prepared the most basic 
 
 ### `router.js`
 Since the only purpose of this file is to provide the routing for our application, we won't be digging too much into it, just pasting the following in the `router.js` will suffice:
-```
+```javascript
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './components/Home.vue'
@@ -134,7 +134,7 @@ If you want to read on how `vue-router` works, you can find the documentation [h
 
 ### `App.vue`
 In our example, the purpose of `App` is mainly related to routing and displaying a header at the top of our application so we won't go into details here aswell. Just go ahead and replace it's content with this
-```
+```html
 <template>
   <div id="app">
     <app-header />
@@ -187,7 +187,7 @@ Let's make a `components` folder in our `src` directory and create 4 components:
 
 #### `AppHeader.vue`
 Similar to our `App`, `AppHeader` is only here to provide routing for our application. We can go ahead and paste the code below into our file
-```
+```html
 <template>
   <header>
     <h1>GraphCMS Starter blog</h1>
@@ -205,7 +205,7 @@ Similar to our `App`, `AppHeader` is only here to provide routing for our applic
 </script>
 ```
 Styles for `App` (just paste them at the end of the file):
-```
+```html
 <style>
   #app {
     font-family: 'Source Sans Pro', sans-serif;
@@ -236,7 +236,7 @@ Styles for `App` (just paste them at the end of the file):
 This is the homepage of our application also responsible for showing the list of posts and a `Load more` pagination button. Let's go through it bit by bit.
 
 First, let's create our main `Home` template
-```
+```html
 <template>
   <div>
     <section v-if="allPosts">
@@ -265,7 +265,7 @@ First, let's create our main `Home` template
 ```
 
 Now, we add the component's logic:
-```
+```html
 <script>
   import gql from 'graphql-tag'
 
@@ -329,7 +329,7 @@ _Note: Your project has to have more posts than the `POSTS_PER_PAGE` indicates o
 There are quite a few things going on in here, let's go through them bit by bit:
 
 * We start with importing the `gql` module and using it to define the query we'd like to fetch the data with. We also create a `POSTS_PER_PAGE` constant to specify how many posts we'd like to have on every page.
-```
+```javascript
   import gql from 'graphql-tag'
 
   const POSTS_PER_PAGE = 2
@@ -350,7 +350,7 @@ There are quite a few things going on in here, let's go through them bit by bit:
 ```
 
 * Next up, we name our component and tell Vue what data do we want it to have.
-```
+```javascript
 export default {
     name: 'HomePage',
     data: () => ({
@@ -386,7 +386,7 @@ Here we say that we'd like:
 You can think of `loading` as a simple conditional that tells us what's the current state of the data fetching process. When `loading` is true, loading message will be rendered. As soon as the loading is finished, the message will be replaced with our component.
 
 The last part of our default export is the list of methods:
-```
+```javascript
 methods: {
   loadMorePosts () {
     this.$apollo.queries.allPosts.fetchMore({
@@ -414,7 +414,7 @@ _*We generally avoid mutating stuff where it's unnecessary because [reasons](htt
 And boom, we now have a complete `Home` component with a neat pagination button! Also, if you haven't already, we strongly encourage you read more about pagination in Apollo and GraphQL in general. [This](https://dev-blog.apollodata.com/understanding-pagination-rest-graphql-and-relay-b10f835549e7) post are great places to start.
 
 Styles for `Home` (just paste them at the end of the file):
-```
+```html
 <style>
   #app {
     font-family: 'Source Sans Pro', sans-serif;
@@ -443,7 +443,7 @@ Styles for `Home` (just paste them at the end of the file):
 #### `Post.vue`
 
 If you managed to follow what happened in the `Home` component, this one is much simpler and requires little more explaining. You can go ahead and paste this into our `Post.vue` file:
-```
+```html
 <template>
   <h2 v-if="loading > 0">
     Loading...
@@ -507,7 +507,7 @@ As you can see, it only gets simpler now. All we do is pass the data from apollo
 _You can read more about `vue-router` route params [here](https://router.vuejs.org/en/essentials/dynamic-matching.html)_
 
 Styles for `Post`:
-```
+```html
 <style scoped>
   .placeholder {
     height: 366px;
@@ -519,7 +519,7 @@ Styles for `Post`:
 #### `About.vue`
 
 Last piece of the puzzle is the `About` component that will display the list of blog authors. Go ahead and paste this in:
-```
+```html
 <template>
   <h2 v-if="loading > 0">
     Loading...
@@ -574,7 +574,7 @@ Last piece of the puzzle is the `About` component that will display the list of 
 As you can see, there's nothing new going on in here, the `About` component is the simplest of them all.
 
 Styles for `About`:
-```
+```html
 <style scoped>
   .author {
     margin-bottom: 72px;
