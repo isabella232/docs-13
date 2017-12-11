@@ -55,7 +55,7 @@ yarn add react-router-dom react-markdown
 ### `index.js`
 
 Alright, we now have everything we need to start hacking! Let's come back to our `index.js` and add the following lines at the top of it
-```
+```javascript
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
@@ -63,7 +63,7 @@ import { ApolloProvider } from 'react-apollo'
 ```
 
 Now we can initialize our Apollo Client! To do so, add this piece after the imports
-```
+```javascript
 const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/YOUR-PROJECT-ID'
 
 const client = new ApolloClient({
@@ -76,7 +76,7 @@ and replace `YOUR-PROJECT-ID` with your project's id.
 Next, we need to wrap our rendered `<App />` component in `ApolloProvider` so we can access our data throughout the application.
 
 This is how it should look like after the modification
-```
+```javascript
 ReactDOM.render(
   <ApolloProvider client={client}>
     <App />
@@ -90,7 +90,7 @@ Styling is the least important part of it all and we've prepared the most basic 
 
 ### `App.js`
 In our example, the purpose of `App` is mainly related to routing and displaying a header at the top of our application so we won't go into details here. Just go ahead and replace it's content with this
-```
+```javascript
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
@@ -125,7 +125,7 @@ Let's make a `components` folder in our `src` directory and create 4 components:
 
 #### `Header.js`
 Similar to our `App.js`, `Header.js` is only here to provide routing for our application. We can go ahead and paste the code below into our file
-```
+```javascript
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
@@ -158,7 +158,7 @@ This is the homepage of our application also responsible for showing the list of
 
 First up, let's import all the required modules and add a pagination constant that we will need in a minute:
 
-```
+```javascript
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { graphql } from 'react-apollo'
@@ -168,7 +168,7 @@ const POSTS_PER_PAGE = 4
 ```
 
 Then, we create our main `Home` component
-```
+```javascript
 const Home = ({ data: { loading, error, allPosts, _allPostsMeta }, loadMorePosts }) => {
   if (error) return <h1>Error fetching posts!</h1>
   if (!loading) {
@@ -211,7 +211,7 @@ As you can see, our functional component takes in 2 props, `data` (from which we
 You can think of `loading` and `error` as simple conditionals that tell us what's the current state of the data fetching process. When `error` prop is true, error message will be rendered instead of our component. Similarly, when `loading` is true, loading message will be rendered. As soon as the loading is finished, the message will be replaced with our component (or the error message if something goes wrong). `loadMorePosts` is something we will get to in a minute.
 
 Right below our `Home` component, let's place:
-```
+```javascript
 export const allPosts = gql`
   query allPosts($first: Int!, $skip: Int!) {
     allPosts(orderBy: dateAndTime_DESC, first: $first, skip: $skip) {
@@ -233,7 +233,7 @@ export const allPosts = gql`
 This is the query we use to tell Apollo what *exact* data we'd like it to get for us. We also specify that our `query allPosts` takes in 2 [variables](http://graphql.org/learn/queries/#variables) `first` and `skip` which we will then pass as [arguments](http://graphql.org/learn/queries/#arguments) to the query to specify how many posts to fetch (`first`) and where to start (`skip`). This will be useful for our pagination.
 
 Now, for the pagination itself, at the end of the file we add:
-```
+```javascript
 export const allPostsQueryVars = {
   skip: 0,
   first: POSTS_PER_PAGE
@@ -272,7 +272,7 @@ Since we don't want to display all our posts at once but rather show the first f
 
 We start by telling Apollo with [options](https://www.apollographql.com/docs/react/basics/setup.html#graphql-config-options) that we want it to use our previously declared `allPostsQueryVars` as variables in the `allPosts` query:
 
-```
+```javascript
 {
   options: {
     variables: allPostsQueryVars
@@ -282,7 +282,7 @@ We start by telling Apollo with [options](https://www.apollographql.com/docs/rea
 
 We follow up with props that allows us to define a map function that takes in the props of our component (including those defined by Apollo). 
 [props](https://www.apollographql.com/docs/react/basics/setup.html#graphql-config-props) is most useful when you want to abstract away complex functions calls into a simple prop that you can pass down to your component.
-```
+```javascript
 props: ({ data }) => ({
     data,
     loadMorePosts: () => {
@@ -313,7 +313,7 @@ And boom, we now have a complete `Home` component with a neat pagination button!
 #### `Post.js`
 
 If you managed to follow what happened in the `Home` component, this one is much simpler and requires little more explaining. You can go ahead and paste this into our `Post.js` file:
-```
+```javascript
 import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
@@ -372,7 +372,7 @@ _You can read more about `react-router` route params [here](https://github.com/r
 #### `About.js`
 
 Last piece of the puzzle is the `About` component that will display the list of blog authors. Go ahead and paste this in:
-```
+```javascript
 import React from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
