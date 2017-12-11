@@ -28,12 +28,13 @@ For this, we'll use [Apollo Client](https://www.apollographql.com/) which is a u
 yarn add apollo-client react-apollo apollo-cache-inmemory apollo-link-http graphql-tag
 ```
 That's quite a lot of packages, don't you worry though, we're gonna look at what each of them does.
-* `apollo-client` is our main hero here, we'll use it to create our GraphQL client using [ApolloClient](https://www.apollographql.com/docs/react/basics/setup.html#ApolloClient).
-* `react-apollo` gives us the access to [ApolloProvider](https://www.apollographql.com/docs/react/basics/setup.html#ApolloProvider) React component which *provides* the React Apollo functionality to all the other components in the application without passing it explicitly. The package also contains `graphql` function used to "enchance" our components with data.
-* `apollo-cache-inmemory` is the recommended cache implementation for Apollo Client 2.0. `InMemoryCache` will normalize our data before saving it to the store by splitting the result into individual objects, creating a unique identifier for each object, and storing those objects in a flattened data structure.
-* `apollo-link-http` is a standard interface for modifying control flow of GraphQL requests and fetching GraphQL results. We'll pass it the endpoint of our project so Apollo knows where to get the data from.
-* `graphql-tag` is a template literal tag we will use to concisely write a GraphQL query that is parsed into the standard GraphQL AST, like so:
-```javascript
+
+- `apollo-client` is our main hero here, we'll use it to create our GraphQL client using [ApolloClient](https://www.apollographql.com/docs/react/basics/setup.html#ApolloClient).
+- `react-apollo` gives us the access to [ApolloProvider](https://www.apollographql.com/docs/react/basics/setup.html#ApolloProvider) React component which *provides* the React Apollo functionality to all the other components in the application without passing it explicitly. The package also contains `graphql` function used to "enchance" our components with data.
+- `apollo-cache-inmemory` is the recommended cache implementation for Apollo Client 2.0. `InMemoryCache` will normalize our data before saving it to the store by splitting the result into individual objects, creating a unique identifier for each object, and storing those objects in a flattened data structure.
+- `apollo-link-http` is a standard interface for modifying control flow of GraphQL requests and fetching GraphQL results. We'll pass it the endpoint of our project so Apollo knows where to get the data from.
+- `graphql-tag` is a template literal tag we will use to concisely write a GraphQL query that is parsed into the standard GraphQL AST, like so:
+```
 const query = gql`
   {
     user(id: 5) {
@@ -116,10 +117,11 @@ export default App
 
 ### Components
 Let's make a `components` folder in our `src` directory and create 4 components:
-* `Header.js`
-* `Home.js`
-* `About.js`
-* `Post.js`
+
+- `Header.js`
+- `Home.js`
+- `About.js`
+- `Post.js`
 
 #### `Header.js`
 Similar to our `App.js`, `Header.js` is only here to provide routing for our application. We can go ahead and paste the code below into our file

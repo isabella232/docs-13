@@ -31,12 +31,13 @@ For this, we'll use [Apollo Client](https://www.apollographql.com/) which is a u
 yarn add apollo-client vue-apollo apollo-cache-inmemory apollo-link-http graphql-tag
 ```
 That's quite a lot of packages, don't you worry though, we're gonna look at what each of them does.
-* `apollo-client` is our main hero here, we'll use it to create our GraphQL client using [ApolloClient](https://github.com/Akryum/vue-apollo#installation).
-* `vue-apollo` will be used to [install](https://github.com/Akryum/vue-apollo#create-a-provider) Apollo plugin in our Vue app and create a provider which *provides* the Apollo functionality to all the other components in the application without passing it explicitly.
-* `apollo-cache-inmemory` is the recommended cache implementation for Apollo Client 2.0. `InMemoryCache` will normalize our data before saving it to the store by splitting the result into individual objects, creating a unique identifier for each object, and storing those objects in a flattened data structure.
-* `apollo-link-http` is a standard interface for modifying control flow of GraphQL requests and fetching GraphQL results. We'll pass it the endpoint of our project so Apollo knows where to get the data from.
-* `graphql-tag` is a template literal tag we will use to concisely write a GraphQL query that is parsed into the standard GraphQL AST, like so:
-```javascript
+
+- `apollo-client` is our main hero here, we'll use it to create our GraphQL client using [ApolloClient](https://github.com/Akryum/vue-apollo#installation).
+- `vue-apollo` will be used to [install](https://github.com/Akryum/vue-apollo#create-a-provider) Apollo plugin in our Vue app and create a provider which *provides* the Apollo functionality to all the other components in the application without passing it explicitly.
+- `apollo-cache-inmemory` is the recommended cache implementation for Apollo Client 2.0. `InMemoryCache` will normalize our data before saving it to the store by splitting the result into individual objects, creating a unique identifier for each object, and storing those objects in a flattened data structure.
+- `apollo-link-http` is a standard interface for modifying control flow of GraphQL requests and fetching GraphQL results. We'll pass it the endpoint of our project so Apollo knows where to get the data from.
+- `graphql-tag` is a template literal tag we will use to concisely write a GraphQL query that is parsed into the standard GraphQL AST, like so:
+```
 const query = gql`
   {
     user(id: 5) {
@@ -180,10 +181,11 @@ In our example, the purpose of `App` is mainly related to routing and displaying
 
 ### Components
 Let's make a `components` folder in our `src` directory and create 4 components:
-* `AppHeader.vue`
-* `Home.vue`
-* `About.vue`
-* `Post.vue`
+
+- `AppHeader.vue`
+- `Home.vue`
+- `About.vue`
+- `Post.vue`
 
 #### `AppHeader.vue`
 Similar to our `App`, `AppHeader` is only here to provide routing for our application. We can go ahead and paste the code below into our file
@@ -328,8 +330,8 @@ _Note: Your project has to have more posts than the `POSTS_PER_PAGE` indicates o
 
 There are quite a few things going on in here, let's go through them bit by bit:
 
-* We start with importing the `gql` module and using it to define the query we'd like to fetch the data with. We also create a `POSTS_PER_PAGE` constant to specify how many posts we'd like to have on every page.
-```javascript
+- We start with importing the `gql` module and using it to define the query we'd like to fetch the data with. We also create a `POSTS_PER_PAGE` constant to specify how many posts we'd like to have on every page.
+```
   import gql from 'graphql-tag'
 
   const POSTS_PER_PAGE = 2
@@ -349,8 +351,8 @@ There are quite a few things going on in here, let's go through them bit by bit:
   `
 ```
 
-* Next up, we name our component and tell Vue what data do we want it to have.
-```javascript
+- Next up, we name our component and tell Vue what data do we want it to have.
+```
 export default {
     name: 'HomePage',
     data: () => ({
@@ -376,12 +378,14 @@ export default {
 Here we say that we'd like:
 
   As initial data:
-  * a variable `loading` with an initial value of 0
+
+  - a variable `loading` with an initial value of 0
 
   From apollo:
-  * `$loadingKey` to be mapped to our `loading` from the initial data
-  * a variable `allPosts` produced from getting the allPosts `query` data with `variables`
-  * a variable `postCount` produced from getting the _allPostsMeta `query` data and extracting the `count` of our posts with `update`.
+  
+  - `$loadingKey` to be mapped to our `loading` from the initial data
+  - a variable `allPosts` produced from getting the allPosts `query` data with `variables`
+  - a variable `postCount` produced from getting the _allPostsMeta `query` data and extracting the `count` of our posts with `update`.
 
 You can think of `loading` as a simple conditional that tells us what's the current state of the data fetching process. When `loading` is true, loading message will be rendered. As soon as the loading is finished, the message will be replaced with our component.
 

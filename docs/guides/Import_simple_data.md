@@ -58,7 +58,7 @@ You can get this URL by copying it from the `Endpoints` section in the projects 
 
 The next code block shows how to setup the Lokka client:
 
-```
+```js
 import { Lokka } from 'lokka';
 import { Transport } from 'lokka-transport-http';
 
@@ -75,7 +75,7 @@ const client = new Lokka({
 
 Now we can write a mutation to write an event into your project. To do this, we write a simple method called `createEvent`, which gets an event object as parameter. Since we call the asynchronous `mutate` method of the Lokka client with `await`, we have to mark this method with `async`:
 
-```
+```js
 const createEvent = async ({ date, description, event, link, location, speakers, title }) => {
   const mutationResult = await client.mutate(`{
     event: createEvent(
@@ -109,7 +109,7 @@ Another special case is the speakers array. Since GraphQL expects an array of st
 The last field is the locations object. Here we have to prepend all quotes with a `\` using a simple regex: `.replace(/\"/g, '\\"')`.
 The mutation string which gets passed to the Lokka client looks like this:
 
-```
+```json
 {
   event: createEvent(
     date: "2017-03-27T00:00:00.000Z"
@@ -130,13 +130,13 @@ After the mutation is executed we return the id of the inserted record.
 
 In general the script simply loads the data to import from the `data.json` file using a simple `require`:
 
-```
+```js
 const data = require('../data.json');
 ```
 
 Then we iterate over each entry and call the `createEvent` method. After all Promises are resolved, we print out the number of inserted entries and their ids.
 
-```
+```js
 const eventIds = await Promise.all(data.map(createEvent));
 console.log(`Finished creating ${eventIds.length} events. Ids:`, eventIds);
 ```
