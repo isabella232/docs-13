@@ -30,7 +30,7 @@ extra_css:
 
 # Extensions
 markdown_extensions:
-  - codehilite(css_class=code)
+  - codehilite
   - admonition
   - meta
   - toc:
