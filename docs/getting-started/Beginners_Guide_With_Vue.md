@@ -464,6 +464,7 @@ If you managed to follow what happened in the `Home` component, this one is much
 
 <script>
   import gql from 'graphql-tag'
+  import VueMarkdown from 'vue-markdown'
 
   const post = gql`
     query post($slug: String!) {
