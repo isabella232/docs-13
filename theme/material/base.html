@@ -24,17 +24,17 @@
         <meta property="og:site_name" content="GraphCMS" />
         <meta name="twitter:site" content="@graph_cms" />
         {% if page.meta.ogtitle %}
-          <meta property="og:title" content="{{ page.meta.ogtitle[0] }}" />
-          <meta name="twitter:title" content="{{ page.meta.ogtitle[0] }}" />
+          <meta property="og:title" content="{{ page.meta.ogtitle }}" />
+          <meta name="twitter:title" content="{{ page.meta.ogtitle }}" />
         {% endif %}
         {% if page.meta.ogdescription %}
-          <meta property="og:description" content="{{ page.meta.ogdescription[0] }}"/>
-          <meta name="twitter:description" content="{{ page.meta.ogdescription[0] }}"/>
+          <meta property="og:description" content="{{ page.meta.ogdescription }}"/>
+          <meta name="twitter:description" content="{{ page.meta.ogdescription }}"/>
         {% endif %}
         {% if page.meta.ogimage %}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta property="og:image" content="{{ page.meta.ogimage[0] }}" />
-          <meta name="twitter:image" content="{{ page.meta.ogimage[0] }}" /> 
+          <meta property="og:image" content="{{ page.meta.ogimage }}" />
+          <meta name="twitter:image" content="{{ page.meta.ogimage }}" /> 
         {% endif %}
       {% endif %}
       <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
