@@ -12,7 +12,7 @@ Asset is a system model created by GraphCMS.
 The content model `Article` has one custom field `title` of type `String`. The content model `Author` has also one custom field with name `name` and type `String`.
 Both models are connected via a one-to-many relation with name `AuthorArticles`.
 
-```
+```json
 type Article {
   author: Author @relation(name: "AuthorArticles")
   createdAt: DateTime!
