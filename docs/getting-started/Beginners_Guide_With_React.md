@@ -27,7 +27,7 @@ For this, we'll use [Apollo Client](https://www.apollographql.com/) which is a u
 ```
 yarn add apollo-client react-apollo apollo-cache-inmemory apollo-link-http graphql-tag
 ```
-That's quite a lot of packages, don't you worry though, we're gonna look at what each of them does.
+That's quite a lot of packages, don't you worry though, we're gonna look at what each of them does. 
 
 - `apollo-client` is our main hero here, we'll use it to create our GraphQL client using [ApolloClient](https://www.apollographql.com/docs/react/basics/setup.html#ApolloClient).
 - `react-apollo` gives us the access to [ApolloProvider](https://www.apollographql.com/docs/react/basics/setup.html#ApolloProvider) React component which *provides* the React Apollo functionality to all the other components in the application without passing it explicitly. The package also contains `graphql` function used to "enchance" our components with data.

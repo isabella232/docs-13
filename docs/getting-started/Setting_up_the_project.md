@@ -94,4 +94,4 @@ When you are done with the content creation you are ready to jump into the examp
 
 ## Choose your Example
 
-You can now choose between the React and Vue example to continue your journey!
+You can now choose between the [React](/getting-started/beginners_guide_with_react/) and [Vue](/getting-started/beginners_guide_with_vue/) example to continue your journey!
