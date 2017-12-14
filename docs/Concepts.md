@@ -40,6 +40,9 @@ GraphCMS offers the following field types:
 
 ## Webhooks
 
+!!! hint " "
+    Webhooks are available starting from the **Basic Plan**. New Projects will be started in a two-week trial, where you get access to every higher-tier feature like Webhooks or Content Localization.
+
 [Webhooks](http://www.webhooks.org/) are a powerful concept that enable you to execute your own business logic in case of specified events.
 
 In GraphCMS, they allow you to define triggers on your content models, so you can run, for example, custom code if your content changes.
