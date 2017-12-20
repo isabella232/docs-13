@@ -66,9 +66,9 @@ import router from './router.js'
 ```
 _Don't worry about the `router` import not existing, we'll get to it in a moment_
 
-Now we can initialize our Apollo Client! We will also tell Vue to install the `vue-apollo` plugin for us. To do so, add this piece after the imports
+Now we can initialize our Apollo Client! We will also tell Vue to install the `vue-apollo` plugin for us. To do so, add this piece after the imports and replace `YOUR-SIMPLE-API-ENDPOINT` with your `Simple Endpoint`'s URI which you can find under `Settings -> Endpoints` in your GraphCMS project.
 ```javascript
-const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/YOUR-PROJECT-ID'
+const GRAPHCMS_API = 'YOUR-SIMPLE-API-ENDPOINT'
 
 const apolloClient = new ApolloClient({
   link: new HttpLink({ uri: GRAPHCMS_API }),

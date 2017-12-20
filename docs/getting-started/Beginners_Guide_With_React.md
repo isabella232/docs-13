@@ -61,9 +61,9 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import { ApolloProvider } from 'react-apollo'
 ```
 
-Now we can initialize our Apollo Client! To do so, add this piece after the imports
+Now we can initialize our Apollo Client! To do so, add this piece after the imports and replace `YOUR-SIMPLE-API-ENDPOINT` with your `Simple Endpoint`'s URI which you can find under `Settings -> Endpoints` in your GraphCMS project.
 ```javascript
-const GRAPHCMS_API = 'https://api.graphcms.com/simple/v1/YOUR-PROJECT-ID'
+const GRAPHCMS_API = 'YOUR-SIMPLE-API-ENDPOINT'
 
 const client = new ApolloClient({
   link: new HttpLink({ uri: GRAPHCMS_API }),
