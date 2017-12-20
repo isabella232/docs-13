@@ -72,6 +72,14 @@ Now your need to select the `Entry type` the left one is already selected from t
 
 ![Relation View](../img/getting-started/relation.png)
 
+### Permissions
+
+There's one more thing we need to do before we can access the later created content via the API - Permissions for each model.
+
+![Permission View](../img/guides/permission_view.png)
+
+Toggle the "R" (Read-Permission) for the Model `Post` and `Author`.
+
 Now we are all set to create content for our Posts! 🔥
 
 ## Creating Content
