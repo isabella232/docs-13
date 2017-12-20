@@ -43,7 +43,7 @@ The last `<fileName>` determined how the image will be called in Filestacks stor
 
 After we sent the request and everything went through, we should get a response like this:
 
-```
+```json
 {"container": "graphcms-dev", "url": "https://cdn.filestackcontent.com/IXJLraciRkafJgsafmpQ", "filename": "asset_settings.png", "key": "86458734-23487294-lfjkf345-53345/settings.png", "type": "image/png", "size": 20049}
 ```
 
@@ -55,7 +55,7 @@ In the last step we want to link the image in Filestacks storage to GraphCMS, so
 
 To do that, we send a `createAsset` mutation to our projects endpoint:
 
-```
+```json
 mutation test {
   createAsset (
     url: "https://media.graphcms.com/IXJLraciRkafJgsafmpQ"

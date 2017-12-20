@@ -10,7 +10,7 @@ Nested mutations allow you to interact with connected parts of your type schema.
 
 Nested create mutations connect the created node to a new node in the related type. Let's assume the following schema:
 
-```
+```json
 type Post implements Node {
     id: ID! @isUnique
     author: Author @relation(name: "AuthorPostRelation")
@@ -32,7 +32,7 @@ In the following examples we are exploring the possibilities for to-many and to-
 
 To make use of a To-Many Relation we create a new `Author` node and connect it to multiple `Posts`:
 
-```
+```json
 mutation createAuthorAndPosts {
   createAuthor(
     authorName: "Hans Hansen"
@@ -61,7 +61,7 @@ The mutations also work with query variables.
 
 Our return should be:
 
-```
+```json
 {
   "data": {
     "createAuthor": {
@@ -88,7 +88,7 @@ The To-one Relations works almost like the To-many one. The only difference is t
 
 Here's what the mutation would look like if we create a `Post` and connect a new `Author` node to it:
 
-```
+```json
 mutation createPostAndAuthor {
   createPost(
     postTitle: "My only post"
@@ -109,7 +109,7 @@ The example above shows, that a Post can only have a single author, which usuall
 Again, note that `author` gets passed all the arguments that a `create Author` mutation would also need.
 
 The return would look like this:
-```
+```json
 {
   "data": {
     "createPost": {
@@ -129,7 +129,7 @@ All of these examples also work with update mutations. The syntax should nearly 
 Nested connect mutations work in a smiliar way to `nested create mutations`. You create a new node and connect an existing one to it.
 
 Let's assume the same schema we uses for `create mutations`:
-```
+```json
 type Post implements Node {
     id: ID! @isUnique
     author: Author @relation(name: "AuthorPostRelation")
@@ -149,7 +149,7 @@ type Author implements Node {
 
 For To-Many Relations we want to create a new author node and connect it to different posts.
 
-```
+```json
 mutation createAuthorAndPosts {
   createAuthor(
     authorName: "Hans Hansen"
@@ -168,7 +168,7 @@ mutation createAuthorAndPosts {
 We simply specifiy an array which holds all the IDs of the posts we want to connect to the new author.
 
 The return should look like this:
-```
+```json
 {
   "data": {
     "createAuthor": {
@@ -190,7 +190,7 @@ The return should look like this:
 ### To-One Relations
 
 We now want to connect a new post to an existing author. We do this as follows:
-```
+```json
 mutation createPostAndConnectAuthor {
   createPost(
     postTitle: "This is a new post"
@@ -208,7 +208,7 @@ mutation createPostAndConnectAuthor {
 We define the `authorId` field with an ID that already exists and boom connected - as simple as that!
 
 The return should look like this:
-```
+```json
 {
   "data": {
     "createPost": {
