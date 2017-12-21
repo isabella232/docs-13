@@ -162,7 +162,14 @@
 
       ga('create', 'UA-83422951-1', 'auto');
       ga('send', 'pageview');
+    </script>
 
+    <script>
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+  window.navigator.serviceWorker.getRegistrations().then(registrations => {
+    registrations.forEach(r => r.unregister())
+  })
+}
     </script>
 
     <!--<script>
