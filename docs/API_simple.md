@@ -118,7 +118,6 @@ allArtists(
   name
   published
 }
-}
 ```
 
 For to-one relations, you can define conditions on the related entry by nesting the according argument in filter:
