@@ -292,7 +292,7 @@ Creates a new edge between two entries specified by their id. The according mode
 The query response can contain both entries of the new edge. The names of query arguments and entry names depend on the field names of the relation.
 ```
 mutation {
-	setArtistReview(reviewReviewId:"cixnen2ssewlo0143bexdd52n" artistArtistId:"cixnen2sse223412bexdd52n") {
+  setArtistReview(reviewReviewId:"cixnen2ssewlo0143bexdd52n" artistArtistId:"cixnen2sse223412bexdd52n") {
     artistArtist {
       id
       name
