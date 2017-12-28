@@ -269,7 +269,7 @@ mutation {
 
 Every mutation has to include the `clientMutationId` argument. If you are running the mutation in the API EXPLORER, you can choose some arbitrary value like `clientMutationId: "abc123"` for this argument. If you run a mutation with Relay, the `clientMutationId` is automatically filled by Relay.
 
-!! hint ""
+!!! hint ""
     Note: The subselection of fields cannot be empty. If you have no specific data requirements, you can always select id as a default.
 
 
