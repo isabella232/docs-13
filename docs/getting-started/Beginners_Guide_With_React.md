@@ -94,10 +94,10 @@ In our example, the purpose of `App` is mainly related to routing and displaying
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import Header from './Header'
-import Home from './Home'
-import About from './About'
-import Post from './Post'
+import Header from './components/Header'
+import Home from './components/Home'
+import About from './components/About'
+import Post from './components/Post'
 
 const App = () => (
   <Router>
@@ -324,11 +324,11 @@ const Post = ({ data: { loading, error, Post } }) => {
   if (!loading) {
     return (
       <article>
-        <h1>{post.title}</h1>
+        <h1>{Post.title}</h1>
         <div className='Post-placeholder'>
           <img
-            alt={post.title}
-            src={`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${post.coverImage.handle}`}
+            alt={Post.title}
+            src={`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${Post.coverImage.handle}`}
           />
         </div>
         <Markdown
