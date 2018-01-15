@@ -25,7 +25,7 @@ Now open up the code in the editor of your choice. You can see the main entry po
 
 For this, we'll use [Apollo Client](https://www.apollographql.com/) which is a universal GraphQL client that takes care of things like caching, pagination and feeding the data to our components in a performant way so we don't have to worry about writing all of that ourselves! Let's install everything we need with:
 ```
-yarn add apollo-client react-apollo apollo-cache-inmemory apollo-link-http graphql-tag
+yarn add apollo-client react-apollo apollo-cache-inmemory apollo-link-http graphql-tag graphql
 ```
 That's quite a lot of packages, don't you worry though, we're gonna look at what each of them does. 
 
