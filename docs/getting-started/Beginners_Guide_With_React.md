@@ -319,15 +319,15 @@ import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
 import Markdown from 'react-markdown'
 
-const Post = ({ data: { loading, error, Post } }) => {
+const Post = ({ data: { loading, error, post } }) => {
   if (error) return <h1>Error fetching the post!</h1>
   if (!loading) {
     return (
       <article>
-        <h1>{Post.title}</h1>
+        <h1>{post.title}</h1>
         <div className='Post-placeholder'>
           <img
-            alt={Post.title}
+            alt={post.title}
             src={`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${Post.coverImage.handle}`}
           />
         </div>
