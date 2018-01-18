@@ -25,7 +25,7 @@ Now open up the code in the editor of your choice. You can see the main entry po
 
 For this, we'll use [Apollo Client](https://www.apollographql.com/) which is a universal GraphQL client that takes care of things like caching, pagination and feeding the data to our components in a performant way so we don't have to worry about writing all of that ourselves! Let's install everything we need with:
 ```
-yarn add apollo-client react-apollo apollo-cache-inmemory apollo-link-http graphql-tag
+yarn add apollo-client react-apollo apollo-cache-inmemory apollo-link-http graphql-tag graphql
 ```
 That's quite a lot of packages, don't you worry though, we're gonna look at what each of them does. 
 
@@ -94,10 +94,10 @@ In our example, the purpose of `App` is mainly related to routing and displaying
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import Header from './Header'
-import Home from './Home'
-import About from './About'
-import Post from './Post'
+import Header from './components/Header'
+import Home from './components/Home'
+import About from './components/About'
+import Post from './components/Post'
 
 const App = () => (
   <Router>
@@ -319,7 +319,7 @@ import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
 import Markdown from 'react-markdown'
 
-const Post = ({ data: { loading, error, Post } }) => {
+const Post = ({ data: { loading, error, post } }) => {
   if (error) return <h1>Error fetching the post!</h1>
   if (!loading) {
     return (
