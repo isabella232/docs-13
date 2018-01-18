@@ -328,7 +328,7 @@ const Post = ({ data: { loading, error, post } }) => {
         <div className='Post-placeholder'>
           <img
             alt={post.title}
-            src={`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${Post.coverImage.handle}`}
+            src={`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${post.coverImage.handle}`}
           />
         </div>
         <Markdown
