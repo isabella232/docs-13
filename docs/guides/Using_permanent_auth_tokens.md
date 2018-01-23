@@ -15,7 +15,7 @@ This will allow your external client to:
     We will soon release a feature that will allow you to create `read-only tokens`, so even if someone gains access to such a token, your data will be safe from manipulation.
 
 !!! hint ""
-    As an alternative, you can set up public access for create, read, update and delete operations ([see here](/guides/Public_API_access)). This will allow you to skip the token step.
+    As an alternative, you can set up public access for create, read, update and delete operations ([see here](/concepts/#using-permissions)). This will allow you to skip the token step.
 
 You can create auth tokens in your project´s `Settings` view.
 
