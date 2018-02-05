@@ -89,7 +89,7 @@ client.query(`
 
 [Apollo](http://dev.apollodata.com/) is a flexible, fully-featured GraphQL client which can be used on every platform.
 
-To authorize your requests using a `permanent auth token` you have register a middleware, which adds the token to all outgoing requests. The example below shows how to do this with `react-apollo`, but you can use it for other Apollo implementations as well.
+To authorize your requests using a `permanent auth token` you have to register a middleware, which adds the token to all outgoing requests. The example below shows how to do this with `react-apollo`, but you can use it for other Apollo implementations as well.
 
 ```js
 import { ApolloClient, createNetworkInterface } from 'react-apollo';
