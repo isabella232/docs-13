@@ -39,3 +39,7 @@ After you added your indices they should become visible in the Algolia dashboard
 ## Demo Application
 
 Now you are ready to integrate Algolia in your frontend. We prepared a small demo application with create-react-app over at [Github](https://github.com/belazer/graphcms-algolia) with a live demo [here](https://graphcms-algolia.netlify.com)
+
+## Limitations
+
+The initial index of your content entries only allows 1000 entries. If you try to index more in the initial index, you will need to update your indices manually.
