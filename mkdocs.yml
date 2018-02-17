@@ -71,6 +71,7 @@ pages:
   - 'Nuxt.js & Apollo Client': 'examples/Nuxt_Apollo_Blog.md'
   - 'PreactCLI & Apollo Client': 'examples/Preact-CLI_Apollo_Blog.md'
   - 'React & Apollo Client': 'examples/React_Apollo_Blog.md'
+  - 'React & URQL': 'examples/React_URQL_Blog.md'
   - 'React Native & Apollo Client': 'examples/React-Native_Apollo_Blog.md'
   - 'React Static & graphql-request': 'examples/React-Static_GraphQL_Request_Blog.md'
   - 'Using Spike': 'examples/Spike_Vinylbase.md'
