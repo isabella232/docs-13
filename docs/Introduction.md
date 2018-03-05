@@ -25,5 +25,5 @@ Since your application receives only the data it requested, the payload is limit
 #### Generated API Documentation
 Writing and maintaining API documentation can be cumbersome. With GraphQL, you don't have to worry about documentation at all. Through introspection all of your API documentation will be generated automatically.
 
-!!! tip ""
+!!! tip
     If you want to learn more about GraphQL, we recommend you to visit the [GraphQL.org](https://graphql.org/) website as a good starting point.

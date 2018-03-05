@@ -8,5 +8,5 @@ By default, all GraphCMS content APIs are private. That means that you will only
 
 The `PUBLIC API ACCESS` panel allows you to set your API public for `CREATE`, `READ`, `UPDATE` and `DELETE` operations.
 
-!!! danger ""
+!!! danger
     If you want to open your API to the public, we highly recommend to only allow `READ` operations, so no one will be able to modify and harm your content. Be also aware that all public requests to your API will count against your monthly API quota.

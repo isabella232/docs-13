@@ -22,8 +22,8 @@ You can replace the `projectId` in the URLs with your own `alias`. If you set up
 
 ![Screenshot](../img/guides/custom_alias.png)
 
-!!! warning ""
+!!! warning
     Please remember that project aliases must be _globally_ unique. If another user has taken the alias already, you cannot use it in your project.
 
-!!! hint ""
+!!! hint
     If you set up an alias for your project, you can still use the default URLs of your API.

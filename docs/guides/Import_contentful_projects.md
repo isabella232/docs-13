@@ -1,6 +1,6 @@
 # Import Contentful Projects
 
-!!! danger " "
+!!! danger
         Please note that the importer is still in **BETA**. <br/>
         Report any bugs via On-Site-Chat, [Slack](https://slack.graphcms.com) or in our [Issue-Tracker](https://github.com/GraphCMS/Issue-tracker)
 
@@ -16,7 +16,7 @@ After entering the credentials you can continue to the next step.
 
 ## Fixing your Models, Fields and Relations
 
-!!! danger " "
+!!! danger
         Relations in Contentful work a little different from the ones in GraphCMS. You will get an error when importing a project with relation fields, which didn't specify a discrete entry type.
 
 After successfully entering all you necessary tokens and clicking `Next` you will most likely be presented with some issues, when having relations in Contentful. This issue is probably occurring since you have relation fields and didn't specify a discrete entry type:

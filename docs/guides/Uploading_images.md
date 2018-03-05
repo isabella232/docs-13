@@ -1,6 +1,6 @@
 # Uploading Images to GraphCMS
 
-!!! hint " "
+!!! hint
     We use [Filestack](https://www.filestack.com/) as our Asset hoster. If you want to build a fancy uploader, check their API documentation for API usage!
 
 In this guide, we will use a `curl` example to upload data to your project.
@@ -87,7 +87,7 @@ The response from this would be:
 
 We now have successfully linked our image from Filestack to GraphCMS and can now use it in our project.
 
-!!! hint " "
+!!! hint
     If any questions are still open, feel free to contact us in [Slack](https://slack.graphcms.com) or via On-Site-Chat!
 
 ## Advanced

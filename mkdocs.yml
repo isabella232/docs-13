@@ -7,8 +7,9 @@ site_url: 'https://graphcms.com/docs'
 
 # Documentation and theme
 docs_dir: 'docs'
-theme: 'material'
-theme_dir: 'theme/material'
+theme:
+  name: 'material'
+  custom_dir: 'theme'
 # Options
 extra:
   version: '0.1.0'
@@ -21,20 +22,24 @@ extra:
       link: 'https://github.com/graphcms'
     - type: 'twitter'
       link: 'https://twitter.com/graph_cms'
+    - type: 'facebook'
+      link: 'https://facebook.com/graphcms'
+    - type: 'instagram'
+      link: 'https://instagram.com/graphcms'
 
 # Copyright
-copyright: 'Copyright &copy; 2017 GraphCMS'
+copyright: 'Copyright &copy; 2018 GraphCMS'
 
 extra_css:
   - 'stylesheets/extra.css'
 
 # Extensions
 markdown_extensions:
-  - codehilite
   - admonition
+  - codehilite
   - meta
   - toc:
-      permalink: '#'
+      permalink: "#"
 
 pages:
 - Introduction: 'Introduction.md'
@@ -92,5 +97,9 @@ pages:
   - 'Uploading Images to GraphCMS': 'guides/Uploading_images.md'
   - 'Import Contentful Projects': 'guides/Import_contentful_projects.md'
 - API:
-  - 'Simple': 'API_simple.md'
-  - 'Relay': 'API_relay.md'
+  - 'Simple': 'api/API_simple.md'
+  - 'Relay': 'api/API_relay.md'
+- Prisma API:
+  - 'Concepts': 'prisma-api/Concepts.md'
+  - 'Queries': 'prisma-api/Queries.md'
+  - 'Mutations': 'prisma-api/Mutations.md'

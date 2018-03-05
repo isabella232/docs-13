@@ -4,7 +4,7 @@ GraphCMS offers a rich UI to insert new data to your project. Often you have a s
 
 This guide explains how to import simple structured data into GraphCMS using a NodeJS script. By simple structured data we mean data without relations. It is intended to be a starting point and can be easily adapted for your specific use case.
 
-!!! hint ""
+!!! hint
     The sample project for this guide can be found [here](https://github.com/GraphCMS/example_02_simple_data_import).
 
 ## Data structure
@@ -45,7 +45,7 @@ An easy way to do this is to use [Lokka](https://github.com/kadirahq/lokka). It 
 
 We are going to use NodeJS with [Babel](https://babeljs.io) to write ES6 code. To get a cleaner handling for async operations, we use the [transform-async-to-generator](https://babeljs.io/docs/plugins/transform-async-to-generator) Bable plugin.
 
-!!! hint ""
+!!! hint
     Since GraphQL queries are just simple HTTP request you can use CURL or any other programming language you want.
 
 
@@ -69,7 +69,7 @@ const client = new Lokka({
 });
 ```
 
-!!! hint ""
+!!! hint
     We need to format the date of each event to `ISO-8601`. You have to ensure the timezone is set to `UTC`.
 
 
@@ -95,7 +95,7 @@ const createEvent = async ({ date, description, event, link, location, speakers,
 };
 ```
 
-!!! hint ""
+!!! hint
     To simplify your development process, you can print out your created mutation string and verify it is valid using a tool like [GraphiQL](https://github.com/graphql/graphiql) or the [GraphCMS API Explorer](/Getting_Started/#exploring-the-content-api)
 
 We create and pass a mutation string into the `mutate` method of the Lokka client. This is a simple GraphQL mutation string, so we have to format the incoming data a little bit.
@@ -142,5 +142,5 @@ console.log(`Finished creating ${eventIds.length} events. Ids:`, eventIds);
 ```
 
 
-!!! hint ""
+!!! hint
     We have configured the field `title` to be unique. If you run the script multiple times it will fail, because reimporting would violate the unique key constraint.

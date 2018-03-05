@@ -29,7 +29,7 @@ The figure below shows mock ups of the three components:
 
 ## GraphCMS-SWAPI
 
-!!! hint ""
+!!! hint
     If you haven´t set up a content model yet, please check our [Getting Started Guide](../Getting_Started). This project will focus on getting the content from GraphCMS and will be using the existing [GraphCMS-SWAPI](https://api.graphcms.com/simple/v1/swapi).
 
 First lets head to [GraphCMS-SWAPI](https://api.graphcms.com/simple/v1/swapi) and use the API Explorer to build our `films` query.
@@ -50,7 +50,7 @@ query films {
 
 <div data-snack-id="S1Xg47yxZ" class="expo" data-snack-platform="ios" data-snack-preview="false"></div>
 
-!!! hint ""
+!!! hint
     Hit the `Preview` switch, to see a live example of the current progress.
 
     Ignore the warnings about `unused components` for now. We will need them later. You can look into [Styled-Components](https://styled-components.com) for more information.
@@ -146,8 +146,8 @@ The data is now available so we pipe it down into the `Film` component.
   : <Loading />}
 ```
 
-!!! hint ""
-    Note: We only render the films if the data is loaded, otherwise we just render a spinner.
+!!! note
+    We only render the films if the data is loaded, otherwise we just render a spinner.
 
 <div data-snack-id="r1oi7XkeZ" class="expo" data-snack-platform="ios" data-snack-preview="false"></div>
 
