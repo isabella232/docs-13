@@ -1,4 +1,5 @@
 {% import "partials/language.html" as lang %}
+{% set font = config.theme.font %}
 <!DOCTYPE html>
 <html class="no-js">
   <head>
@@ -15,7 +16,7 @@
         <meta name="author" content="{{ config.site_author }}">
       {% endif %}
       {% if config.site_favicon %}
-        <link rel="shortcut icon" href="{{ base_url }}/{{ config.site_favicon }}">
+      <link rel="shortcut icon" href="{{ base_url }}/{{ config.theme.favicon }}">
       {% else %}
         <link rel="shortcut icon" href="{{ base_url }}/assets/images/favicon.ico">
       {% endif %}
@@ -52,13 +53,13 @@
       <script src="{{ base_url }}/assets/javascripts/modernizr-facb31f4a3.js"></script>
     {% endblock %}
     {% block fonts %}
-      {% if config.extra.font != "none" %}
-        {% set text = config.extra.get("font", {}).text | default("Roboto") %}
-        {% set code = config.extra.get("font", {}).code
-                    | default("Roboto Mono") %}
-        {% set font = text + ':300,400,400i,700|' + code | replace(' ', '+') %}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ font }}">
-        <style>body,input{font-family:"{{ text }}","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"{{ code }}","Courier New",Courier,monospace}</style>
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      {% if font != false %}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{
+              font.text | replace(' ', '+')  + ':300,400,400i,700|' +
+              font.code | replace(' ', '+')
+            }}">
+        <style>body,input{font-family:"{{ font.text }}","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"{{ font.code }}","Courier New",Courier,monospace}</style>
       {% endif %}
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     {% endblock %}
@@ -124,9 +125,9 @@
           {% endblock %}
           <div class="md-content">
             <article class="md-content__inner md-typeset">
-               {% if config.edit_uri %}
-                 <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-icon md-content__edit">edit</a>
-               {% endif %}
+              {% if page.edit_url %}
+              <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-icon md-content__icon">&#xE3C9;</a>
+            {% endif %}
               {% block content %}
                 {% if not "\x3ch1 id=" in page.content %}
                   <h1>{{ page.title | default(config.site_name, true)}}</h1>
