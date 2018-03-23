@@ -28,6 +28,7 @@ theme:
 
 # Options
 extra:
+  base_url: 'https://graphcms.com/docs'
   social:
     - type: 'github'
       link: 'https://github.com/graphcms'
@@ -39,7 +40,6 @@ extra:
       link: 'https://instagram.com/graphcms'
   search:
     language: 'en'
-  base_url: 'https://graphcms.com/docs'
 
 # Copyright
 copyright: 'Copyright &copy; 2018 GraphCMS'
