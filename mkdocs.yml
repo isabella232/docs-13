@@ -1,4 +1,4 @@
-site_name: GraphCMS Docs
+site_name: GraphCMS Documentation
 # Project information
 site_description: 'A GraphQL based Headless Content Management System'
 site_author: 'Michael Lukaszczyk & Daniel Winter'
@@ -19,6 +19,12 @@ theme:
   font:
     text: 'Open Sans'
     code: 'Roboto Mono'
+  palette:
+    primary: 'deep purple'
+    accent: 'deep purple'
+  feature:
+    tabs: false
+
 
 # Options
 extra:
@@ -33,13 +39,13 @@ extra:
       link: 'https://instagram.com/graphcms'
   search:
     language: 'en'
+  base_url: 'https://graphcms.com/docs/'
 
 # Copyright
 copyright: 'Copyright &copy; 2018 GraphCMS'
 
 extra_css:
   - 'stylesheets/extra.css'
-
 # Extensions
 markdown_extensions:
   - admonition

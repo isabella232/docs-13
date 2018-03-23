@@ -8,6 +8,10 @@ header.md-header {
   } 
 }
 
+.md-header {
+  height: 5rem !important;
+}
+
 /* Related to embedded expo.io */
 .expo {
   overflow: hidden;
