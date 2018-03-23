@@ -39,7 +39,7 @@ extra:
       link: 'https://instagram.com/graphcms'
   search:
     language: 'en'
-  base_url: 'https://graphcms.com/docs/'
+  base_url: 'https://graphcms.com/docs'
 
 # Copyright
 copyright: 'Copyright &copy; 2018 GraphCMS'
