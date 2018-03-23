@@ -2,7 +2,7 @@
 
 GraphCMS has a simple, built in publishing workflow that allows you to control which content will be delivered by your API. This lets you create new content and only deliver it after it was reviewed.
 
-!!! warning ""
+!!! warning
     Currently, unpublished entries are also delivered from the API. In the future we won´t serve them via the API. For now, you can add a filter to your queries to ignore unpublished entries.
 
     Example: `{ allPosts(filter: {isPublished: true}) { title body }}`

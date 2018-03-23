@@ -1,6 +1,6 @@
 # Algolia
 
-!!! Hint ""
+!!! hint
     All of Algolias indexing is not covered within our pricing plans, so you might create extra costs with a lot of indices or records. Algolias free community plan includes 10.000 records and 100.000 operations and you have to display their logo on your search results. Details [here](https://www.algolia.com/pricing)
 
 Algolia is a hosted full-text, numerical, and faceted search engine capable of delivering realtime results from the first keystroke. Algolia’s powerful API lets you quickly and seamlessly implement search within your websites and mobile applications. The search API powers billions of queries for thousands of companies every month, delivering relevant results in under 100ms anywhere in the world.
@@ -29,7 +29,7 @@ Now you can copy & paste both the `Application ID` and `API Key` in the GraphCMS
 
 After you entered your credentials you will be redirected to the Algolia configuration. From here you can now create indices for Algolia.
 
-!!! Hint ""
+!!! hint
     The Index will only get created if you have data in your content model. If you create an index for a content model without content, the index will not be created until you add content to it.
 
 ![IMAGE ALT TEXT HERE](https://media.giphy.com/media/xT1Ra3NA1YjMQMpB4Y/giphy.gif)

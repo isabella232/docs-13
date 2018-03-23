@@ -1,40 +1,52 @@
 site_name: GraphCMS Docs
-theme: 'material'
 # Project information
 site_description: 'A GraphQL based Headless Content Management System'
 site_author: 'Michael Lukaszczyk & Daniel Winter'
 site_url: 'https://graphcms.com/docs'
 
+# Repository
+repo_name: graphcms/docs
+repo_url: https://github.com/graphcms/docs
+edit_uri: ""
+
 # Documentation and theme
-docs_dir: 'docs'
-theme: 'material'
-theme_dir: 'theme/material'
-# Options
-extra:
-  version: '0.1.0'
+theme:
+  name: null
+  language: 'en'
+  custom_dir: 'theme/material'
   logo: 'img/graphcms_logo.svg'
+  favicon: 'assets/images/favicon.ico'
   font:
     text: 'Open Sans'
     code: 'Roboto Mono'
+
+# Options
+extra:
   social:
     - type: 'github'
       link: 'https://github.com/graphcms'
     - type: 'twitter'
       link: 'https://twitter.com/graph_cms'
+    - type: 'facebook'
+      link: 'https://facebook.com/graphcms'
+    - type: 'instagram'
+      link: 'https://instagram.com/graphcms'
+  search:
+    language: 'en'
 
 # Copyright
-copyright: 'Copyright &copy; 2017 GraphCMS'
+copyright: 'Copyright &copy; 2018 GraphCMS'
 
 extra_css:
   - 'stylesheets/extra.css'
 
 # Extensions
 markdown_extensions:
-  - codehilite
   - admonition
+  - codehilite
   - meta
   - toc:
-      permalink: '#'
+      permalink: "#"
 
 pages:
 - Introduction: 'Introduction.md'
@@ -92,5 +104,9 @@ pages:
   - 'Uploading Images to GraphCMS': 'guides/Uploading_images.md'
   - 'Import Contentful Projects': 'guides/Import_contentful_projects.md'
 - API:
-  - 'Simple': 'API_simple.md'
-  - 'Relay': 'API_relay.md'
+  - 'Simple': 'api/API_simple.md'
+  - 'Relay': 'api/API_relay.md'
+#- New API:
+#  - 'Concepts': 'prisma-api/Concepts.md'
+#  - 'Queries': 'prisma-api/Queries.md'
+#  - 'Mutations': 'prisma-api/Mutations.md'

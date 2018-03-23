@@ -36,5 +36,5 @@ Each user can be assigned to one role at a time. If you want to change the role,
 
 To remove yourself from a project, use the `LEAVE PROJECT` button in the danger zone.
 
-!!! hint ""
+!!! hint
     Currently it is not possible to invite users without a GraphCMS account. What works already is to first create a GraphCMS account using the sign up form on app.graphcms.com and invite the user afterwards. An invite feature for inviting external users will be available soon.

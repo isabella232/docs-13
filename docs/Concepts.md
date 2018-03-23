@@ -40,7 +40,7 @@ GraphCMS offers the following field types:
 
 ## Webhooks
 
-!!! hint " "
+!!! hint
     Webhooks are available starting from the **Basic Plan**. New Projects will be started in a two-week trial, where you get access to every higher-tier feature like Webhooks or Content Localization.
 
 [Webhooks](http://www.webhooks.org/) are a powerful concept that enable you to execute your own business logic in case of specified events.
@@ -92,7 +92,7 @@ You can also define if your webhook is triggered synchronously or asynchronously
 
 Your webhook will be active by default. You can disable it by clicking on the switch in the webhook´s entry.
 
-!!! Warning ""
+!!! warning
     If you change your content models or modify your fields, remember to update affected webhooks accordingly! This does not happen automatically.
 
 ## GraphQL Endpoints
@@ -146,7 +146,7 @@ To connect your client applications with your GraphCMS backend, you will need to
 
 [How to work with permanent auth tokens](guides/Using_permanent_auth_tokens)
 
-!!! warning ""
+!!! warning
     Be careful! Anyone that gains access to one of your tokens will be able to execute all of these operations and manipulate your content. So it is never a good idea to store a token on the client side, i.e. a JavaScript client application.
 
     We will soon release a feature that will allow you to create `read-only tokens`, so even if someone gains access to such a token, your data will be safe from manipulation.

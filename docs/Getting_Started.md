@@ -231,8 +231,8 @@ Cool! We can now start building our frontend application. Switch over to the `SE
 
 ![Screenshot](img/screenshots/settings.png)
 
-!!! warning ""
+!!! warning
     If you run into an issue, please have a look at the known issues in our [issue tracker](https://github.com/GraphCMS/Issue-tracker). Please don´t hesitate to open a bug ticket if you experienced an issue that is not covered by those in the tracker.
 
-!!! hint ""
+!!! hint
     If you are missing a feature or if you have an idea for additional functionality, please help us to improve by submitting a feature request to the [Feature-Request Repository](https://github.com/GraphCMS/Feature-Requests).
