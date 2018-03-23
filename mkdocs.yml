@@ -31,6 +31,8 @@ extra:
       link: 'https://facebook.com/graphcms'
     - type: 'instagram'
       link: 'https://instagram.com/graphcms'
+  search:
+    language: 'en'
 
 # Copyright
 copyright: 'Copyright &copy; 2018 GraphCMS'
@@ -104,7 +106,7 @@ pages:
 - API:
   - 'Simple': 'api/API_simple.md'
   - 'Relay': 'api/API_relay.md'
-- New API:
-  - 'Concepts': 'prisma-api/Concepts.md'
-  - 'Queries': 'prisma-api/Queries.md'
-  - 'Mutations': 'prisma-api/Mutations.md'
+#- New API:
+#  - 'Concepts': 'prisma-api/Concepts.md'
+#  - 'Queries': 'prisma-api/Queries.md'
+#  - 'Mutations': 'prisma-api/Mutations.md'
