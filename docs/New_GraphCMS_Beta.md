@@ -48,7 +48,7 @@ query {
 ```
 
 ### Filtering
-If you want to **filter** you now need to use the `where` argument:
+If you want to filter you now need to use the `where` argument:
 ```json
 query {
   authors(where: {
@@ -60,7 +60,7 @@ query {
 }
 ```
 
-A more advanced **filter** example:
+A more advanced filter example:
 ```json
 query {
   posts(where: {
@@ -91,7 +91,7 @@ query {
 ```
 
 ### Ordering
-**Ordering** still works the same as before:
+Ordering still works the same as before:
 ```json
 query {
   posts(orderBy: title_ASC) {
@@ -219,4 +219,17 @@ mutation {
 ## What to Expect in the Next Weeks
 We will be making daily changes to the web app and the web app will display when a new version is ready.
 
-The final release around the end of may will be mostly feature pair with the "old version" of GraphCMS, so there will be a lot of things coming throughout the beta. For example: Translations, Webhooks, Publish Workflows, Roles...
+The final release around the end of may will be mostly feature pair with the "old version" of GraphCMS, so there will be a lot of things coming throughout the beta. 
+
+What's still to come:
+
+- Dashboard (without Mock data)
+- Translations
+- Staging
+- Webhooks
+- Publish Workflows
+- Remaining Fields
+- Relations
+- Roles
+- Integrations (Algolia etc.)
+- Settings
