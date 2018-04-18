@@ -1,3 +1,7 @@
+ogtitle: GraphCMS Beta Onboarding
+ogdescription: Detailed GraphCMS Beta Onboarding Docs
+ogimage: https://graphcms.com/blog/covers/new_gcms_cover.png
+
 #The New GraphCMS - Beta Onboarding
 Welcome to the beta of the new GraphCMS! We are very happy to have you as one of our early stage testers.
 
