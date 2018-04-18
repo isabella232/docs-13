@@ -34,6 +34,188 @@ You can reach us either through Intercom, our on site chat, or via [Slack](https
 ## How to Access
 The Beta version is hosted on [https://beta.graphcms.com](https://beta.graphcms.com) and we will whitelist your email for access! If you have trouble logging in, please contact us in Slack.
 
+## API Changes
+
+The API will be a little different from what you are used in the current version. The `all`-Prefix from the queries is gone now. So a simple Query might look like this:
+```json
+query {
+    posts {
+        id
+        title
+        content
+    }
+}
+```
+
+### Filtering
+If you want to **filter** you now need to use the `where` argument:
+```json
+query {
+  authors(where: {
+    age_gt: 18
+  }) {
+    id
+    name
+  }
+}
+```
+
+A more advanced **filter** example:
+```json
+query {
+  posts(where: {
+    title_in: ["My biggest Adventure", "My latest Hobbies"]
+  }) {
+    id
+    title
+    published
+  }
+}
+```
+
+As before you can also use `AND` and `OR` to chain filters:
+```json
+query {
+  posts(where: {
+    AND: [{
+      title_in: ["My biggest Adventure", "My latest Hobbies"]
+    }, {
+      published: true
+    }]
+  }) {
+    id
+    title
+    published
+  }
+}
+```
+
+### Ordering
+**Ordering** still works the same as before:
+```json
+query {
+  posts(orderBy: title_ASC) {
+    id
+    title
+    published
+  }
+}
+```
+
+### Pagination
+You can accomplish Pagination like this for example:
+```json
+query {
+  posts(
+    first: 2
+    skip: 1
+  ) {
+    id
+    title
+  }
+}
+```
+
+```json
+query {
+  posts(
+    first: 2
+    after: "cixnen24p33lo0143bexvr52n"
+  ) {
+    id
+    title
+  }
+}
+```
+
+### Mutations
+
+Mutations are looking a little bit different now. Here are the main changes:
+
+#### Creating Nodes
+
+The create Mutation now takes a `data` argument, which includes an object of the fields you want to create:
+
+```json
+# Create a new Author
+mutation {
+  createAuthor(
+    data: {
+      age: 42
+      email: "zeus@example.com"
+      name: "Zeus"
+    }
+  ) {
+    id
+    name
+  }
+}
+```
+
+#### Updating Nodes
+
+The update Mutation also takes a `data` argument but also `where` for filtering for the specific node that should be updated:
+
+```json
+# Update an Author
+mutation {
+  updateAuthor(
+    data: {
+      email: "zeus2@example.com"
+      name: "Zeus2"
+    }
+    where: {
+      email: "zeus@example.com"
+    }
+  ) {
+    id
+    name
+  }
+}
+```
+
+#### Upserting
+
+When we want to either update an existing node, or create a new one in a single mutation, we can use _upsert_ mutations.
+
+Here, we use `upsertAuthor` to update the `Author` with a certain `email`, or create a new `Author` if a `Author` with that `email` doesn't exist yet:
+
+```json
+# Upsert a Author
+mutation {
+  upsertAuthor(
+    where: {
+      email: "zeus@example.com"
+    }
+    create: {
+      email: "zeus@example.com"
+      age: 42
+      name: "Zeus"
+    }
+    update: {
+      name: "Another Zeus"
+    }
+  ) {
+    name
+  }
+}
+```
+
+#### Deleting Nodes
+
+```json
+# Delete an Author
+mutation {
+  deleteAuthor(where: {
+    id: "cjcdi63l20adx0146vg20j1ck"
+  }) {
+    id
+    name
+    email
+  }
+}
+```
+
 ## What to Expect in the Next Weeks
 We will be making daily changes to the web app and the web app will display when a new version is ready.
 
