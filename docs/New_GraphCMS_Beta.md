@@ -2,7 +2,8 @@ ogtitle: GraphCMS Beta Onboarding
 ogdescription: Detailed GraphCMS Beta Onboarding Docs
 ogimage: https://graphcms.com/blog/covers/new_gcms_cover.png
 
-#The New GraphCMS - Beta Onboarding
+# 🎉 The New GraphCMS - Beta Onboarding 🎉
+
 Welcome to the beta of the new GraphCMS! We are very happy to have you as one of our early stage testers.
 
 ![New GraphCMS](./img/new_gcms_cover.png)
@@ -21,7 +22,7 @@ The current beta web app is capable of the following things:
     - Integer
     - Float
     - Checkbox
-- Creating Content for these Fields
+- Creating Content
 - Uploading Assets
 - Staging Preview
 - API Explorer (API per Stages)
@@ -29,10 +30,25 @@ The current beta web app is capable of the following things:
 ## How to Give Feedback
 During the beta we are dependent on your feedback! There may be things that are not working properly or some rough edges, but we still want you to provide us with everything that you find buggy or weird. If you are missing something or got stuck somewhere, just let us know!
 
-You can reach us either through Intercom, our on site chat, or via [Slack](https://slack.graphcms.com) in the locked `#beta` channel. If you need access for that simply message `@fabian` in Slack or [fabian@graphcms.com](mailto:fabian@graphcms.com).
+!!! tip
+    You can reach us either through Intercom (On-Site-Chat) or via [Slack](https://slack.graphcms.com) in the locked `#beta` channel. If you need access for that simply message `@fabian` in Slack or via [fabian@graphcms.com](mailto:fabian@graphcms.com).
 
 ## How to Access
 The Beta version is hosted on [https://beta.graphcms.com](https://beta.graphcms.com) and we will whitelist your email for access! If you have trouble logging in, please contact us in Slack.
+
+## Field Creation Workflow
+
+To create fields you can make use of our brand new workflow for that. Simply create a Model and drag the Fields onto it:
+
+![Field Creation Workfllow](./img/FieldCreation.gif)
+
+## Staging Preview
+
+The new GraphCMS is allowing you to create `Stages` for your project. The most bottom stage will be the `Write-Only` Stage. All other Stages are `Read-Only`. So changes can only be applied on the bottom stage and then Synced upwards.
+
+See a quick demo  here:
+
+![Staging Preview](./img/Staging.gif)
 
 ## API Changes
 
