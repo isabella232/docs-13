@@ -44,7 +44,7 @@ To create fields you can make use of our brand new workflow for that. Simply cre
 
 ## Staging Preview
 
-The new GraphCMS is allowing you to create `Stages` for your project. The most bottom stage will be the `Write-Only` Stage. All other Stages are `Read-Only`. So changes can only be applied on the bottom stage and then Synced upwards.
+The new GraphCMS is allowing you to create `Stages` for your project. The most bottom stage will be the `Read-And-Write` Stage. All other Stages are `Read-Only`. So changes can only be applied on the bottom stage and then synced upwards.
 
 See a quick demo  here:
 
