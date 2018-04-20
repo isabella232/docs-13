@@ -30,8 +30,7 @@ The current beta web app is capable of the following things:
 ## How to Give Feedback
 During the beta we are dependent on your feedback! There may be things that are not working properly or some rough edges, but we still want you to provide us with everything that you find buggy or weird. If you are missing something or got stuck somewhere, just let us know!
 
-!!! tip
-    You can reach us either through Intercom (On-Site-Chat) or via [Slack](https://slack.graphcms.com) in the locked `#beta` channel. If you need access for that simply message `@fabian` in Slack or via [fabian@graphcms.com](mailto:fabian@graphcms.com).
+You can reach us via [Slack](https://slack.graphcms.com) in the locked `#beta` channel. If you need access for that simply message `@fabian` in Slack or [fabian@graphcms.com](mailto:fabian@graphcms.com).
 
 ## How to Access
 The Beta version is hosted on [https://beta.graphcms.com](https://beta.graphcms.com) and we will whitelist your email for access! If you have trouble logging in, please contact us in Slack.
