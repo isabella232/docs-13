@@ -36,7 +36,11 @@ During the beta we are dependent on your feedback! There may be things that are 
 You can reach us via [Slack](https://slack.graphcms.com) in the locked `#beta` channel. If you need access for that simply message `@fabian` in Slack or [fabian@graphcms.com](mailto:fabian@graphcms.com).
 
 ## How to Access
-The Beta version is hosted on [https://beta.graphcms.com](https://beta.graphcms.com) and we will whitelist your email for access! If you have trouble logging in, please contact us in Slack.
+The Beta version is hosted on [https://beta.graphcms.com](https://beta.graphcms.com) and we will whitelist your email for access! 
+
+!!! warning
+    You will need to use `Sign up` and **create a new account with the email that received the invite**, since the accounts are not linked to the old version.
+If you have trouble logging in, please contact us in Slack.
 
 ## Field Creation Workflow
 
