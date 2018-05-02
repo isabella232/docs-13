@@ -78,7 +78,7 @@ There's one more thing we need to do before we can access the later created cont
 
 ![Permission View](../img/guides/permission_view.png)
 
-Toggle the "R" (Read-Permission) for the Model `Post` and `Author`.
+Toggle the "R" (Read-Permission) for the Model `Post`, `Author` and `Asset`.
 
 Now we are all set to create content for our Posts! 🔥
 
