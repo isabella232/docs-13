@@ -89,7 +89,7 @@ const apolloProvider = new VueApollo({
 
 new Vue({
   el: '#app',
-  apolloProvider,
+  provide: apolloProvider.provide(),
   router,
   template: '<App/>',
   components: { App }
@@ -290,7 +290,9 @@ Now, we add the component's logic:
   export default {
     name: 'HomePage',
     data: () => ({
-      loading: 0
+      loading: 0,
+      allPosts: null,
+      postCount: null
     }),
     apollo: {
       $loadingKey: 'loading',
@@ -356,7 +358,9 @@ There are quite a few things going on in here, let's go through them bit by bit:
 export default {
     name: 'HomePage',
     data: () => ({
-      loading: 0
+      loading: 0,
+      allPosts: null,
+      postCount: null
     }),
     apollo: {
       $loadingKey: 'loading',
@@ -563,7 +567,8 @@ Last piece of the puzzle is the `About` component that will display the list of 
   export default {
     name: 'AboutPage',
     data: () => ({
-      loading: 0
+      loading: 0,
+      allAuthors: null
     }),
     apollo: {
       $loadingKey: 'loading',
