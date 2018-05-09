@@ -1,8 +1,6 @@
 # Getting started: Blog with create-react-app & Apollo Client
 _Note: This guide assumes you have some knowledge about React and GraphQL. If you don't yet, we *highly* recommend you check out [this](https://www.howtographql.com/) to learn about GraphQL and [this](https://reactjs.org/tutorial/tutorial.html) to learn about React._
 
-Test Line Again
-
 In this tutorial, we'll learn how to create a basic blog using `create-react-app`, `Apollo Client` and `GraphCMS`. The complete code for this example is available [here](https://github.com/GraphCMS/graphcms-examples/tree/master/react-apollo-blog).
 
 You can also see and play around with it in the awesome CodeSandbox editor below!
