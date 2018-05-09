@@ -2,3 +2,5 @@
 *~
 site
 .vscode
+*python*
+env
