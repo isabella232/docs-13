@@ -1,6 +1,6 @@
 # Table of Contents
 
-* [Geting Started](README.md)
+* [Geting Started](Introduction.md)
     * [Headless Paradigms](Introduction.md)
     * [Thinking in Graphs](Introduction.md)
     * [Structuring Content](Introduction.md)
@@ -59,16 +59,57 @@
 # User Guides
 
 * [User Guides](users/Concepts.md)
-    * [User Guides3](users/Concepts.md)
-    * [User Guides4](users/Concepts.md)
+	* [Concepts 'Concepts.md'](Introduction.md)
+	* [Editor](Introduction.md)
+		* [Dashboard](Introduction.md)
+		* [Assets](Introduction.md)
+		* [Models](Introduction.md)
+		* [Enumerations](Introduction.md)
+		* [Content](Introduction.md)
+		* [Integrations ](Introduction.md)
+		* [Webhooks](Introduction.md)
+		* [Settings](Introduction.md)
+		* [Profile Settings](Introduction.md)
+	* [Creating a Project](Introduction.md)
+		* [Picking a Template](Introduction.md)
+		* [Importing](Introduction.md)
+		* [From Scratch](Introduction.md)
+	* [Staging](Introduction.md)
+	* [How To](Introduction.md)
+		* [Export Schema and Content](guides/Export_schema_and_content.md)
+		* [Adding Members to your Team](guides/Adding_members_to_team.md)
+		* [Publishing Workflows](guides/Publishing_workflow.md)
+		* [Import simple data](guides/Import_simple_data.md)
+		* [Changing Your Email and Password](guides/User_Settings.md)
+		* [Using Translations](guides/Using_translations.md)
+		* [Uploading Images to GraphCMS](guides/Uploading_images.md)
+		* [Import Contentful Projects](guides/Import_contentful_projects.md)
 
 # Tutorials
 
 * [Tutorials](users/Concepts.md)
+	* [User](Introduction.md)
+		* [Setting up the Blog Example Project](getting-started/Setting_up_the_project.md)
+	* [Developers](Introduction.md)
+		* [Beginners Guide with React](getting-started/Beginners_Guide_With_React.md)
+		* [Beginners Guide with Vue](getting-started/Beginners_Guide_With_Vue.md)
 
 # Examples
 
 * [Examples](users/Concepts.md)
+	* [Gatsby & gatsby-source-graphcms](examples/Gatsby_Source-plugin_Blog.md)
+	* [Next.js & Apollo Client](examples/Next_Apollo_Blog.md)
+	* [Nuxt.js & Apollo Client](examples/Nuxt_Apollo_Blog.md)
+	* [PreactCLI & Apollo Client](examples/Preact-CLI_Apollo_Blog.md)
+	* [React & Apollo Client](examples/React_Apollo_Blog.md)
+	* [React & URQL](examples/React_URQL_Blog.md)
+	* [React Native & Apollo Client](examples/React-Native_Apollo_Blog.md)
+	* [React Static & graphql-request](examples/React-Static_GraphQL_Request_Blog.md)
+	* [Using Spike](examples/Spike_Vinylbase.md)
+	* [RSS Feed - VanillaJS & apollo-fetch](examples/Vanillajs_Apollo-fetch_RSS_feed.md)
+	* [Vue & Apollo Client](examples/Vue_Apollo_Blog.md)
+	* [Server-side rendered app with Next.js and Apollo](examples/Server-side_rendered_app_with_nextjs_and_apollo.md)
+	* [Star Wars App with Expo](examples/Star_Wars_Expo.md)
 
 # GraphQL Tools & Resources
 
