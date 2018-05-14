@@ -2,16 +2,16 @@
 
 * [Geting Started](getting-started/getting-started.md)
     * [Headless Paradigms](getting-started/headless-paradigms.md)
-    * [Thinking in Graphs](Introduction.md)
-    * [Structuring Content](Introduction.md)
-    * [NEW: Open Beta!](Introduction.md)
+    * [Thinking in Graphs](getting-started/thinking-in-graphs.md)
+    * [Structuring Content](getting-started/structuring-content.md)
+    * [NEW: Open Beta!](getting-started/new-graphcms-beta.md)
 
 # Developer Guides
 
-* [Developer Guides](users/concepts.md)
-	* [Concepts](Introduction.md)
-	* [Migrating to the new GraphCMS](Introduction.md)
-		* [New GraphCMS Beta: New_GraphCMS_Beta.md](Introduction.md)
+* [Developer Guides](developers/developers.md)
+	* [Concepts](developers/concepts.md)
+	* Migration
+		* [New GraphCMS Beta](migration/new-graphcms-beta-migration-guide.md)
 	* [API](Introduction.md)
 		* [Making a call](Introduction.md)
 		* [GraphQL "Status Codes"](Introduction.md)
