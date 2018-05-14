@@ -8,7 +8,7 @@
 
 # Developer Guides
 
-* [Developer Guides](users/Concepts.md)
+* [Developer Guides](users/concepts.md)
 	* [Concepts](Introduction.md)
 	* [Migrating to the new GraphCMS](Introduction.md)
 		* [New GraphCMS Beta: New_GraphCMS_Beta.md](Introduction.md)
