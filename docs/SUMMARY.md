@@ -1,7 +1,7 @@
 # Table of Contents
 
-* [Geting Started](Introduction.md)
-    * [Headless Paradigms](Introduction.md)
+* [Geting Started](getting-started/getting-started.md)
+    * [Headless Paradigms](getting-started/headless-paradigms.md)
     * [Thinking in Graphs](Introduction.md)
     * [Structuring Content](Introduction.md)
     * [NEW: Open Beta!](Introduction.md)
