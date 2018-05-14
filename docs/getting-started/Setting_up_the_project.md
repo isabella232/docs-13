@@ -45,7 +45,7 @@ Now you need to create to following fields to finish up the `Post` Model:
 
 - `Content` field – Type `Text` – Appearance `Markdown`
 - `Cover Image` field – Type `Asset` – Appearance `Asset Grid`
-- `Date And Time` field – Type `Date and Time` – Appearance `Date & Time``
+- `Date and Time` field – Type `Date and Time` – Appearance `Date & Time``
 - `Tags` field – Type `Text` – Appearance `Slug` – Configuration: `Field has multiple values`
 
 ### Author Model
@@ -55,7 +55,7 @@ One of our last steps is the `Author` Model. Just like before, click `Add Conten
 Now we will add the necessary fields:
 
 - `Name` field – Type `Text` – Appearance `Single Line`
-- `Avatar` field – Type `Asset` – Appearance `Asset Grid`
+- `Image` field – Type `Asset` – Appearance `Asset Grid`
 - `Bibliography` field – Type `Text` – Appearance `Multi Line`
 
 Now we are nearly done with our Content Model, and we just need one more step to connect a `Blog Post` with an `Author`.
