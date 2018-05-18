@@ -6,7 +6,7 @@ ogimage: https://graphcms.com/blog/covers/new_gcms_cover.png
 
 Welcome to the beta of the new GraphCMS! We are very happy to have you as one of our early stage testers.
 
-![New GraphCMS](./img/new_gcms_cover.png)
+![New GraphCMS](../img/new_gcms_cover.png)
 
 ##General Information
 The current state of the revamped web app is having a limited feature set and is not on par with the existing application. However, the ground work is done and we will now be able to ship new features at a very fast pace. 
@@ -48,7 +48,7 @@ If you have trouble logging in, please contact us in Slack.
 
 To create fields you can make use of our brand new workflow for that. Simply create a Model and drag the Fields onto it:
 
-![Field Creation Workfllow](./img/FieldCreation.gif)
+![Field Creation Workfllow](../img/FieldCreation.gif)
 
 ## Staging Preview
 
@@ -56,7 +56,7 @@ The new GraphCMS is allowing you to create `Stages` for your project. The most b
 
 See a quick demo  here:
 
-![Staging Preview](./img/Staging.gif)
+![Staging Preview](../img/Staging.gif)
 
 ## API Changes
 
