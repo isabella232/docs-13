@@ -10,26 +10,25 @@ Welcome to the beta of the new GraphCMS! We are very happy to have you as one of
 
 ![New GraphCMS](../gitbook/images/new_gcms_cover.png)
 
-{% tonic %}
-// GeoJSON!
-var google = "https://storage.googleapis.com/maps-devrel/google.json"
-JSON.parse(await require("request-promise")(google))
-{% endtonic %}
 
 {% method %}
 ## Install {#install}
 
 The first thing is to get the GitBook API client.
 
-{% sample lang="js" %}
+{% sample lang="old" %}
 ```bash
 $ npm install gitbook-api
 ```
 
-{% sample lang="go" %}
+{% sample lang="new" %}
 ```bash
 $ go get github.com/GitbookIO/go-gitbook-api
 ```
+
+{% common %}
+This will appear for both JavaScript and Go.
+
 {% endmethod %}
 
 ##General Information
