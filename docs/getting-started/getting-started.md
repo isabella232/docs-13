@@ -6,7 +6,7 @@ Building a content API with GraphCMS is easy! In this getting started guide we w
 
 We start off by creating a new project called `Vinylbase`.
 
-![Screenshot](img/screenshots/createProject.png)
+![Screenshot](../gitbook/images/screenshots/createProject.png)
 
 !!! Hint ""
     Project names can contain only alphanumeric characters and whitespaces.
@@ -20,7 +20,7 @@ After creating the project, switch to the `CONTENT` view and use the `ADD MODEL`
 * `Review`
 * `Record Store`
 
-![Screenshot](img/screenshots/modelOverview.png)
+![Screenshot](../gitbook/images/screenshots/modelOverview.png)
 
 !!! Hint ""
     API IDs for models must start with a capital letter and can contain only alphanumeric characters. No whitespaces allowed.
@@ -31,7 +31,7 @@ Before we can populate our content models with content, we need to add fields to
 
 Doing so will open up the `Field Wizard`. Here we can specify the types, appearance, API identifiers and additional rules for the fields we add to our content model.
 
-![Screenshot](img/screenshots/fieldWizard.png)
+![Screenshot](../gitbook/images/screenshots/fieldWizard.png)
 
 ### Fields for model Artist
 
@@ -43,7 +43,7 @@ For content model `Artist`, we will add three fields:
 
 For `Name` we use a `Single Line Text Field` that we set as `required`. The `Display Name` allows you define how the field will be displayed in the web interface, while the `API ID` defines how the field will be named in your content API.
 
-![Screenshot](img/screenshots/fieldWizardFieldSettings.png)
+![Screenshot](../gitbook/images/screenshots/fieldWizardFieldSettings.png)
 
 !!! Hint ""
     In the web interface, API IDs are prefixed with a `#` (e.g.: `#name`).
@@ -54,7 +54,7 @@ For field `Pictures` we will add an asset field and check `Allow multiple values
 
 We will now add a relation to this model. Relations allow you to connect two content models. In this case, we create an `ArtistRecord Relation`, since we want to connect artists to existing records. The `Relation Name` defines how the relation will be named in your content API.
 
-![Screenshot](img/screenshots/fieldWizardArtistRelation.png)
+![Screenshot](../gitbook/images/screenshots/fieldWizardArtistRelation.png)
 
 We will set up the relation so that an `Artist` can have _many_ `#records`, while on the reverse side, a `Record` can also have _many_ `#artists`.
 
@@ -63,7 +63,7 @@ We will set up the relation so that an `Artist` can have _many_ `#records`, whil
 
 You can now see all fields that are attached to model.
 
-![Screenshot](img/screenshots/fieldListArtist.png)
+![Screenshot](../gitbook/images/screenshots/fieldListArtist.png)
 
 !!! Hint ""
     Notice that there are three additional fields: `ID`, `CreatedAt` and `UpdatedAt`. These are system fields and cannot be removed or modified.
@@ -112,7 +112,7 @@ Great! We can now start to create our content.
 We are now able to use the input form elements to populate our content. The presentation of the input fields depend on the field configuration we did before.
 For example, field `#cover` is of type `Asset`, so it will allow you to upload media to your project and attach it to your record.
 
-![Screenshot](img/screenshots/createRecord.png)
+![Screenshot](../gitbook/images/screenshots/createRecord.png)
 
 !!! Hint ""
     Before uploading, you can crop pictures within the upload widget.
@@ -128,13 +128,13 @@ We can save the entry now by clicking the `SAVE` button. This will take us to th
 
 Now let us create a `Content Entry` of type `Artist`. We do this in the same way as we did with the `Record Entry`. Except this time we will be able to assign an entry to the relation field `#records`. Let´s assign the record we created previously!
 
-![Screenshot](img/screenshots/createArtist.png)
+![Screenshot](../gitbook/images/screenshots/createArtist.png)
 
 ### Creating a `review`
 
 Let us now add a review to _Hannah Popanna´s_ new record. Here we can use a markdown editor to write a sophisticated critique.
 
-![Screenshot](img/screenshots/createReview.png)
+![Screenshot](../gitbook/images/screenshots/createReview.png)
 
 ### Creating a `record store`
 
@@ -142,7 +142,7 @@ Almost done! In the last step, we create an entry for a `Record Store`. To add a
 
 Cool. Now that we are done with our content creation, let´s start to explore our GraphQL content API in the `API EXPLORER`
 
-![Screenshot](img/screenshots/createRecordStore.png)
+![Screenshot](../gitbook/images/screenshots/createRecordStore.png)
 
 ## Exploring the Content API
 
@@ -229,7 +229,7 @@ Will respond with:
 
 Cool! We can now start building our frontend application. Switch over to the `SETTINGS` menu to see your endpoint `URLs` and create `Permanent Auth Tokens` for your applications. [See how to work with permanent auth tokens](/guides/Using_permanent_auth_tokens).
 
-![Screenshot](img/screenshots/settings.png)
+![Screenshot](../gitbook/images/screenshots/settings.png)
 
 !!! warning
     If you run into an issue, please have a look at the known issues in our [issue tracker](https://github.com/GraphCMS/Issue-tracker). Please don´t hesitate to open a bug ticket if you experienced an issue that is not covered by those in the tracker.
