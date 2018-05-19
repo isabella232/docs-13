@@ -29,10 +29,11 @@ The current beta web app is capable of the following things:
 - Staging Preview
 - API Explorer (API per Stages)
 
-!!! warning
-    The performance of the beta is not on par with the production version since we are using minimal hardware ressources for testing purposes. The final version will have a highly increased performance.
+{% hint style='danger' %}
+The performance of the beta is not on par with the production version since we are using minimal hardware ressources for testing purposes. The final version will have a highly increased performance.
 
-    There might also be data-loss from time to time if we need to reset the database for new features or restructuring. Please note that the beta is not recommended to use in Production at the moment!
+There might also be data-loss from time to time if we need to reset the database for new features or restructuring. Please note that the beta is not recommended to use in Production at the moment!
+{% endhint %}
 
 ## How to Give Feedback
 During the beta we are dependent on your feedback! There may be things that are not working properly or some rough edges, but we still want you to provide us with everything that you find buggy or weird. If you are missing something or got stuck somewhere, just let us know!
