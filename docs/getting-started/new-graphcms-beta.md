@@ -10,6 +10,28 @@ Welcome to the beta of the new GraphCMS! We are very happy to have you as one of
 
 ![New GraphCMS](../gitbook/images/new_gcms_cover.png)
 
+{% tonic %}
+// GeoJSON!
+var google = "https://storage.googleapis.com/maps-devrel/google.json"
+JSON.parse(await require("request-promise")(google))
+{% endtonic %}
+
+{% method %}
+## Install {#install}
+
+The first thing is to get the GitBook API client.
+
+{% sample lang="js" %}
+```bash
+$ npm install gitbook-api
+```
+
+{% sample lang="go" %}
+```bash
+$ go get github.com/GitbookIO/go-gitbook-api
+```
+{% endmethod %}
+
 ##General Information
 The current state of the revamped web app is having a limited feature set and is not on par with the existing application. However, the ground work is done and we will now be able to ship new features at a very fast pace. 
 The current beta web app is capable of the following things:
@@ -43,9 +65,11 @@ You can reach us via [Slack](https://slack.graphcms.com) in the locked `#beta` c
 ## How to Access
 The Beta version is hosted on [https://beta.graphcms.com](https://beta.graphcms.com) and we will whitelist your email for access! 
 
-!!! warning
-    You will need to use `Sign up` and **create a new account with the email that received the invite**, since the accounts are not linked to the old version.
+{% hint style='danger' %}
+You will need to use `Sign up` and **create a new account with the email that received the invite**, since the accounts are not linked to the old version.
+
 If you have trouble logging in, please contact us in Slack.
+{% endhint %}
 
 ## Field Creation Workflow
 
