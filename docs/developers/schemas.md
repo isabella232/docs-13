@@ -13,7 +13,7 @@ A model is an object of one ore more fields and have a default set of permission
 ### Fields
 * Single Line Text
 * Multi Line Text
-* Markdown
+* Markdownt
 * Integer
 * Float
 * Checkbox
@@ -29,6 +29,7 @@ A model is an object of one ore more fields and have a default set of permission
 | Read |   |   |   |
 | Update |   |   |   |
 | Delete |   |   |   |
+<!-- TODO: Write Permissions scope for Models -->
 
 
 ## Enumerations
@@ -49,3 +50,4 @@ An enumeration is a collection with a couple of identifying properties. A unique
 | Read |   |   |   |
 | Update |   |   |   |
 | Delete |   |   |   |
+<!-- TODO: Write Permissions scope for Enums -->
