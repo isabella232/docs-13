@@ -15,7 +15,7 @@
 	* API
 		* [Making a call](developers/api/making-a-call.md)
 		* [GraphQL "Status Codes"](developers/api/graphql-status-codes.md)
-		* [Management API](developers/api/management-api.md)
+		* [System API](developers/api/system-api.md)
 		* [Project API](developers/api/project-api.md)
 		* [Examples](developers/api/example.md)
 	* [CLI](developers/cli.md)
