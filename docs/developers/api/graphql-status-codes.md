@@ -1,5 +1,5 @@
 # Responses and Errors
-When writing a query, a traditional POST and GET request is generated. But apart from the communication with the server, that's where the similarities end.
+When writing a query, a traditional POST or GET request can be used, but in GraphCMS we only use POST. Apart from the communication with the server, that's where the similarities with REST end.
 
 
 ## Success
