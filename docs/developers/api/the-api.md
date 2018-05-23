@@ -66,6 +66,10 @@ query {
 {% common %}
 This will be familiar to may developers who've spent time writing SQL queries. 
 
+
+{% endmethod %}
+
+{% method %}
 A more advanced example:
 
 {% sample lang="old" %}
@@ -94,6 +98,9 @@ query {
 }
 ```
 
+{% endmethod %}
+
+{% method %}
 and as before, you can chain boolean operators `AND` and `OR`:
 
 {% sample lang="old" %}
