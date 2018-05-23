@@ -430,5 +430,6 @@ mutation {
 {% hint type="info" %}
 API docs are inspired by / copied from GRAPHCOOL
 
-[![Graphcool Logo](../img/graphcool.svg)](https://graph.cool)
+[![Graphcool Logo](../../gitbook/images/graphcool.svg)](https://graph.cool)
+
 {% endhint %}
