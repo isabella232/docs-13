@@ -1,61 +1,90 @@
 # The API
 
-The underlying technology of GraphCMS received a fantastic update and now the previous Relay and Simple API's have been merged into one. One end point, many possibilities!
+Welcome to the new GraphCMS API. The previous two API is being deprecated in favor of a combined syntax that supports all GraphQL clients.
 
-To make this new "one-api-to-rule-them-all", a few changes were necessary to bring the APIs into parity.
+## Querying the API
+To query the API you need to use your project specific Endpoint URL. The URL is composed by the API URL and your project ID:
 
-## Queries
+`https://api.graphcms.com/simple/v1/$YOUR_PROJECT_ID$`
 
-{% method %}
-### No more explicit all- prefix
-The API will be a little different from what you are used in the current version. The `all`-Prefix from the queries is gone now. So a simple Query might look like this:
+This URL can be used by clients like Apollo, Lokka, UrQL, or even a simple curl-request.
+For example if you wan't to query the title of all posts within your project you could use the following curl command:
 
-{% sample lang="old" %}
+`curl 'https://api.graphcms.com/simple/v1/$YOUR_PROJECT_ID$' -H 'content-type: application/json' --data-binary '{"query":"query {posts {title}}"}' --compressed`
+
+## Generated Queries
+Using _queries_ you can ask for data you are interested in. Within each query you define a set of fields, which should be returned within the response.
+All queries are generated for you and can have different arguments which can be passed into the query.
+
+### Query a single entry
+For every content model there is one query to fetch a specific entry. You have to pass a selector as an argument to this query, to retrieve the right entry.
+You can either pass the entries ID or any scalar field which is marked as _unique_ within this model.
+For example if you want to get the `name` and the `createdAt` field from the content model `Artist`, the following request can be used:
 ```json
 query {
-    allPosts {
-        id
-        title
-        content
-    }
+  artist( where: {
+    id: "cixnen2vv33lo0143bdwvr52n"
+  }
+  ) {
+    name
+    createdAt
+  }
+}
+```
+{hint style="info"}
+Note the use of the `where` clause. This is a new addition to the API and is used for all selection-like queries.
+{% endhint %}
+
+Any unique field in the model can be used for search/selection, such as `slug`:
+```json
+query {
+  artist( where: {
+    slug: "my-awesome-artist"
+  } ) {
+    name
+    createdAt
+  }
+}
+```
+{hint style="info"}
+You cannot use both parameters within one query
+{% endhint %}
+
+### Query multiple entries
+The API contains automatically generated queries to fetch all entries of a certain model. For example, for the Artist model the top-level query `artists` will be generated.
+
+A few examples for query names
+| Model Name | Query Name |
+|---|---|
+| Artist | artists |
+| Track | tracks |
+| Review | reviews |
+
+A query which fetches all entries from the `Artist` content model could look like the following:
+```json
+query {
+  artists {
+    id
+    name
+  }
 }
 ```
 
-{% sample lang="new" %}
+{% hint style="info" %}
+Note: The query name approximates the plural rules of the English language. If you are unsure about the actual query name, explore available queries in your API EXPLORER.
+{% endhint %}
+
+The query response of a query fetching multiple entries can be further controlled by supplying different query arguments. The response can be _ordered_, _filtered*_ or _paginated_
+
+#### Ordering entries
+When querying all entries of a model you can supply the orderBy argument for every scalar field of the model:
+`orderBy: <field>_ASC` or `orderBy: <field>_DESC.`
+
+Example:
 ```json
 query {
-    posts {
-        id
-        title
-        content
-    }
-}
-```
-{% endmethod %}
-
-{% method %}
-### Filtering
-If you want to filter you now need to use the `where` argument:
-
-{% sample lang="old" %}
-```json
-query {
-    allAuthors(
-        filter: {
-            age_gt: 18
-        }) {
-        id
-        title
-        content
-    }
-}
-```
-
-{% sample lang="new" %}
-```json
-query {
-  authors(where: {
-    age_gt: 18
+  artists( where: {
+    orderBy: name_ASC
   }) {
     id
     name
@@ -63,171 +92,143 @@ query {
 }
 ```
 
-{% common %}
-This will be familiar to may developers who've spent time writing SQL queries. 
+#### Filtering entries
+When querying all entries of a model you can supply different parameters to the filter argument to filter the query response accordingly. The available options depend on the scalar fields defined on the model in question.
 
-
-{% endmethod %}
-
-{% method %}
-A more advanced example:
-
-{% sample lang="old" %}
+If you supply exactly one parameter to the filter argument, the query response will only contain entries that fulfill this constraint:
 ```json
 query {
-  posts(filter: {
-    title_in: ["My biggest Adventure", "My latest Hobbies"]
-  }) {
+  artists( where: {
+      published: false
+}) {
     id
-    title
+    name
     published
   }
 }
 ```
 
-{% sample lang="new" %}
+Depending on the type of the field you want to filter by, you have access to different advanced criteria you can use to filter your query response:
 ```json
-query {
-  posts(where: {
-    title_in: ["My biggest Adventure", "My latest Hobbies"]
+artists( where: {
+    name_in: [
+      "Velvet Parker",
+      "Cat Stevie"
+    ]
   }) {
-    id
-    title
-    published
-  }
+  id
+  name
+  published
 }
 ```
 
-{% endmethod %}
+A non-exhaustive list of these "_helper" filters are:
+| Matches | Behavior |
+| --- | --- |
+| *_in | One of |
+| *_lt | Less than |
+| *_gt | Greater than |
+| *_not | Not this |
+| *_lte | Less than or equal to |
+| *_gte | Greater than or equal to |
+| *_not_in | Not one of |
+| *_starts_with | Starts with string |
+| *_not_starts_with | Doesn't start with string |
+| *_ends_with | Ends with string |
+| *_not_ends_with | Doesn't end with string |
+| *_contains | Includes string |
+| *_not_contains | Does not include string |
 
-{% method %}
-and as before, you can chain boolean operators `AND` and `OR`:
 
-{% sample lang="old" %}
+For **to-one** relations, you can define conditions on the related entry by nesting the according argument in filter:
 ```json
-query {
-  allPosts(filter: {
-    AND: [{
-      title_in: ["My biggest Adventure", "My latest Hobbies"]
-    }, {
-      published: true
-    }]
-  }) {
+{
+  records( where: {
+      artist: {
+          name: "Cat-Stevie"
+      }}) {
     id
-    title
-    published
+    slug
   }
 }
 ```
+##### Every, Some, None
 
-{% sample lang="new" %}
+For to-many relations, three additional arguments are available: `every`, `some` and `none`, to define that a condition should match every, some or none related entries.
 ```json
-query {
-  posts(where: {
-    AND: [{
-      title_in: ["My biggest Adventure", "My latest Hobbies"]
-    }, {
-      published: true
-    }]
-  }) {
-    id
-    title
-    published
-  }
-}
-```
-
-{% endmethod %}
-
-### Ordering
-An example of ordering the response, the same as previous
-```json
-query {
-  posts(orderBy: title_ASC) {
-    id
-    title
-    published
-  }
-}
-```
-
-### Pagination
-An example of a paginating query.
-```json
-query {
-  posts(
-    first: 2
-    skip: 1
-  ) {
-    id
-    title
-  }
-}
-```
-
-```json
-query {
-  posts(
-    first: 2
-    after: "cixnen24p33lo0143bexvr52n"
-  ) {
-    id
-    title
-  }
-}
-```
-
-## Mutations
-Mutations look different with the new syntax. The primary difference is the addition of a new `data` field in the body of the mutation. See below for examples.
-
-{% method %}
-
-### Create
-
-{% sample lang="old" %}
-```json
-
-mutation {
-  createAuthor(
-      age: 42
-      email: "zeus@example.com"
-      name: "Zeus"
-  ) {
-    id
-    name
-  }
-}
-```
-
-{% sample lang="new" %}
-```json
-mutation {
-  createAuthor(
-    data: {
-      age: 42
-      email: "zeus@example.com"
-      name: "Zeus"
+{
+  artists(where: {
+      records_every: {
+          slug: "All-your-Base"}}) {
+      id
+      name
     }
-  ) {
-    id
-    name
   }
-}
 ```
 
-{% endmethod %}
-
-{% method %}
-
-### Update
-Update takes both a `data` field AND a `where` field
-
-{% sample lang="old" %}
+##### AND / OR
+You can use the boolean operators `OR` and `AND` to create an arbitrary logical combination of filter conditions.
 ```json
-mutation {
-  updateAuthor(
-      email: "zeus2@example.com"
-      name: "Zeus2"
+{
+  records(where: {AND: [
+    {artist: {name: "Cat-Stevie"}},
+    {cover: {isPublic: true}}
+  ]}) {
+    id
+    slug
+    cover {
+      url
+    }
+  }
+}
+```
+
+You can combine and even nest the boolean operators `AND` and `OR` to create arbitrary logical combinations of filter conditions:
+```JSON
+{
+  records(where: {OR: [
+    {AND: [
+        {artist:
+            {name: "Cat-Stevie"}},
+            {cover: {isPublic: true}}]},
+    {OR: [
+        {artist:
+            {name_not: "Cat-Stevie"}},
+            {cover: {isPublic: false}}]}
+  ]}) {
+    id
+    slug
+    cover {
+      url
+    }
+  }
+}
+```
+
+
+#### Pagination
+When querying all entries of a specific model you can supply arguments that allow you to paginate the query response.
+Pagination allows you to request a certain amount of entries at the same time. You can seek forwards or backwards through the entries and supply an optional starting entry:
+
+- to seek forwards, use `first`; specify the pointer location with `after`.
+- to seek backwards, use `last`; specify the pointer location with `before`.
+
+You can also skip an arbitrary amount of entries in whichever direction you are seeking by supplying the `skip` argument:
+```json
+{
+  artists(first: 5) {
+    id
+    name
+  }
+}
+```
+ 
+To query the first two artists after the artists with id `cixnen2ssewlo0143bexdd52n`:
+```json
+{
+  artists(
+    first: 2,
+    after: "cixnen2ssewlo0143bexdd52n"
   ) {
     id
     name
@@ -235,104 +236,199 @@ mutation {
 }
 ```
 
-{% sample lang="new" %}
+To query the last 5 artists use `last`:
+```json
+{
+  artists(last: 5) { where: {}
+    id
+    name
+  }
+}
+```
+
+{% hint style="info" %}
+Note: You cannot combine `first` with `before` or `last` with `after`.
+
+Note: If you query more entries than exist, your response will simply contain all entries that actually do exist in that direction.
+{% endhint %}
+
+## Generated mutations
+With a mutation you can modify the data of your project. Similar to queries, all mutations are automatically generated. Explore them by using the API EXPLORER inside your project.
+This is an example mutation:
 ```json
 mutation {
-  updateAuthor(
-    data: {
-      email: "zeus2@example.com"
-      name: "Zeus2"
-    }
-    where: {
-      email: "zeus@example.com"
-    }
-  ) {
+  createArtist(data: {
+      name:"Cat Stevie",
+      slug:"cat-stevie"
+      }) {
     id
     name
+    slug
   }
 }
 ```
+{% hint style="info"% }
+Note: The sub-selection of fields cannot be empty. If you have no specific data requirements, you can always select `id` as a default.
+{% endhint %}
 
-{% endmethod %}
+### Modifying entries
+For every content model in your project, there are different mutations to _create_, _update_ and _delete_ entries.
 
-{% method %}
-
-### Upsert (Update OR Insert)
-When we want to either update an existing node, or create a new one in a single mutation, we can use _upsert_ mutations. Previously this was accomplished with the little documented utility, `updateOrCreate`.
-
-
-{% sample lang="new" %}
+#### Creating entries
+Creates a new entry for a specific model that gets assigned a new id. All required fields of the model without a default value have to be specified, the other fields are optional arguments.
+The query response can contain all fields of the newly created entry, including the id field.
 ```json
 mutation {
-  upsertAuthor(
-    where: {
-      email: "zeus@example.com"
-    }
-    create: {
-      email: "zeus@example.com"
-      age: 42
-      name: "Zeus"
-    }
-    update: {
-      name: "Zeus"
-    }
-  ) {
-    name
-  }
-}
-```
-
-Since this is not a very DRY exmaple, a more common practice would be something like this:
-
-```json
-mutation UpsertAuthor($email: String!, $age: Int, $name: String) {
-  upsertAuthor(
-    where: {
-      id: $email
-    }
-    create: {email: $email, age: $age, name: $name}
-    update: {email: $email, age: $age, name: $name}
-  ) {
-    name
+  createArtist(data: {
+      name: "Cat Stevie",
+      slug:"cat-stevie"
+    }) {
     id
-    email
+    name
+    slug
   }
 }
 ```
 
-{% common %}
-Note, `email` here is a unique field on the model. For more about variables, [look here.](http://graphql.org/learn/queries/#variables)
-
-{% endmethod %}
-
-{% method %}
-
-### Delete
-Deleting builds on the usage of `where` but omits the `data` field.
-
-{% sample lang="old" %}
+When creating an entry you can directly connect it to another entry on the one-side of a relation. You can either choose to connect it to an existing entry, or even create the entry yourself:
 ```json
 mutation {
-  deleteAuthor(
-      id: "12345"
-  ) {
+  createArtist(data: {
+      name: "Cat Stevie",
+      slug: "cat-stevie",
+      records: [{
+          title: "Summer Breeze",
+          slug: "summer-breeze"}
+        ]}) {
     id
     name
+    slug
   }
 }
 ```
+{% hint type="info" %}
+Note: This works for one-to-one and one-to-many relations but not for many-to-many relations.
+{% endhint %}
 
-{% sample lang="new" %}
+#### Updating entries
+Updates fields of an existing entry of a certain content model specified by the id field. The entry's fields will be updated according to the additionally provided values.
+The query response can contain all fields of the updated entry.
 ```json
 mutation {
-  deleteAuthor(where: {
-    id: "cjcdi63l20adx0146vg20j1ck"
-  }) {
+  updateArtist(
+        data: {slug:"cat-stevie"},
+        where: {id:"cixnen2ssewlo0143bexdd52n"}) {
     id
-    name
-    email
+    slug
   }
 }
 ```
 
-{% endmethod %}
+#### Deleting entries
+Deletes an entry specified by the id field.
+The query response can contain all fields of the deleted entry.
+```json
+mutation {
+  deleteArtist(where: {
+      id:"cixnen2ssewlo0143bexdd52n"
+    }) {
+    id
+  }
+}
+```
+
+#### Connect two entries in a one-to-one relation
+
+{% hint type="danger" %}
+This section is a **WIP** and is subject to change. The API listed below may or may not work.
+{% endhint %}
+
+Creates a new edge between two entries specified by their id. The according models have to be in the same relation.
+The query response can contain both entries of the new edge. The names of query arguments and entry names depend on the field names of the relation.
+```json
+mutation {
+  setArtistReview(
+  reviewReviewId: "cixnen2ssewlo0143bexdd52n" artistArtistId:"cixnen2sse223412bexdd52n") {
+    artistArtist {
+      id
+      name
+    }
+    reviewReview {
+      id
+      title
+    }
+  }
+}
+```
+{% hint style="info" %}
+Note: First removes existing connections containing one of the specified entries, then adds the edge connecting both entries.
+{% endhint %}
+
+You can also use the `updateArtist` or `updateReview` to connect an artist with a review:
+```json
+mutation {
+  updateArtist(id: "cixnen2sse223412bexdd52n", reviewId: "cixnen2ssewlo0143bexdd52n") {
+    id
+  }
+}
+```
+
+To remove an edge of an entry you have can use the `unset` mutation.
+The query response can contain both entries of the former edge. The names of query arguments and entry names depend on the field names of the relation:
+```json
+mutation {
+  unsetArtistReview(reviewReviewId: "cixnen2ssewlo0143bexdd52n", artistArtistId: "cixnen2sse223412bexdd52n") {
+    artistArtist {
+      id
+    }
+    reviewReview {
+      id
+    }
+  }
+}
+```
+
+#### Connect two entries in a one-to-many relation
+
+{% hint type="danger" %}
+This section is a **WIP** and is subject to change. The API listed below may or may not work.
+{% endhint %}
+
+One-to-many relations relate two models to each other.
+An entry of the one side of a one-to-many relation can be connected to multiple entries. An entry of the many side of a one-to-many relation can at most be connected to one entry.
+
+To create a new edge between two entries you have to use the `addTo` mutation. The according models have to be in the same relation.
+The query response can contain both entries of the new edge. The names of query arguments and entry names depend on the field names of the relation.
+```json
+mutation {
+  addToTrackList(tracksTrackId: "cixnen2sddseq143bexdd52n", recordRecordId: "cixnen222dfsdwebexdd52n") {
+    recordRecord {
+      id
+    }
+    tracksTrack {
+      id
+    }
+  }
+}
+```
+
+To remove one edge between two entries use the `removeFrom` mutation.
+The query response can contain both entries of the former edge. The names of query arguments and entry names depend on the field names of the relation.
+```json
+mutation {
+  removeFromTrackList(tracksTrackId: "cixnen2sddseq143bexdd52n", recordRecordId: "cixnen222dfsdwebexdd52n") {
+    recordRecord {
+      id
+    }
+    tracksTrack {
+      id
+    }
+  }
+}
+```
+
+{% hint type="info" %}
+API docs are inspired by / copied from GRAPHCOOL
+
+[![Graphcool Logo](../img/graphcool.svg)](https://graph.cool)
+{% endhint %}

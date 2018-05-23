@@ -259,7 +259,7 @@ query {
 
 With a mutation you can modify the data of your project. Similar to queries, all mutations are automatically generated. Explore them by using the API EXPLORER inside your project.
 This is an example mutation:
-```
+```json
 mutation {
   createArtist(input: {name: "Cat Stevie", slug: "cat-stevie", clientMutationId: "abc123"}) {
     artist {
@@ -283,7 +283,7 @@ For every content model in your project, there are different mutations to _creat
 #### Creating entries
 Creates a new entry for a specific model that gets assigned a new id. All required fields of the model without a default value have to be specified, the other fields are optional arguments.
 The query response can contain all fields of the newly created entry, including the id field.
-```
+```json
 mutation {
   createArtist(input: {name:"Cat Stevie", slug:"cat-stevie", clientMutationId: "abc123" }) {
     artist {
@@ -296,7 +296,7 @@ mutation {
 ```
 
 When creating an entry you can directly connect it to another entry on the one-side of a relation. You can either choose to connect it to an existing entry, or even create the entry yourself:
-```
+```json
 mutation {
   createArtist(input: {name: "Cat Stevie", slug: "cat-stevie", records: [
     {title: "Summer Breeze", slug: "summer-breeze"}
@@ -315,7 +315,7 @@ mutation {
 #### Updating entries
 Updates fields of an existing entry of a certain content model specified by the id field. The entry's fields will be updated according to the additionally provided values.
 The query response can contain all fields of the updated entry.
-```
+```json
 mutation {
   updateArtist(input: {id: "cixnen2ssewlo0143bexdd52n", slug: "cat-stevie", clientMutationId: "abc123"}) {
     artist {
@@ -329,7 +329,7 @@ mutation {
 #### Deleting entries
 Deletes an entry specified by the id field.
 The query response can contain all fields of the deleted entry.
-```
+```json
 mutation {
   deleteArtist(input: {id: "cixnen2ssewlo0143bexdd52n", clientMutationId: "abc123"}) {
     artist {
@@ -342,7 +342,7 @@ mutation {
 #### Connect two entries in a one-to-one relation
 Creates a new edge between two entries specified by their id. The according models have to be in the same relation.
 The query response can contain both entries of the new edge. The names of query arguments and entry names depend on the field names of the relation.
-```
+```json
 mutation {
   setArtistReview(input: {reviewReviewId: "cixnen2ssewlo0143bexdd52n", artistArtistId: "cixnen2sse223412bexdd52n", clientMutationId: "abc123"}) {
     artistArtist {
@@ -360,7 +360,7 @@ mutation {
     First removes existing connections containing one of the specified entries, then adds the edge connecting both entries.
 
 You can also use the `updateArtist` or `updateReview` to connect an artist with a review:
-```
+```json
 mutation {
   updateArtist(input: {id: "cixnen2sse223412bexdd52n", reviewId: "cixnen2ssewlo0143bexdd52n", clientMutationId: "abc123"}) {
     artist {
@@ -372,7 +372,7 @@ mutation {
 
 To remove an edge of an entry you have can use the `unset` mutation.
 The query response can contain both entries of the former edge. The names of query arguments and entry names depend on the field names of the relation:
-```
+```json
 mutation {
   unsetArtistReview(input: {reviewReviewId: "cixnen2ssewlo0143bexdd52n", artistArtistId: "cixnen2sse223412bexdd52n", clientMutationId: "abc123"}) {
     artistArtist {
@@ -391,7 +391,7 @@ An entry of the one side of a one-to-many relation can be connected to multiple 
 
 To create a new edge between two entries you have to use the `addTo` mutation. The according models have to be in the same relation.
 The query response can contain both entries of the new edge. The names of query arguments and entry names depend on the field names of the relation.
-```
+```json
 mutation {
   addToTrackList(input: {tracksTrackId: "cixnen2sddseq143bexdd52n", recordRecordId: "cixnen222dfsdwebexdd52n", clientMutationId: "abc123"}) {
     recordRecord {
@@ -407,7 +407,7 @@ mutation {
 
 To remove one edge between two entries use the `removeFrom` mutation.
 The query response can contain both entries of the former edge. The names of query arguments and entry names depend on the field names of the relation.
-```
+```json
 mutation {
   removeFromTrackList(input: {tracksTrackId: "cixnen2sddseq143bexdd52n", recordRecordId: "cixnen222dfsdwebexdd52n", clientMutationId: "abc123"}) {
     recordRecord {

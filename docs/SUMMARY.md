@@ -13,6 +13,7 @@
 	* Migration
 		* [New GraphCMS Beta](migration/new-graphcms-beta-migration-guide.md)
 	* [API](developers/api/the-api.md)
+		* [What's newin the API](developers/api/api-changes.md)
 		* [GraphQL "Status Codes"](developers/api/graphql-status-codes.md)
 		* [Management API](developers/api/management-api.md)
 		* [Project API](developers/api/project-api.md)

@@ -8,8 +8,9 @@ We start off by creating a new project called `Vinylbase`.
 
 ![Screenshot](../gitbook/images/screenshots/createProject.png)
 
-!!! Hint ""
-    Project names can contain only alphanumeric characters and whitespaces.
+{% hint type="info" %}
+  Project names can contain only alphanumeric characters and whitespaces.
+  {% endhint %}
 
 ## Creating Content Models
 
@@ -22,8 +23,9 @@ After creating the project, switch to the `CONTENT` view and use the `ADD MODEL`
 
 ![Screenshot](../gitbook/images/screenshots/modelOverview.png)
 
-!!! Hint ""
-    API IDs for models must start with a capital letter and can contain only alphanumeric characters. No whitespaces allowed.
+{% hint type="info" %}
+API IDs for models must start with a capital letter and can contain only alphanumeric characters. No whitespaces allowed.
+{% endhint %}
 
 ## Adding Fields to your Content Models
 
@@ -45,10 +47,11 @@ For `Name` we use a `Single Line Text Field` that we set as `required`. The `Dis
 
 ![Screenshot](../gitbook/images/screenshots/fieldWizardFieldSettings.png)
 
-!!! Hint ""
-    In the web interface, API IDs are prefixed with a `#` (e.g.: `#name`).
+{% hint type="info" %}
+In the web interface, API IDs are prefixed with a `#` (e.g.: `#name`).
 
-    API IDs for fields must start with a lowercase letter and can contain only alphanumeric characters.
+API IDs for fields must start with a lowercase letter and can contain only alphanumeric characters.
+{% endhint %}
 
 For field `Pictures` we will add an asset field and check `Allow multiple values`, this will allow us to store an arbitrary number of media files.
 
@@ -58,19 +61,23 @@ We will now add a relation to this model. Relations allow you to connect two con
 
 We will set up the relation so that an `Artist` can have _many_ `#records`, while on the reverse side, a `Record` can also have _many_ `#artists`.
 
-!!! Hint ""
-    Relation names must start with a capital letter and can contain only alphanumeric characters
+{% hint type="info" %}
+Relation names must start with a capital letter and can contain only alphanumeric characters
+{% endhint %}
 
 You can now see all fields that are attached to model.
 
 ![Screenshot](../gitbook/images/screenshots/fieldListArtist.png)
 
-!!! Hint ""
-    Notice that there are three additional fields: `ID`, `CreatedAt` and `UpdatedAt`. These are system fields and cannot be removed or modified.
+{% hint type="info" %}
+Notice that there are three additional fields: `ID`, `CreatedAt` and `UpdatedAt`. These are system fields and cannot be removed or modified.
+{% endhint %}
 
-!!! Hint ""
-    You can change the order of your fields by dragging an entry on the icon on the left side.
-    The order you define here is the same order within the entry form, where you can create or edit entries for this content model.
+{% hint type="info" %}
+You can change the order of your fields by dragging an entry on the icon on the left side.
+
+The order you define here is the same order within the entry form, where you can create or edit entries for this content model.
+{% endhint %}
 
 
 ### Fields for model Record
@@ -114,10 +121,11 @@ For example, field `#cover` is of type `Asset`, so it will allow you to upload m
 
 ![Screenshot](../gitbook/images/screenshots/createRecord.png)
 
-!!! Hint ""
-    Before uploading, you can crop pictures within the upload widget.
+{% hint type="info" %}
+Before uploading, you can crop pictures within the upload widget.
 
-    All uploaded files can be found in the `ASSET` section.
+All uploaded files can be found in the `ASSET` section.
+{% endhint %}
 
 
 We will leave the relation fields blank for now, since we don´t have any content entries that could be assigned.
