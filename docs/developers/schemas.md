@@ -25,10 +25,10 @@ A model is an object of one ore more fields and have a default set of permission
 ### Default Permisions
 | _Perm_ | Editors | Developers | Admins |
 |---|---|---|---|
-| Create |   |   |   |
-| Read |   |   |   |
-| Update |   |   |   |
-| Delete |   |   |   |
+| _Create_ |   | &#10004; | &#10004; |
+| _Read_ | &#10004; | &#10004; | &#10004;  |
+| _Update_ | &#10004; | &#10004; | &#10004; |
+| _Delete_ |   | &#10004; | &#10004; |
 <!-- TODO: Write Permissions scope for Models -->
 
 
@@ -46,8 +46,8 @@ An enumeration is a collection with a couple of identifying properties. A unique
 ### Default Permisions
 | _Perm_ | Editors | Developers | Admins |
 |---|---|---|---|
-| Create |   |   |   |
-| Read |   |   |   |
-| Update |   |   |   |
-| Delete |   |   |   |
+| _Create_ |   | &#10004; | &#10004; |
+| _Read_ | &#10004; | &#10004; | &#10004;  |
+| _Update_ | &#10004; | &#10004; | &#10004; |
+| _Delete_ |   | &#10004; | &#10004; |
 <!-- TODO: Write Permissions scope for Enums -->

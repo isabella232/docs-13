@@ -7,3 +7,6 @@ See the [Project API](./project-api.md) docs here.
 The schema of the Management API is a known entity. From time to time we will release updates to the schema, but in contrast to the project API, the methods won't change much.
 
 ## Management API Methods
+
+_Coming Soon!_
+<!-- TODO: Write managment API docs -->

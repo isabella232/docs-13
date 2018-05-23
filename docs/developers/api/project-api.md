@@ -8,8 +8,30 @@ The Project API Shape is impossible to define. Each API changes depending on def
 
 Let's take an example of this project's Content Management Interface (CMI).
 
-<!-- TODO: SCREENSHOT:CMI:WINDOW -->
+!["Overview of CMI for Content Models"](../../gitbook/images/project-api-overview.png)
 
-The generated API would look something like this:
+The generated API for Super Heroes would look something like this:
 
-<!-- TODO: METHODS:PROJECT -->
+### Arguments
+| | |
+| --- | --- |
+| where | SuperHeroWhereInput |
+| orderBy | SuperHeroOrderByInput |
+| skip | Int |
+| after | String |
+| before | String |
+| first | Int |
+| last | Int |
+
+### Fields
+
+|  |  |
+| --- | --- |
+| id | ID! |
+| createdAt | DateTime! |
+| updatedAt | DateTime! |
+| status | Status! |
+| realName | String |
+| secretName | String |
+
+For making queries, [check out the API documentation.](the-api.md)
