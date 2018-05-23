@@ -12,8 +12,7 @@
 	* [Concepts](developers/concepts.md)
 	* Migration
 		* [New GraphCMS Beta](migration/new-graphcms-beta-migration-guide.md)
-	* API
-		* [Making a call](developers/api/making-a-call.md)
+	* [API](developers/api/the-api.md)
 		* [GraphQL "Status Codes"](developers/api/graphql-status-codes.md)
 		* [Management API](developers/api/management-api.md)
 		* [Project API](developers/api/project-api.md)

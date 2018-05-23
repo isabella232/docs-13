@@ -84,145 +84,19 @@ See a quick demo  here:
 
 ![Staging Preview](../gitbook/images/Staging.gif)
 
-## API Changes
+<!-- TODO: Link to API document -->
 
-The API will be a little different from what you are used in the current version. The `all`-Prefix from the queries is gone now. So a simple Query might look like this:
-```json
-query {
-    posts {
-        id
-        title
-        content
-    }
-}
-```
 
-### Filtering
-If you want to filter you now need to use the `where` argument:
-```json
-query {
-  authors(where: {
-    age_gt: 18
-  }) {
-    id
-    name
-  }
-}
-```
-
-A more advanced filter example:
-```json
-query {
-  posts(where: {
-    title_in: ["My biggest Adventure", "My latest Hobbies"]
-  }) {
-    id
-    title
-    published
-  }
-}
-```
-
-As before you can also use `AND` and `OR` to chain filters:
-```json
-query {
-  posts(where: {
-    AND: [{
-      title_in: ["My biggest Adventure", "My latest Hobbies"]
-    }, {
-      published: true
-    }]
-  }) {
-    id
-    title
-    published
-  }
-}
-```
-
-### Ordering
-Ordering still works the same as before:
-```json
-query {
-  posts(orderBy: title_ASC) {
-    id
-    title
-    published
-  }
-}
-```
-
-### Pagination
-You can accomplish Pagination like this for example:
-```json
-query {
-  posts(
-    first: 2
-    skip: 1
-  ) {
-    id
-    title
-  }
-}
-```
-
-```json
-query {
-  posts(
-    first: 2
-    after: "cixnen24p33lo0143bexvr52n"
-  ) {
-    id
-    title
-  }
-}
-```
 
 ### Mutations
 
 Mutations are looking a little bit different now. Here are the main changes:
 
-#### Creating Nodes
-
-The create Mutation now takes a `data` argument, which includes an object of the fields you want to create:
-
-```json
-# Create a new Author
-mutation {
-  createAuthor(
-    data: {
-      age: 42
-      email: "zeus@example.com"
-      name: "Zeus"
-    }
-  ) {
-    id
-    name
-  }
-}
-```
 
 #### Updating Nodes
 
 The update Mutation also takes a `data` argument but also `where` for filtering for the specific node that should be updated:
 
-```json
-# Update an Author
-mutation {
-  updateAuthor(
-    data: {
-      email: "zeus2@example.com"
-      name: "Zeus2"
-    }
-    where: {
-      email: "zeus@example.com"
-    }
-  ) {
-    id
-    name
-  }
-}
-```
 
 #### Upserting
 
