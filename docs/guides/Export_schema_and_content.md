@@ -1,6 +1,9 @@
 # Export your Schema and Content
 
-To export the GraphQL schema or the content of your GraphCMS project, you can use the export function from the _Settings_ page.
+
+## Export Schema
+
+To export the GraphQL schema of your GraphCMS project, you can use the export function from the _Settings_ page.
 
 ![Screenshot](../img/guides/download_schema_and_content.png)
 
@@ -41,5 +44,42 @@ type Asset {
   url: String!
 }
 ```
+## Export Content
 
-To download your complete content, use the `DOWNLOAD DATA` button. This creates a zip archive containing all the stored data of your project. The data of each content model is stored in a separate JSON file..
+To download your complete content, you will need to create query that includes every model and field of your project. Run the query against your projects API via the API Explorer for example.
+
+Here's an example for the Schema mentioned above:
+
+```json
+query backup {
+  article: allArticles {
+    id
+    title
+    author{
+      id
+      name
+    }
+  }
+  author: allAuthors {
+    id
+    name
+    articles {
+      id
+      title
+    }
+  }
+  asset: allAssets {
+    id
+    filename
+    handle
+    mimeType
+    size
+    url
+  }
+}
+```
+
+The response of this query will be in a `JSON` format.
+
+!!! warning
+    Make sure to also download the assets that are stored in GraphCMS manually, since they will be deleted once you delete your project!
