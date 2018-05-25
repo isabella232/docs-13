@@ -1,7 +1,9 @@
 # Assets
-The asset window is a first class model that supports special methods and utilities for developers. For users, images are also commonly handled differently with their own unique workflow such as gathering permissions, managing edits and optimizing variations for different platforms.
+Images can be uploaded from the asset view, or directly from an asset field that is used in your content model.
 
-## The Wiindow
+Under the hood, an asset is just another content model but also supports special methods and utilities for developers. For users, images are also commonly handled differently with their own unique workflow such as gathering permissions, managing edits and optimizing variations for different platforms.
+
+## The Window
 At it's most basic, the assets window looks like this:
 
 ![CMI window for assets.](../../gitbook/images/app/assets-page.png)
