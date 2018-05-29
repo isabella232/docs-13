@@ -18,10 +18,14 @@ The current beta web app is capable of the following things:
     - Single Line Text
     - Multi Line Text
     - Markdown
-    - Code
     - Integer
     - Float
+    - Date
+    - DateTime
     - Checkbox
+    - Enumeration
+    - Relations (Coming very soon!)
+    - JSON
 - Creating Content
 - Uploading Assets
 - Staging Preview
