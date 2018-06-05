@@ -9,15 +9,21 @@ When the question can be answered with one of a list of simple answers, enums ar
 
 This is a contrast to [Models](models.md) which are a collection of fields that can express complex objects like locations, job descriptions, published works and more.
 
+!["Model window in the CMI."](../../gitbook/images/app/schema-enum-page.png)
 
---- WORK HERE
-!["Model window in the CMI."](../../gitbook/images/app/schema-enu-page.png)
+## Creating an Enum
+Creating an Enum is very easy! Click on the blue button "Create Enumeration" and you'll be presented with a screen like this.
 
-## Creating a Model
-Creating a model is very easy! Click on the blue button "Create Model" and you'll be presented with a screen like this.
-
-!["Model window in the CMI."](../../gitbook/images/screenshots/createModelArtist.png)
+!["Model window in the CMI."](../../gitbook/images/app/schema-new-enum-page.png)
 
 ### Display Name
+The Display Name helps you identify the Enum later on.
+
 ### API ID
+The API ID is generated automatically but you can override this with something custom if you prefer. Most users will leave this alone. This is how you will refer to the Enum from the API later on.
+
 ### Description
+A short description to help explain the intended use of this field.
+
+### Possible Values
+These are the unique values of the Enum. They must begin with an uppercase letter.
