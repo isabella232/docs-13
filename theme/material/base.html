@@ -73,6 +73,13 @@
 
   <body dir="{{ lang.t('direction') }}">
     {% endif %}
+    <div style="display: flex;width: 100%;height: 50px;padding: 15px;margin-top: 55px;align-items: center;justify-content: center;color:white;background: rgb(3, 193, 221);"> 
+      <div style="position: relative;display: flex;"> 
+          <p style="font-size: 14px">  
+            <b>The Documentation for the new version is available <a style="font-weight: bold;text-decoration: underline" href="https://docs.graphcms.com/" target="_blank">here</a>!</b> 
+          </p>
+      </div> 
+    </div> 
     <svg class="md-svg">
       <defs>
         {% set platform = config.extra.repo_icon or config.repo_url %} {% if "github" in platform %} {% include "assets/images/icons/github.a4034fb1.svg"
