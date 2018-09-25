@@ -18,10 +18,10 @@ https://media.graphcms.com/quality=[options]/[File Handle]
 
 ### Quality Examples
 
->Original Image: [https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B](https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B)
+>Original Image: [https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 
->![Original Image](https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B)
+>![Original Image](https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 
->Change Quality Image: [https://media.graphcms.com/resize=w:500/quality=value:70/compress/bXa8m7oYQdmyWpmo2I2B](https://media.graphcms.com/resize=w:500/quality=value:70/compress/bXa8m7oYQdmyWpmo2I2B)
+>Change Quality Image: [https://media.graphcms.com/resize=w:500/quality=value:70/compress/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:500/quality=value:70/compress/IvwxgEnhSOWuQsVxvvnc)
 
->![Change Quality Image](https://media.graphcms.com/resize=w:500/quality=value:70/compress/bXa8m7oYQdmyWpmo2I2B)
+>![Change Quality Image](https://media.graphcms.com/resize=w:500/quality=value:70/compress/IvwxgEnhSOWuQsVxvvnc)

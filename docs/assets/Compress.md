@@ -23,10 +23,10 @@ https://media.graphcms.com/compress=[options]/[File Handle]
 
 ### Compress Example
 
->Original Image: [https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B](https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B)
+>Original Image: [https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 
->![Original Image](https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B)
+>![Original Image](https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 
->Compressed Image: [https://media.graphcms.com/resize=w:500/compress/bXa8m7oYQdmyWpmo2I2B](https://media.graphcms.com/resize=w:500/compress/bXa8m7oYQdmyWpmo2I2B)
+>Compressed Image: [https://media.graphcms.com/resize=w:500/compress/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:500/compress/IvwxgEnhSOWuQsVxvvnc)
 
->![Compressed Image](https://media.graphcms.com/resize=w:500/compress/bXa8m7oYQdmyWpmo2I2B)
+>![Compressed Image](https://media.graphcms.com/resize=w:500/compress/IvwxgEnhSOWuQsVxvvnc)

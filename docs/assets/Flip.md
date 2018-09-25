@@ -12,10 +12,10 @@ https://media.graphcms.com/flip/[File Handle]
 
 **Flip Example**
 
->Original Image: [https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B](https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B)
+>Original Image: [https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 
->![Original Image](https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B)
+>![Original Image](https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 
->Rotated Image: [https://media.graphcms.com/resize=w:500/flip/bXa8m7oYQdmyWpmo2I2B](https://media.graphcms.com/resize=w:500/flip/bXa8m7oYQdmyWpmo2I2B)
+>Rotated Image: [https://media.graphcms.com/resize=w:500/flip/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:500/flip/IvwxgEnhSOWuQsVxvvnc)
 
->![Rotated Image](https://media.graphcms.com/resize=w:500/flip/bXa8m7oYQdmyWpmo2I2B)
+>![Rotated Image](https://media.graphcms.com/resize=w:500/flip/IvwxgEnhSOWuQsVxvvnc)

@@ -30,14 +30,14 @@ https://media.graphcms.com/rotate=[options]/[File Handle]
 
 ### Rotate Example
 
->Original Image: [https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B](https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B)
+>Original Image: [https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 
->![Original Image](https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B)
+>![Original Image](https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 
->Rotated Image: [https://media.graphcms.com/resize=w:500/rotate=deg:180/bXa8m7oYQdmyWpmo2I2B](https://media.graphcms.com/resize=w:500/rotate=deg:180/bXa8m7oYQdmyWpmo2I2B)
+>Rotated Image: [https://media.graphcms.com/resize=w:500/rotate=deg:180/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:500/rotate=deg:180/IvwxgEnhSOWuQsVxvvnc)
 
->![Rotated Image](https://media.graphcms.com/resize=w:500/rotate=deg:180/bXa8m7oYQdmyWpmo2I2B)
+>![Rotated Image](https://media.graphcms.com/resize=w:500/rotate=deg:180/IvwxgEnhSOWuQsVxvvnc)
 
->Rotated with Background: [https://media.graphcms.com/resize=w:500/rotate=deg:145,background:black/bXa8m7oYQdmyWpmo2I2B](https://media.graphcms.com/resize=w:500/rotate=deg:145,background:black/bXa8m7oYQdmyWpmo2I2B)
+>Rotated with Background: [https://media.graphcms.com/resize=w:500/rotate=deg:145,background:black/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:500/rotate=deg:145,background:black/IvwxgEnhSOWuQsVxvvnc)
 
->![Rotated Image with Background](https://media.graphcms.com/resize=w:500/rotate=deg:145,background:black/bXa8m7oYQdmyWpmo2I2B)
+>![Rotated Image with Background](https://media.graphcms.com/resize=w:500/rotate=deg:145,background:black/IvwxgEnhSOWuQsVxvvnc)

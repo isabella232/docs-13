@@ -30,10 +30,10 @@ https://media.graphcms.com/watermark=[options]/[File Handle]
 
 ### Watermark Example
 
->Original Image: [https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B](https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B)
+>Original Image: [https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 
->![Original Image](https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B)
+>![Original Image](https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 
->Watermarked Image: [https://media.graphcms.com/resize=w:500/watermark=file:7FlqIg31QFCbrNcLmiNQ,size:25,position:[top,left]/bXa8m7oYQdmyWpmo2I2B](https://media.graphcms.com/resize=w:500/watermark=file:7FlqIg31QFCbrNcLmiNQ,size:25,position:[top,left]/bXa8m7oYQdmyWpmo2I2B)
+>Watermarked Image: [https://media.graphcms.com/resize=w:500/watermark=file:7FlqIg31QFCbrNcLmiNQ,size:25,position:[top,left]/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:500/watermark=file:7FlqIg31QFCbrNcLmiNQ,size:25,position:[top,left]/IvwxgEnhSOWuQsVxvvnc)
 
->![Watermarked Image](https://media.graphcms.com/resize=w:500/watermark=file:7FlqIg31QFCbrNcLmiNQ,size:25,position:[top,left]/bXa8m7oYQdmyWpmo2I2B)
+>![Watermarked Image](https://media.graphcms.com/resize=w:500/watermark=file:7FlqIg31QFCbrNcLmiNQ,size:25,position:[top,left]/IvwxgEnhSOWuQsVxvvnc)

@@ -131,10 +131,10 @@ For a complete list of possible conversions, see the table below.
 
 ## Output Example
 
->Original Image: [https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B](https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B)
+>Original Image: [https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 
->![Original Image](https://media.graphcms.com/resize=w:500/bXa8m7oYQdmyWpmo2I2B)
+>![Original Image](https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 
->Output Image: [https://media.graphcms.com/resize=w:500/output=format:png/bXa8m7oYQdmyWpmo2I2B](https://media.graphcms.com/resize=w:500/output=format:png/bXa8m7oYQdmyWpmo2I2B)
+>Output Image: [https://media.graphcms.com/resize=w:500/output=format:png/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:500/output=format:png/IvwxgEnhSOWuQsVxvvnc)
 
->![Output Image](https://media.graphcms.com/resize=w:500/output=format:png/bXa8m7oYQdmyWpmo2I2B)
+>![Output Image](https://media.graphcms.com/resize=w:500/output=format:png/IvwxgEnhSOWuQsVxvvnc)
