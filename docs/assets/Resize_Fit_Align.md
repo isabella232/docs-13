@@ -10,8 +10,8 @@ https://media.graphcms.com/resize=[options]/[File Handle]
 
 > Basic resize example with a GraphCMS file handle
 >
->[https://media.graphcms.com/resize=width:300/bYbYJmGyQfynUBaBkRnP](https://media.graphcms.com/resize=width:300/bYbYJmGyQfynUBaBkRnP)
-![TransformedImage](https://media.graphcms.com/resize=width:300/bYbYJmGyQfynUBaBkRnP)
+>[https://media.graphcms.com/resize=width:300/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=width:300/IvwxgEnhSOWuQsVxvvnc)
+![TransformedImage](https://media.graphcms.com/resize=width:300/IvwxgEnhSOWuQsVxvvnc)
 
 <!-- -->
 > `resize=width:100`
@@ -60,5 +60,5 @@ You can also specify pairs e.g. align:[top,left]. Center cannot be used in pairs
 <!-- -->
 > Example with `resize` + `fit:crop`
 >
->[https://media.graphcms.com/resize=w:300,h:300,fit:crop/bYbYJmGyQfynUBaBkRnP](https://media.graphcms.com/resize=w:300,h:300,fit:crop/bYbYJmGyQfynUBaBkRnP)
-![TransformedImage](https://media.graphcms.com/resize=w:300,h:300,fit:crop/bYbYJmGyQfynUBaBkRnP)
+>[https://media.graphcms.com/resize=w:300,h:300,fit:crop/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/resize=w:300,h:300,fit:crop/IvwxgEnhSOWuQsVxvvnc)
+![TransformedImage](https://media.graphcms.com/resize=w:300,h:300,fit:crop/IvwxgEnhSOWuQsVxvvnc)

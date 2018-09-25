@@ -29,7 +29,7 @@ The X and Y coordinates start from [0,0] and correspond to the top left hand cor
 >![TransformedImage](https://media.graphcms.com/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 >
 > Cropped Image
->[https://media.graphcms.com/crop=dim:[2000,900,1800,1300]/resize=w:500/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/crop=dim:[2000,900,1800,1300]/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
+>[https://media.graphcms.com/crop=dim:[500,500,500,500]/resize=w:500/IvwxgEnhSOWuQsVxvvnc](https://media.graphcms.com/crop=dim:[500,500,500,500]/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
 >
 >
-![TransformedImage](https://media.graphcms.com/crop=dim:[2000,900,1800,1300]/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
+![TransformedImage](https://media.graphcms.com/crop=dim:[500,500,500,500]/resize=w:500/IvwxgEnhSOWuQsVxvvnc)
