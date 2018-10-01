@@ -4,7 +4,7 @@ You can add other GraphCMS users as team members to your projects. This can be d
 
 ![Screenshot](../img/guides/addTeamMembers.png)
 
-By default, this table is empty and only the project owner is displayed in the header of the panel.
+By default, this table is empty and only the project owner is displayed in the header of the panel. If you want to change the owner, simply contact us through our On-Site-Chat.
 You can invite other GraphCMS users to your project and assign them a role. Currently, there are four predefined roles:
 
 * Admin
