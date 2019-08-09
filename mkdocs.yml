@@ -55,7 +55,7 @@ markdown_extensions:
       permalink: "#"
 
 pages:
-- Introduction: 'Introduction.md'
+- Introduction: 'index.md'
 - Concepts: 'Concepts.md'
 - Getting Started: 
   - 'Setting up the Blog Example Project': 'getting-started/Setting_up_the_project.md'
@@ -112,8 +112,6 @@ pages:
 - API:
   - 'Simple': 'api/API_simple.md'
   - 'Relay': 'api/API_relay.md'
-- hidden: 
-  - 'New GraphCMS Beta': 'New_GraphCMS_Beta.md'
 #- New API:
 #  - 'Concepts': 'prisma-api/Concepts.md'
 #  - 'Queries': 'prisma-api/Queries.md'
